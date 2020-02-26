@@ -1,0 +1,532 @@
+{
+    "wpml_add_language_form_field": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_add_language_form_field",
+        "summary": "  Make a custom search form multilingual-ready",
+        "description": "<p>Echoes an HTML hidden input field with <strong>name=\u201dlang\u201d<\/strong> and as value the current language.<\/p><p>In order to add a search form to your theme you would normally use the standard WordPress template tag: <code>get_search_form()<\/code><br>If you are making use of the default WordPress search form, you do not need to edit anything. WPML will handle the rest.<\/p><p>However, there may be times when <code>get_search_form()<\/code> can\u2019t be used. If you are creating a custom search form and you need to make it WPML compatible then this action hook is what you need.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_add_language_selector": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_add_language_selector",
+        "summary": "  Display WPML's drop-down language switcher",
+        "description": "<p>Displays the drop down language selector as configured from the \u201c<em>WPML-&gt;Languages<\/em>\u201d admin screen<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_admin_make_post_duplicates": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_admin_make_post_duplicates",
+        "summary": "  Create or update duplicate posts programatically",
+        "description": "<p>Builds or updates duplicate posts from a \u201cmaster\u201d post. This action hook is reserved for admin backend calls.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "master_post_id ": {
+                "label": "master_post_id ",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The ID of the post to duplicate from. It can be that of a post, page or custom post. The \u201cmaster post\u201d doesn\u2019t need to be in the default language."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_delete_package_action": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_delete_package_action",
+        "summary": "  Deletes a string translation package",
+        "description": "<p>Deletes a <a href=\"https:\/\/wpml.org\/documentation\/support\/string-package-translation\/\">string translation package<\/a>*. When this action is called, all the data related to the package is deleted: package, strings, strings translations and jobs.<\/p><p>*String translation packages are registered with <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_register_string\/\">wpml_register_string <\/a> and their translations retrieved with <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_translate_string\/\">wpml_translate_string<\/a><\/p><p><strong>Note<\/strong>: This hook requires the WPML String Translation module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "package_name": {
+                "label": "package_name",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The unique name of the package as it was registered with wpml_register_string"
+            },
+            "package_kind": {
+                "label": "package_kind",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The package kind as used when it was registered using wpml_register_string"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_enqueued_browser_redirect_language": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_enqueued_browser_redirect_language",
+        "summary": "  Run additional logic after WPML has executed the default one or if the value of $params is customized",
+        "description": "<p>This hook is executed at the end of the browser redirection PHP logic, after the <code>wpml_browser_redirect_language_params<\/code> and <code>wpml_enqueue_browser_redirect_language<\/code> filters. Despite its name, the action is fired even if <code>wpml_enqueue_browser_redirect_language<\/code> returns true.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "enqueued": {
+                "label": "enqueued",
+                "type": "mixed",
+                "required": false,
+                "description": "bool If true the script has been enqueued"
+            },
+            "params": {
+                "label": "params",
+                "type": "mixed",
+                "required": false,
+                "description": "array Data with values, $pageLanguage, $languageUrls and $cookie.$pageLanguagestring The language of the current page.$languageUrlsarray Associative array where the key is the language code and the values are the translated URLs of the current page.$cookieStores an associative array with the cookie settings. Please refer to Document.cookie for more details. The keys are:name: the name of the cookie (defaults to _icl_visitor_lang_js).domain: the domain in which the cookie must be used (defaults to the current domain and is not meant to be changed).path: the path of the cookie (defaults to \/).expiration: the expiration in seconds is read from the value set in\u00a0Remember visitors\u2019 language preference that can be found in\u00a0Browser language redirect on the\u00a0WPML -> Languages."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_footer_language_selector": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_footer_language_selector",
+        "summary": "  Display WPML's horizontal language switcher",
+        "description": "<p>Displays the horizontal footer language selector as configured from the \u201c<em>WPML-&gt;Languages<\/em>\u201d admin screen<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_language_has_switched": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_language_has_switched",
+        "summary": "  Run actions when switching the global current language in WordPress queries.",
+        "description": "<ul><li>Run your custom functions right after switching the global current language in WordPress queries.<\/li><li>To change the current language, use the <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_switch_language\/\">wpml_switch_language<\/a> hook.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "function_to_add": {
+                "label": "function_to_add",
+                "type": "callable",
+                "required": true,
+                "description": "(callable) (Required) Your callback to be run when the filter is applied."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_language_switcher": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_language_switcher",
+        "summary": "  Display WPML's language switcher",
+        "description": "<p>Displays the language selector as configured on the <strong>WPML<\/strong> -&gt; <strong>Languages<\/strong> page.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_loaded": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_loaded",
+        "summary": "  Run actions after WPML is fully configured and loaded.",
+        "description": "<ul><li>To make sure a WPML dependent code is executed at the right time, this code should be hooked into the <code>wpml_loaded<\/code> action. This action is called after WPML is fully configured and loaded.<\/li><li>If we do not hook into this <code>wpml_loaded<\/code>, sometimes the WPML dependent code might be called too early. Then even if WPML is active and configured, we may not get expected results.<\/li><li><code>wpml_loaded<\/code> is executed during the <a href=\"https:\/\/developer.wordpress.org\/reference\/hooks\/plugins_loaded\/\">plugins_loaded<\/a> action.<\/li><li>There are similar hooks for WPML String Translation <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_st_loaded\/\">wpml_st_loaded<\/a> and WPML Translation Management <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_tm_loaded\/\">wpml_tm_loaded<\/a>. They are both hooked to <code>wpml_loaded<\/code>.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "function_to_add": {
+                "label": "function_to_add",
+                "type": "callable",
+                "required": true,
+                "description": "(callable) (Required) Your callback to be run when the filter is applied."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_make_post_duplicates": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_make_post_duplicates",
+        "summary": "  Create duplicate posts programatically",
+        "description": "<p>Builds duplicate posts from a \u201cmaster\u201d post. This action hook is reserved for front-end calls.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "master_post_id ": {
+                "label": "master_post_id ",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The ID of the post to duplicate from. It can be that of a post, page or custom post. The \u201cmaster post\u201d doesn\u2019t need to be in the default language"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_multilingual_options": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_multilingual_options",
+        "summary": "  Enable the possibility to save theme\/plugin options per language.",
+        "description": "<p>Enables the possibility to save a different value per language for your theme\/plugin options using WPML language switcher on directly the settings screen.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_register_single_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_register_single_string",
+        "summary": "  Register user input texts for translation",
+        "description": "<p>*Registers a individual (as opposed to a string that is part of a package**) text string for translation. This action is usually used for user input texts otherwise referred to as \u201cdynamic text strings\u201d<\/p><p>*For retrieving a string translation please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_translate_single_string\/\">wpml_translate_single_string<\/a><br>**For registering a text string that is part of a package please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_register_string\/\">wpml_register_string<\/a><\/p><p><strong>Note<\/strong>: This hook requires the WPML String Translation module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "context": {
+                "label": "context",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) This value gives the string you are about a context. This will usually be the name of the plugin or theme, in a human readable format"
+            },
+            "name": {
+                "label": "name",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The name of the string which helps the translator understand what\u2019s being translated"
+            },
+            "value": {
+                "label": "value",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string that needs to be translated"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_register_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_register_string",
+        "summary": "  Register dynamic texts for translation",
+        "description": "<p>*Registers a text string for translation. The string being registered is <a href=\"https:\/\/wpml.org\/documentation\/support\/string-package-translation\/\">part of a package or a group of strings<\/a> (as opposed to an individual string**).<\/p><p>*For retrieving a \u201cpackage\u201d string translation please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_translate_string\/\">wpml_translate_string<\/a><br>**For registering an individual text string that does not belong to a package please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_register_single_string\/\">wpml_register_single_string<\/a><\/p><p><strong>Note<\/strong>: This hook requires the WPML String Translation module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "string_value": {
+                "label": "string_value",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string to register for translation"
+            },
+            "string_name": {
+                "label": "string_name",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) A unique name for the string"
+            },
+            "package": {
+                "label": "package",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) The package object. Array keys must match the following WPML_Package fields and will be the same for all texts sent to translation for an object:kind\u00a0A free text to identify the package object. Must be the same for all packages of the same type. i.e. \u2018Gravity Form\u2019 or \u2018Layout\u2019name\u00a0A name to identify the set of strings with. Must be unique for each package of the same type such as an ID.title\u00a0A humanly readable title for the package. Must be different for each package of the same type.edit_link\u00a0Link to edit this set of strings (it can be an empty string)view_link\u00a0Link to view this set of strings (it can be an empty string)"
+            },
+            "string_title": {
+                "label": "string_title",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) A title for the string (together with $string_name it will be used to build the name field in icl_strings table)"
+            },
+            "string_type": {
+                "label": "string_type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string kind. Must be one of the following values:AREA\u00a0Anything that must contain multiple rowsLINE\u00a0A single line valueVISUAL\u00a0This will be shown as a WYSIWYG editor and will be handled as HTML content"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_register_string_packages": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_register_string_packages",
+        "summary": "  Register in bulk dynamic texts for translation",
+        "description": "<p>Registers <a href=\"https:\/\/wpml.org\/documentation\/support\/string-package-translation\/\">string packages<\/a> for translation. It allows for strings to registered in bulk* if the package translation plugin is activated after content has been created.<\/p><p>*String packages would otherwise be registered with <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_register_string\/\">wpml_register_string <\/a> and their translations retrieved with <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_translate_string\/\">wpml_translate_string<\/a><\/p><p><strong>Note<\/strong>: This hook requires the WPML String Translation module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "type": {
+                "label": "type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The type of package to register. This matches the \u2018kind\u2019 array key in the $packages parameter as documented for wpml_register_string"
+            },
+            "existing ": {
+                "label": "existing ",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) An array of existing package names. Use this so that existing packages are not re-registered. This matches the \u2018name\u2019 array key in the $packages parameter as documented for wpml_register_string"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_set_element_language_details": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_set_element_language_details",
+        "summary": "  Set or update an element's language information",
+        "description": "<p>The action hook makes it possible to set or update an element\u2019s language information. Apart from its straightforward implied usage, the hook can prove to be useful when one needs to connect two elements with one as the \u201cTranslation of\u201d the other. Refer to the \u201cHook Example Usage\u201d section below for an example of this.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "args ": {
+                "label": "args ",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) An array of arguments to be used.element_id(bool) Use term_taxonomy_id for taxonomies, post_id for postselement_type(string) The type of an element. Can be a post type: post_post, post_page, post_attachment, post_nav_menu_item, post_{custom post key} or taxonomy: tax_category, tax_post_tag, tax_nav_menu, tax_{custom taxonomy key}. Defaults to post_post\u00a0if not set.trid(int) The trid\u00a0to which the element is to be assigned to. If set to FALSE it will create a new trid for the element causing any potential translation relations to\/from it to disappear.language_code(string) The language code for the elementsource_language_code(string) The source language code for the element. NULL is reserved for original elements i.e. elements that are not a translation of another. Defaults to NULL when not set.check_duplicates(bool) Defaults to TRUE. What this does is, it checks whether another element of a different type with the same ID already exists and outputs a user-level notice (E_USER_NOTICE) with the message \u201cElement ID already exists with a different type\u201d"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_set_translation_mode_for_post_type": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_set_translation_mode_for_post_type",
+        "summary": "  Set a translation mode for a given post type.",
+        "description": "<p>Allows setting a translation mode for a given post type.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "post_type": {
+                "label": "post_type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The slug of the post type you want to set translation mode for."
+            },
+            "translation_mode": {
+                "label": "translation_mode",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) Translation mode to set, can be one of the following values:\u201cdo_not_translate\u201d\u201ctranslate\u201d\u201cdisplay_as_translated\u201d"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_show_package_language_ui": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_show_package_language_ui",
+        "summary": "  Display a language information box in the admin UI for content",
+        "description": "<p>Outputs the UI to display a language information box in admin screens of content that was registered for translation as a string package*. It also shows the current state of any translations.<\/p><p>*String translation packages are registered with <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_register_string\/\">wpml_register_string <\/a> and their translations retrieved with <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_translate_string\/\">wpml_translate_string<\/a><\/p><p><strong>Note<\/strong>: This hook requires the WPML String Translation module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "package": {
+                "label": "package",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) The package object. Array keys must match the following WPML_Package fields and will be the same for all texts sent to translation for an object:kindA free text to identify the package object. Must be the same for all packages of the same type. i.e. \u2018Gravity Form\u2019 or \u2018Layout\u2019nameA name to identify the set of strings with. Must be unique for each package of the same type such as an IDtitleA humanly readable title for the package. Must be different for each package of the same type.edit_linkLink to edit this set of strings (it can be an empty string)view_linkLink to view this set of strings (it can be an empty string)"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "(array) (Optional) Arguments to control the output$show_title(bool) Will hide\/show the \u201cWPML Translation\u201d title in the box. Defaults to TRUE$show_description(bool) Will hide\/show the \u201cLanguage of this {package_kind} is {language_name}\u201d Defaults to TRUE$show_status(bool) Will hide\/show the translation status\u201d Defaults to TRUE$show_link(bool) Will hide\/show the link which leads to the translation dashboard. Defaults to TRUE$title_tag(string) The HTML Tag to use for the box title. Defaults to \u2018h2\u2019$status_container_tag(string) The HTML Tag to use for translation status container. Defaults to \u2018p\u2019$main_container_attributes(array) Array of keys->values to add to the main container (for CSS and\/or js) Defaults to an empty array$status_container_attributes(array) Array of keys->values to add to the status container (for CSS and\/or js) Defaults to array( 'style' => 'padding-left: 10px' )"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_st_loaded": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_st_loaded",
+        "summary": "  Run actions after WPML String Translation is fully configured and loaded.",
+        "description": "<ul><li>To make sure a WPML String Translation dependent code is executed at the right time, this code should be hooked into the <code>wpml_st_loaded<\/code> action. This action is called after WPML String Translation is fully configured and loaded.<\/li><li>If we do not hook into this <code>wpml_st_loaded<\/code>, sometimes the WPML String Translation dependent code might be called too early. Then even if WPML String Translation is active and configured, we may not get expected results.<\/li><li><code>wpml_st_loaded<\/code> is executed during the <a href=\"https:\/\/developer.wordpress.org\/reference\/hooks\/plugins_loaded\/\">plugins_loaded<\/a> and <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_loaded\/\">wpml_loaded<\/a> actions.<\/li><li>There is a similar hook for WPML Translation Management <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_tm_loaded\/\">wpml_tm_loaded<\/a>.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "function_to_add": {
+                "label": "function_to_add",
+                "type": "callable",
+                "required": true,
+                "description": "(callable) (Required) Your callback to be run when the filter is applied."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_switch_language": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_switch_language",
+        "summary": "  Control language in WordPress queries",
+        "description": "<p>This action hook allows controlling the language in WordPress queries. It overrides the WPML language global variable used to filter database query requests.<\/p><p>Note: The action hook must be passed to the <a href=\"https:\/\/codex.wordpress.org\/Plugin_API\/Action_Reference\/pre_get_posts\">pre_get_posts <\/a> WordPress hook. Use with caution since <strong>it affects the WPML language variable globally<\/strong>. To avoid unexpected results, <strong>use the hook in combination with WordPress conditional tags<\/strong> to only alter the specific query on the page you want.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "language_code ": {
+                "label": "language_code ",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The 2-letter language code to switch to. If set to null it restores the original language. If set to \u2018all\u2019 it will query content from all active languages. Defaults to null"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_sync_all_custom_fields": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_sync_all_custom_fields",
+        "summary": "  Sync values of all custom fields across all translations of a given post",
+        "description": "<p>Synchronizes the values of all custom fields across all translations of a given post. It only does it if the translation option for these custom fields are set to <strong>Copy<\/strong>.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_sync_custom_field": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_sync_custom_field",
+        "summary": "  Sync custom field value across all translations of a given post",
+        "description": "<p>Synchronizes the value of a specified custom field across all translations of a given post. It only does it if the translation option for this custom field is set to <strong>Copy<\/strong>.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_tf_feedback_open_link": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_tf_feedback_open_link",
+        "summary": "  Display WPML's translation feedback link",
+        "description": "<p>Display the front-end link to the WPML Translation Feedback feature. Clicking this link displays the dialog box for users to leave their feedback about the current page\u2019s translation.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "(array) (Optional) Arguments to filter the translation feedback link output:title\u00a0\u2013 Link text to display on the front-end.classes\u00a0\u2013\u00a0classes to add to the <a> tag."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_tm_loaded": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-action",
+        "name": "wpml_tm_loaded",
+        "summary": "  Run actions after WPML Translation Management is fully configured and loaded.",
+        "description": "<ul><li>To make sure a WPML Translation Management dependent code is executed at the right time, this code should be hooked into the <code>wpml_tm_loaded<\/code> action. This action is called after WPML Translation Management is fully configured and loaded.<\/li><li>If we do not hook into this <code>wpml_tm_loaded<\/code>, sometimes the WPML Translation Management dependent code might be called too early. Then even if WPML Translation Management is active and configured, we may not get expected results.<\/li><li><code>wpml_tm_loaded<\/code> is executed during the <a href=\"https:\/\/developer.wordpress.org\/reference\/hooks\/plugins_loaded\/\">plugins_loaded<\/a> and <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_loaded\/\">wpml_loaded<\/a> actions.<\/li><li>There is a similar hook for WPML Translation Management <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_st_loaded\/\">wpml_st_loaded<\/a>.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "function_to_add": {
+                "label": "function_to_add",
+                "type": "callable",
+                "required": true,
+                "description": "(callable) (Required) Your callback to be run when the filter is applied."
+            }
+        },
+        "rank": 1
+    }
+}

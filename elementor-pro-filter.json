@@ -1,0 +1,46 @@
+{
+    "elementor_pro-forms-wp_mail_headers": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-filter",
+        "name": "elementor_pro\/forms\/wp_mail_headers",
+        "summary": "",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "headers": {
+                "type": "string",
+                "label": "headers",
+                "required": false,
+                "description": "The email headers for wp_mail arguments."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-wp_mail_message": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-filter",
+        "name": "elementor_pro\/forms\/wp_mail_message",
+        "summary": "",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "email_text": {
+                "type": "string",
+                "label": "email_text",
+                "required": false,
+                "description": "The email html content for wp_mail arguments."
+            }
+        },
+        "rank": 1
+    }
+}

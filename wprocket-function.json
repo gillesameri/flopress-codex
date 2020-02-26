@@ -1,0 +1,169 @@
+{
+    "get_rocket_cdn_url": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "fct",
+        "name": "get_rocket_cdn_url",
+        "summary": "Force the rewrite of the image URL",
+        "description": "<p>WP Rocket rewrites all the URLs of your images to the CDN URL. However, in rare cases image URLs may not be rewritten, because the theme, or a plugin does not use native WordPress functions to display images.<\/p><p>It is possible to use one of WP Rocket\u2019s own functions to force the rewrite of the image URL in such cases.<\/p>",
+        "inputs": {
+            "url": {
+                "label": "url",
+                "type": "string",
+                "description": "The url"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "cdn_url",
+                "type": "string",
+                "description": "The cdn url"
+            }
+        },
+        "return_description": "",
+        "rank": 1
+    },
+    "rocket_clean_domain": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "efct",
+        "name": "rocket_clean_domain",
+        "summary": "Clear the cache for your entire website.",
+        "description": "<p>Use the rocket_clean_domain() function when you want to purge a complete domain from the cache.<\/p><p>If your website is multilingual, you can specify the language to be cleared.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "lang": {
+                "label": "lang",
+                "type": "string",
+                "description": "The language to be cleared"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "rocket_clean_files": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "efct",
+        "name": "rocket_clean_files",
+        "summary": "Use the rocket_clean_files() function when you want to purge some specific pages of the cache.",
+        "description": "<p>You can use a string, or an array with the URL(s) to purge.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "pages": {
+                "label": "pages",
+                "type": "string",
+                "types": [
+                    "string",
+                    "array"
+                ],
+                "description": "String or array with the URL(s) to purge"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": ""
+    },
+    "rocket_clean_home": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "efct",
+        "name": "rocket_clean_home",
+        "summary": "Purge your home page from the cache.",
+        "description": "<p>Use the rocket_clean_home() function when you want to purge your home page from the cache.<\/p><p>If your website is multilingual, you can specify the language to purge.<\/p><p>WP Rocket supports Polylang and WPML plugins for multilingual content.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "lang": {
+                "label": "lang",
+                "type": "string",
+                "description": "The language to be cleared",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "rocket_clean_post": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "efct",
+        "name": "rocket_clean_post",
+        "summary": "Purge a post and all \u201celements\u201d associated to it from the cache",
+        "description": "<p>Use the rocket_clean_post() function when you want to purge a post and all \u201celements\u201d associated to it from the cache. Associated elements would be category and tag archive, archives with pagination, etc.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post ID",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "rocket_clean_user": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "efct",
+        "name": "rocket_clean_user",
+        "summary": "Clear the cache of a specific user.",
+        "description": "<p>The rocket_clean_user($user_id, $lang) function can be used to clear the cache of a specific user when you have logged-in user cache option active.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "user_id": {
+                "label": "user_id",
+                "type": "int",
+                "description": "The user ID",
+                "required": true
+            },
+            "lang": {
+                "label": "lang",
+                "type": "string",
+                "description": "The language code",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}

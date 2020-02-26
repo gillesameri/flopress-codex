@@ -1,0 +1,1350 @@
+{
+    "wpml_active_languages": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_active_languages",
+        "summary": "  Get a list of the languages enabled for a site",
+        "description": "<p>Filters the list of the languages enabled (active) for a site. This filter is usually used to create custom language switchers.<\/p><p>This filter can only work when the global <a href=\"https:\/\/developer.wordpress.org\/reference\/classes\/wp_query\/\">$wp_query<\/a> object has been instantiated. This means that it should be called after the <a href=\"https:\/\/codex.wordpress.org\/Plugin_API\/Action_Reference\/wp\">wp action<\/a> happens.<\/p><p>WPML returns a site\u2019s active (enabled) languages as an array with relative information per language. For example, for a WordPress site running English, French and Italian, the hook will return this:<\/p><pre>Array( [en] =&gt; Array  (   [id] =&gt; 1   [active] =&gt; 1   [native_name] =&gt; English   [missing] =&gt; 0   [translated_name] =&gt; English   [language_code] =&gt; en   [country_flag_url] =&gt; http:\/\/yourdomain\/wpmlpath\/res\/flags\/en.png   [url] =&gt; http:\/\/yourdomain\/about  ) [fr] =&gt; Array  (   [id] =&gt; 4   [active] =&gt; 0   [native_name] =&gt; Fran\u00e7ais   [missing] =&gt; 0   [translated_name] =&gt; French   [language_code] =&gt; fr   [country_flag_url] =&gt; http:\/\/yourdomain\/wpmlpath\/res\/flags\/fr.png   [url] =&gt; http:\/\/yourdomain\/fr\/a-propos  ) [it] =&gt; Array  (   [id] =&gt; 27   [active] =&gt; 0   [native_name] =&gt; Italiano   [missing] =&gt; 0   [translated_name] =&gt; Italian   [language_code] =&gt; it   [country_flag_url] =&gt; http:\/\/yourdomain\/wpmlpath\/res\/flags\/it.png   [url] =&gt; http:\/\/yourdomain\/it\/circa  ))<\/pre><p>The <code>wpml_active_languages<\/code> filter provides a way to do things like reorder the language array. Or something more complex, like redirecting missing languages to a custom url.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            },
+            "args": {
+                "label": "args",
+                "type": "mixed",
+                "required": false,
+                "description": "(array|string) (Optional) Arguments to filter the language outputskip_missing(bool) How to treat languages with no translations. 1\u00a0to skip language or 0\u00a0to link to home of language for missing translations.link_empty_to(string) Works in conjunction with skip_missing = 0 and allows using custom links for the languages that do not have translations for the current element. {%lang} can be used as placeholder for the language code. Empty by default.orderby(string) Accepts id|code|name Defaults to custom. The custom order can be defined in the WordPress admin under WPML \u00bb Languages \u00bb Language Switcher Optionsorder(string) Accepts asc|desc"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_browser_redirect_language_params": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_browser_redirect_language_params",
+        "summary": "  Filters the $params argument which is an associative array that contains information about the current language",
+        "description": "<p>This filter can be used when the theme developer wants to use a different cookie name or tweak the <code>languageUrls<\/code> array to use different URLs.<\/p><p>It uses&nbsp;the <code>$params<\/code> argument which is an associative array containing some information about the current language, the active languages and the cookie settings.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "pageLanguage": {
+                "label": "pageLanguage",
+                "type": "mixed",
+                "required": false,
+                "description": "Stores the current language code."
+            },
+            "languageUrls": {
+                "label": "languageUrls",
+                "type": "mixed",
+                "required": false,
+                "description": "Stores an associative array containing all the current page\u2019s translation URLs. The keys of the array are the language codes. The same language can have multiple entries to match a different combination of language codes. For instance, in the case of en_US, the same URL is repeated three times with the following keys: en_us, en, and us."
+            },
+            "cookie": {
+                "label": "cookie",
+                "type": "mixed",
+                "required": false,
+                "description": "Stores an associative array with the cookie settings. Please refer to Document.cookie for more details. The keys are:name: the name of the cookie (defaults to _icl_visitor_lang_js).domain: the domain in which the cookie must be used (defaults to the current domain and is not meant to be changed).path: the path of the cookie (defaults to \/).expiration: the expiration in seconds is read from the value set in\u00a0Remember visitors\u2019 language preference that can be found in\u00a0Browser language redirect on the\u00a0WPML -> Languages."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_cross_domain_language_data": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_cross_domain_language_data",
+        "summary": "  Pass data among language domains.",
+        "description": "<ul><li>Pass the necessary information among language domains. You can find more details in our document <a href=\"https:\/\/wpml.org\/documentation\/getting-started-guide\/language-setup\/passing-session-data-between-languages-in-domains\/\" target=\"_blank\">Passing session data between languages in domains<\/a>.<\/li><li>This is specific for the language <strong>URL format Different languages in directories<\/strong>.<\/li><li>To get back the data, use the filter <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_get_cross_domain_language_data\/\" target=\"_blank\">wpml_get_cross_domain_language_data<\/a>.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "function_to_add": {
+                "label": "function_to_add",
+                "type": "callable",
+                "required": true,
+                "description": "(callable) (Required) Your callback to be run when the filter is applied."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_current_language": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_current_language",
+        "summary": "  Get the current display language",
+        "description": "<p>Returns the current language<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_decode_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_decode_string",
+        "summary": "  Decode fields that are in a format that WPML does not understand",
+        "description": "<p>Custom fields can be encoded in a format that WPML does not understand. Those fields have to be decoded and encoded before WPML can translate them. To achieve this, the <strong>wpml_decode_custom_field<\/strong> and <strong><a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_encode_string\/\">wpml_encode_custom_field<\/a><\/strong> filters must be used.&nbsp;These filters can be used if there is additional custom encoding besides the ones already handled by WPML.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "custom_field_val": {
+                "label": "custom_field_val",
+                "type": "mixed",
+                "required": false,
+                "description": "Value contained within field that needs to be decoded"
+            },
+            "custom_field_name": {
+                "label": "custom_field_name",
+                "type": "mixed",
+                "required": false,
+                "description": "Name of the field that needs to be decoded"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_default_language": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_default_language",
+        "summary": "  Get the default language enabled for a site",
+        "description": "<p>Returns the default language<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL.  This for the filter function to actually receive the full argument list"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_display_language_names": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_display_language_names",
+        "summary": "  Get a language's native and translated name for display in a custom language switcher",
+        "description": "<p>Checks if the native name of a language and the translated name of the same language are different. If so, it returns them both. Otherwise, it returns only one.<br>This filter is usually used in custom language switchers.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            },
+            "native_name": {
+                "label": "native_name",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The language native name"
+            },
+            "translated_name": {
+                "label": "translated_name",
+                "type": "mixed",
+                "required": true,
+                "description": "(string|bool) (Required) The language translated name Defaults to FALSE"
+            },
+            "lang_native_hidden": {
+                "label": "lang_native_hidden",
+                "type": "bool",
+                "required": false,
+                "description": "(bool) (Optional) Default is FALSE 0|false or 1|true Whether to hide the language native name or not"
+            },
+            "lang_translated_hidden": {
+                "label": "lang_translated_hidden",
+                "type": "bool",
+                "required": false,
+                "description": "(bool) (Optional) Default is FALSE 0|false or 1|true Whether to hide the language translated name or not"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_duplicate_generic_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_duplicate_generic_string",
+        "summary": "  Filter post data upon duplication before saving",
+        "description": "<p>WPML applies this hook filter on custom field values, post content, post title and post excerpt when a WordPress post type is being duplicated and before the data is saved into the database. The data are in this way made available to external themes and plugins for filtering.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "value_to_filter": {
+                "label": "value_to_filter",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The data string to filter"
+            },
+            "target_language": {
+                "label": "target_language",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The target language code"
+            },
+            "meta_data": {
+                "label": "meta_data",
+                "type": "array",
+                "required": false,
+                "description": "(array) (Optional) See details below:context(string) The data context. Set to \u201ccustom_field\u201d if the value belongs to a custom field and \u201cpost\u201d for all other cases (post title, content or excerpt)attribute(string) Set to: \u201cvalue\u201d for custom fields, \u201ccontent\u201d for post content, \u201ctitle\u201d for post title, \u201cexcerpt\u201d for post excerptkey(string) The $post_meta->meta_key if the filter is being applied to custom field values. Otherwise the id of the original post that acts as master for duplication$is_serialized(bool) Passed only for custom field data. true|false Whether the data is serialized. This allows to unserialize the value if needed.post_id(int) Passed only for custom field data. The id of the post being duplicatedmaster_post_id(int) Passed only for custom field data. The id of the original post that acts as master for duplication"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_editor_cf_to_display": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_editor_cf_to_display",
+        "summary": "  Filter custom fields displayed in WPML's translation editor",
+        "description": "<p>WPML applies this hook filter on custom field values when a post is displayed in translation editor. The custom field value is in this way made available to external themes and plugins for filtering.<\/p><p>Note: This hook requires the WPML Translation Management module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "element": {
+                "label": "element",
+                "type": "object",
+                "required": false,
+                "description": "(object) (Optional) The element object available for filtering"
+            },
+            "job": {
+                "label": "job",
+                "type": "object",
+                "required": false,
+                "description": "(object) (Optional) The job object the $element belongs to"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_element_has_translations": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_element_has_translations",
+        "summary": "  Find out whether a post type or a taxonomy term is translated",
+        "description": "<p>Returns TRUE or FALSE based on whether a post type or taxonomy term is translated or not.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            },
+            "element_id": {
+                "label": "element_id",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The element id to retrieve the information of. Use term_id for taxonomy terms, post_id for post types"
+            },
+            "element_type": {
+                "label": "element_type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The type of element the ID belongs to. Can be a post type: post, page, attachment, nav_menu_item, {custom post key} or taxonomy: category, post_tag, nav_menu {custom taxonomy key}"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_element_language_code": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_element_language_code",
+        "summary": "  Get the language code for a translatable element",
+        "description": "<p>This filter hook will retrieve the language code for a translatable element by querying WPML\u2019s icl_translations database table. <\/p><p>Also look at <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_element_language_details\/\">wpml_element_language_details <\/a>if you are interested in more information such as the element\u2019s trid<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "language_code": {
+                "label": "language_code",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) A 2-letter language code. Defaults to null."
+            },
+            "args ": {
+                "label": "args ",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) An array of arguments to be used.element_id(bool) Use term_taxonomy_id for taxonomies, post_id for postselement_type(string) The type of element to check. Can be a post type: post, page, attachment, nav_menu_item, {custom post key} or taxonomy: category, post_tag, nav_menu {custom taxonomy key}"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_element_language_details": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_element_language_details",
+        "summary": "  Get the trid, language code and source language code for a translatable element",
+        "description": "<p>This filter hook will retrieve language information for a translatable element. It queries WPML\u2019s icl_translations database table and returns an object with the element\u2019s trid, source language code and language code. <\/p><p>If you are only looking for the element\u2019s language code you might prefer to use <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_element_language_code\/\">wpml_element_language_code<\/a><\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "element_object": {
+                "label": "element_object",
+                "type": "object",
+                "required": true,
+                "description": "(object) (Required) A WordPress object. Defaults to null."
+            },
+            "args ": {
+                "label": "args ",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) An array of arguments to be used.element_id(bool) Use term_taxonomy_id for taxonomies, post_id for postselement_type(string) The type of element to check. Can be a post type: post, page, attachment, nav_menu_item, {custom post key} or taxonomy: category, post_tag, nav_menu {custom taxonomy key}"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_element_link": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_element_link",
+        "summary": "  Get the url for a post type or taxonomy term for the current language",
+        "description": "<p>Returns a post type link or taxonomy term link in the current language.<\/p><p>* Note: There are alternative ways to retrieve an element\u2019s link which gives developers fuller control over the HTML output.<br>WordPress offers a number of functions to do this such as <code>get_permalink()<\/code>, <code>get_term_link()<\/code>, etc.<\/p><p>If you plan on using functions that require a post type or term ID as a parameter then you may be interested in looking into the <code>wpml_object_id<\/code> filter.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "element_id": {
+                "label": "element_id",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The ID of the post type (post, page, attachment, custom post) or taxonomy term (tag, category, custom taxonomy) to link to"
+            },
+            "element_type": {
+                "label": "element_type",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The type of element to link to. Can be \u2018post\u2019, \u2018page\u2019, \u2018attachment\u2019, \u2018{custom post}\u2019, \u2018tag\u2019, \u2018category\u2019, \u2018{custom taxonomy}\u2019. Defaults to \u2018post\u2019"
+            },
+            "link_text": {
+                "label": "link_text",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The link text. Defaults to the element\u2019s name"
+            },
+            "optional_parameters": {
+                "label": "optional_parameters",
+                "type": "array",
+                "required": false,
+                "description": "(array) (Optional) Arguments for the link"
+            },
+            "anchor": {
+                "label": "anchor",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) Anchor for the link"
+            },
+            "echo": {
+                "label": "echo",
+                "type": "bool",
+                "required": false,
+                "description": "(bool) (Optional) 0|false to return or 1|true to echo the localized link. Defaults to true"
+            },
+            "return_original_if_missing": {
+                "label": "return_original_if_missing",
+                "type": "bool",
+                "required": false,
+                "description": "(bool) (Optional) If set to true it will always return a value (the original value, if translation is missing). Default is TRUE"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_element_translation_type": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_element_translation_type",
+        "summary": "  Find out whether a post type or taxonomy term has been translated or duplicated",
+        "description": "<p>Returns a post type or taxonomy term\u2019s translation type (translated or not | duplicated or is a duplicate itself).<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            },
+            "element_id": {
+                "label": "element_id",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The element id to retrieve the information of. Use term_id for taxonomy terms, post_id for post types"
+            },
+            "element_type": {
+                "label": "element_type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The type of element the ID belongs to. Can be a post type: post, page, attachment, nav_menu_item, {custom post key} or taxonomy: category, post_tag, nav_menu {custom taxonomy key}"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_element_trid": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_element_trid",
+        "summary": "  Get \u201ctrid\u201d (the ID of the translation group) of a translated element",
+        "description": "<ul><li>Get <code>trid<\/code> (the ID of the translation group) of a translated element, which is required for the &nbsp;<a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_get_element_translations\/\">wpml_get_element_translations<\/a> filter and others which expect this argument.<\/li><li>Learn more about <code>trid<\/code>&nbsp;on the <a href=\"https:\/\/wpml.org\/documentation\/support\/wpml-tables\/\">WPML\u2019s tables<\/a> documentation page.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is usually the value the filter will be modifying. We are not filtering anything here so set this to NULL. This is needed for the filter function to actually receive the full argument list."
+            },
+            "element_id": {
+                "label": "element_id",
+                "type": "integer",
+                "required": true,
+                "description": "(integer) (Required) The ID of the item (post_id for post types, term_taxonomy_id for taxonomy terms)."
+            },
+            "element_type": {
+                "label": "element_type",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The type of an element. Can be a post type: post_post, post_page, post_attachment, post_nav_menu_item, post_{custom post key} or taxonomy: tax_category, tax_post_tag, tax_nav_menu, tax_{custom taxonomy key}. Defaults to post_post if not set."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_element_type": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_element_type",
+        "summary": "  Get the WPML element type name for a post type or taxonomy term as saved in the database",
+        "description": "<p>Filters a WordPress element type (post type, taxonomy term, comment) by adding the WPML prefix \u2018post_\u2019, \u2018tax_\u2019 (for default tags use \u2018post_tag\u2019), or nothing for \u2018comment\u2019 as used in the icl_translations db table.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "element_type": {
+                "label": "element_type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) Accepts comment, post, page, attachment, nav_menu_item, {custom post key}, nav_menu, category, post_tag, {custom taxonomy key}"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_elements_without_translations": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_elements_without_translations",
+        "summary": "  Retrieve untranslated elements",
+        "description": "<p>This filter hook can be used to retrieve elements without translations<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "element_ids": {
+                "label": "element_ids",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) An array of element ids. Defaults to an empty array."
+            },
+            "args ": {
+                "label": "args ",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) An array of arguments to be used.target_language(bool) The target language code. A 2-letter codesource_language(bool) The source language code. A 2-letter codeelement_type(string) The type of element to check. Can be a post type: post, page, attachment, nav_menu_item, {custom post key} or taxonomy: category, post_tag, nav_menu {custom taxonomy key}"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_encode_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_encode_string",
+        "summary": "  Encode fields that are in a format that WPML does not understand",
+        "description": "<p>Custom fields can be encoded in a format that WPML does not understand. Those fields have to be decoded and encoded before WPML can translate them. To achieve this, the&nbsp;<a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_decode_string\/\"><strong>wpml_decode_custom_field<\/strong><\/a> and <strong>wpml_encode_custom_field<\/strong> filters must be used.&nbsp;These filters can be used if there is additional custom encoding besides the ones already handled by WPML.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "custom_field_val": {
+                "label": "custom_field_val",
+                "type": "mixed",
+                "required": false,
+                "description": "Value contained within field that needs to be encoded"
+            },
+            "custom_field_name": {
+                "label": "custom_field_name",
+                "type": "mixed",
+                "required": false,
+                "description": "Name of the field that needs to be encoded"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_enqueue_browser_redirect_language": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_enqueue_browser_redirect_language",
+        "summary": "  Use a custom JavaScript for handling the browser redirection",
+        "description": "<p>This filter is used when the theme developer wants to use a custom JavaScript for handling the browser redirection.<\/p><p>This filters a boolean set to <code>true<\/code> by default.<br>If the filter returns <code>false<\/code>, the JavaScript which takes care of redirecting the visitor won\u2019t be enqueued.<br>The filter is applied only if the <code>wpml_browser_redirect_language_params<\/code> filter returns a valid <code>$param<\/code> (<code>pageLanguage<\/code> and <code>languageUrls<\/code> must be set).<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_get_cross_domain_language_data": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_get_cross_domain_language_data",
+        "summary": "  Retrieve the data passed among language domains.",
+        "description": "<ul><li>Retrieve the data passed by the filter <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_cross_domain_language_data\/\">wpml_cross_domain_language_data<\/a>.You can find more details in our document <a href=\"https:\/\/wpml.org\/documentation\/getting-started-guide\/language-setup\/passing-session-data-between-languages-in-domains\/\" target=\"_blank\">Passing session data between languages in domains<\/a>.<\/li><li>This is specific for the language <strong>URL format Different languages in directories<\/strong>.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "array": {
+                "label": "array",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) This is just an empty array, you should always use this value array()."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_get_element_translations": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_get_element_translations",
+        "summary": "  Get the element translations info using \u201ctrid\u201d (the ID of the translation group)",
+        "description": "<ul><li>Get the element translations info using <code>trid<\/code> (the ID of the translation group).<\/li><li><code>trid<\/code> can be retrieved by the <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_element_trid\/\">wpml_element_trid<\/a> filter.<\/li><li>Learn more about this on the <a href=\"https:\/\/wpml.org\/documentation\/support\/wpml-tables\/\">WPML\u2019s tables<\/a> documentation page.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is usually the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list."
+            },
+            "trid": {
+                "label": "trid",
+                "type": "integer",
+                "required": true,
+                "description": "(integer) (Required) The ID of the translation group."
+            },
+            "element_type": {
+                "label": "element_type",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The type of an element. Can be a post type: post_post, post_page, post_attachment, post_nav_menu_item, post_{custom post key} or taxonomy: tax_category, tax_post_tag, tax_nav_menu, tax_{custom taxonomy key}. Defaults to post_post if not set."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_get_translated_slug": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_get_translated_slug",
+        "summary": "  Get the post type slug translation in a specific language.",
+        "description": "<ul><li>Gets the post type slug translation in a specific language.<\/li><li>The translation value is saved in <strong>WPML-&gt;Translation Management-&gt;Multilingual Content Setup-&gt;Custom posts<\/strong>.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "slug": {
+                "label": "slug",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required)\u00a0The value is set in the rewrite argument of the register_post_type function."
+            },
+            "post_type": {
+                "label": "post_type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required)\u00a0The first parameter value of the register_post_type function."
+            },
+            "language_code": {
+                "label": "language_code",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional)\u00a0Return the translation in this language. Default is NULL which returns the current language."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_hide_management_column": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_hide_management_column",
+        "summary": "  Allow hiding the translation management column based on post types.",
+        "description": "<ul><li>Allows hiding the translation management column based on the post type.<\/li><li>This filter is working in sync with <a href=\"https:\/\/codex.wordpress.org\/Administration_Screens#Screen_Options\">Screen Options<\/a>. Therefore, hiding column from Screen Options will have the same effect.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "is_visible": {
+                "label": "is_visible",
+                "type": "bool",
+                "required": false,
+                "description": "(bool) Whether or not the translation management column displays."
+            },
+            "post_type": {
+                "label": "post_type",
+                "type": "string",
+                "required": false,
+                "description": "(string) The post type."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_home_url": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_home_url",
+        "summary": "  Get a site's home url for the current language",
+        "description": "<p>Returns the home url in the current language. To be used in place of <code>get_option('home')<\/code><\/p><p>* Note: Good code will make use of <code>get_home_url()<\/code> or <code>home_url()<\/code> which apply filters natively. In this case there is no need to replace anything.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "home_url": {
+                "label": "home_url",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The home url from get_option('home')"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_is_redirected": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_is_redirected",
+        "summary": "  Disable WPML canonical URL redirection",
+        "description": "<p>WPML automatically tries to redirect visitors to the canonical URL when it does find a match. This hook allows to disable this WPML functionality.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "redirect": {
+                "label": "redirect",
+                "type": "bool",
+                "required": false,
+                "description": "(bool)\u00a0Boolean value to define whether or not to disable WPML canonical URL redirection actions."
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "integer",
+                "required": false,
+                "description": "(integer) post ID"
+            },
+            "query": {
+                "label": "query",
+                "type": "array",
+                "required": false,
+                "description": "(array) The WordPress query array."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_is_rtl": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_is_rtl",
+        "summary": "  Find out whether the current language text direction is RTL or not",
+        "description": "<p>Returns TRUE is the current language is RTL<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_language_form_input_field": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_language_form_input_field",
+        "summary": "  Filter the hidden input field rendered by the wpml_add_language_form_field hook.",
+        "description": "<p>Filter the hidden input field rendered by the <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_add_language_form_field\/\">wpml_add_language_form_field<\/a> hook.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "function_to_add": {
+                "label": "function_to_add",
+                "type": "callable",
+                "required": true,
+                "description": "(callable) (Required) Your callback to be run when the filter is applied."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_language_is_active": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_language_is_active",
+        "summary": "  Find out if a specific language is enabled for the site",
+        "description": "<p>Returns TRUE or FALSE if a given language has been enabled.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            },
+            "language_code": {
+                "label": "language_code",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The language code to check. Accepts a 2-letter code like \u2018en\u2019"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_ls_directories_to_scan": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_ls_directories_to_scan",
+        "summary": "  Add directories containing language switcher templates",
+        "description": "<ul><li>Add directories containing language switcher templates.<\/li><li>This hook is useful when developers want to add their own directories instead of the default directory <code>{your-theme-folder}\/wpml\/templates\/language-switchers\/<\/code>.<\/li><li>See more at the <a href=\"https:\/\/wpml.org\/documentation\/getting-started-guide\/language-setup\/designing-custom-language-switchers-using-template-files\/\">Designing Custom Language Switchers Using Template Files<\/a> document.<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "dirs": {
+                "label": "dirs",
+                "type": "array",
+                "required": false,
+                "description": "(array) The array including directories."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_ls_model_css_classes": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_ls_model_css_classes",
+        "summary": "  Filter CSS classes for language switcher wrappers. These wrappers are not available for language switchers in menus.",
+        "description": "<p>Filter CSS classes for language switcher wrappers. These wrappers are not available for language switchers in menus.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "css_classes": {
+                "label": "css_classes",
+                "type": "array",
+                "required": false,
+                "description": "(array) The array including CSS classes for language switcher wrappers."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_ls_model_language_css_classes": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_ls_model_language_css_classes",
+        "summary": "  Filter CSS classes for each item in a language switcher",
+        "description": "<p>Filter CSS classes for each item in a language switcher.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "css_classes": {
+                "label": "css_classes",
+                "type": "array",
+                "required": false,
+                "description": "(array) The array including CSS classes for each item of language switchers."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_master_post_from_duplicate": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_master_post_from_duplicate",
+        "summary": "  Get the original post from its duplicated post",
+        "description": "<p>Returns the original post ID from the duplicated post ID<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "post_id ": {
+                "label": "post_id ",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The duplicated post id"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_object_id": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_object_id",
+        "summary": "  Get the ID in the current language or in another language you specify",
+        "description": "<p>Returns an element\u2019s ID in the current language or in another specified language.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "element_id": {
+                "label": "element_id",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The ID of the post type (post, page, attachment, custom post) or taxonomy term (tag, category, custom taxonomy) to filter"
+            },
+            "element_type": {
+                "label": "element_type",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The type of element the ID belongs to. Can be post, page, {custom post type key}, nav_menu, nav_menu_item, category, post_tag, {custom taxonomy key}"
+            },
+            "return_original_if_missing": {
+                "label": "return_original_if_missing",
+                "type": "bool",
+                "required": false,
+                "description": "(bool) (Optional) If set to true it will always return a value (the original value, if translation is missing) Default is FALSE"
+            },
+            "ulanguage_code": {
+                "label": "ulanguage_code",
+                "type": "mixed",
+                "required": false,
+                "description": "(mixed) (Optional) If missing or NULL, it will use the current language. If set to a language code, it will return a translation for that language code or the original if the translation is missing and $return_original_if_missing is set to TRUE. Default is NULL"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_permalink": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_permalink",
+        "summary": "  Add language information to WordPress permalinks",
+        "description": "<p>Filters a WordPress permalink and converts it to a language-specific permalink based on the language URL format set in the WPML language settings. <\/p><p>This means that when \u201cLanguage URL format\u201d is set to \u201cDifferent languages in directories\u201d the permalink will be returned in the <code>http:\/\/domain.com\/de<\/code> form. When \u201cA different domain per language\u201d is selected the permalink will be converted to include the correct domain assigned to the requested language.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "permalink": {
+                "label": "permalink",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The WordPress generated URL to filter."
+            },
+            "language_code ": {
+                "label": "language_code ",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The language to convert the url into. It accepts a 2-letter code. When set to null, it falls back to default language for root page, or current language in all other cases. Default is null"
+            },
+            "full_resolution": {
+                "label": "full_resolution",
+                "type": "boolean",
+                "required": false,
+                "description": "(boolean) (Optional) Enable full conversion of hard-coded URLs."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_post_duplicates": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_post_duplicates",
+        "summary": "  Get the duplicated posts of another post you specify",
+        "description": "<p>Returns the duplicated post IDs from the original post ID.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "master_post_id": {
+                "label": "master_post_id",
+                "type": "int",
+                "required": true,
+                "description": "(int) (Required) The original post id from which duplicates exist"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_post_language_details": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_post_language_details",
+        "summary": "  Get the language of a post",
+        "description": "<p>Retrieve language information of a post by its ID.<\/p><p>The language information that is returned includes:<\/p><ul><li>the post language 2-letter code,<\/li><li>the post locale,<\/li><li>the language text direction (True for RTL, False for LTR),<\/li><li>the post language translated name and native name and<\/li><li>whether the current language is different to the post language (True\/False)<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "required": false,
+                "description": "(int) (Optional) The post id to retrieve information of (post, page, attachment, custom post) Defaults to current post ID."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_setting": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_setting",
+        "summary": "  Get the value of a WPML setting",
+        "description": "<p>Returns a WPML setting value<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "default": {
+                "label": "default",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed|bool) (Required) The value to return if the settings key does not exist. Set to false if not using"
+            },
+            "key": {
+                "label": "key",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The settings name key to return the value of"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_sub_setting": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_sub_setting",
+        "summary": "  Get the value of a WPML sub setting",
+        "description": "<p>Returns a WPML sub setting value.<\/p><div style=\"margin: 2em; padding: 1em; border: 1pt solid #80FF80; background-color: #f0fff0;\"><h3>Attention<\/h3><ul><li>This hook is temporarily broken in WPML 3.3.6. We are working on it to fix this issue.<\/li><li>Currently you can use this hook <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_setting\/\">wpml_setting<\/a>&nbsp;for the same purpose.<\/li><li>Example:<pre>\/\/ Example: I need to get sub setting \"font-current-normal\" of \"icl_lang_sel_config\"$switcher = apply_filters( 'wpml_setting', false, 'icl_lang_sel_config' );echo $switcher['font-current-normal']; <\/pre><\/li><\/ul><\/div>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "default": {
+                "label": "default",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed|bool) (Required) The value to return if the settings key does not exist. Set to false if not using"
+            },
+            "key": {
+                "label": "key",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The settings name key the sub key belongs to"
+            },
+            "sub_key": {
+                "label": "sub_key",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The sub key to return the value of"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_tm_save_translation_cf": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_tm_save_translation_cf",
+        "summary": "  Filter custom fields before saving in WPML's translation editor or XLIFF import",
+        "description": "<p>WPML applies this hook filter on custom field values when a translation is saved either via the translation editor screen or via an XLIFF import. The custom field value is in this way made available to external themes and plugins for further manipulation before saving e.g. encoding or substitution.<\/p><p>Note: This hook requires the WPML Translation Management module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "required": false,
+                "description": "(array) (Optional) The current custom field array"
+            },
+            "fieldname": {
+                "label": "fieldname",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The custom field name"
+            },
+            "data": {
+                "label": "data",
+                "type": "array",
+                "required": false,
+                "description": "(array) (Optional) The data array being processed through the filter"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_tm_xliff_export_original_cf": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_tm_xliff_export_original_cf",
+        "summary": "  Filter original custom field values before XLIFF export",
+        "description": "<p>WPML applies this hook filter to the original custom field values when a document is exported to an XLIFF file. The custom field value is in this way made available to external themes and plugins for further manipulation before saving e.g. substitution.<\/p><p>Note: This hook requires the WPML Translation Management module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "field_data": {
+                "label": "field_data",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The encoded original custom field value."
+            },
+            "element ": {
+                "label": "element ",
+                "type": "object",
+                "required": false,
+                "description": "(object) (Optional) The current custom field"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_tm_xliff_export_translated_cf": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_tm_xliff_export_translated_cf",
+        "summary": "  Filter translated custom field values before XLIFF export",
+        "description": "<p>WPML applies this hook filter to the translated custom field values when a document is exported to an XLIFF file. The custom field value is in this way made available to external themes and plugins for further manipulation before saving e.g. substitution.<\/p><p>Note: This hook requires the WPML Translation Management module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "field_data_translated": {
+                "label": "field_data_translated",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The encoded translated custom field value. Empty if not translated yet"
+            },
+            "element ": {
+                "label": "element ",
+                "type": "object",
+                "required": false,
+                "description": "(object) (Optional) The current custom field"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_translatable_user_meta_fields": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_translatable_user_meta_fields",
+        "summary": "  Make certain user meta fields translatable through WPML String Translation.",
+        "description": "<p>Filters an array of user meta keys which will be translated when calling the function <a href=\"https:\/\/codex.wordpress.org\/Function_Reference\/get_the_author\">get_the_author()<\/a>. The translatable user meta fields will be registered as strings in WPML String Translation.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "user_meta_fields": {
+                "label": "user_meta_fields",
+                "type": "array",
+                "required": true,
+                "description": "(array) (Required) Containing the user meta fields to translate."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_translate_single_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_translate_single_string",
+        "summary": "  Retrieve a string translation",
+        "description": "<p>*Retrieves an individual (as opposed to a string that is part of a package**) text string translation. The filter looks for a string with matching $domain and $name. If it finds it, it looks for a translation in the current language or the language you specify. If a translation exists, it will return it. Otherwise, it will return the original string.<\/p><p>*To register a string for translation please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_register_single_string\/\">wpml_register_single_string<\/a><br>**For retrieving a string translation that is part of a package please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_translate_string\/\">wpml_translate_string<\/a><\/p><p><strong>Note<\/strong>: This hook requires the WPML String Translation module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "original_value": {
+                "label": "original_value",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string\u2019s original value"
+            },
+            "domain": {
+                "label": "domain",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string\u2019s registered\u00a0domain"
+            },
+            "name": {
+                "label": "name",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string\u2019s registered name"
+            },
+            "language_code": {
+                "label": "language_code",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) Return the translation in this language. Default is NULL which returns the current language"
+            }
+        },
+        "rank": 1
+    },
+    "wpml_translate_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_translate_string",
+        "summary": "  Retrieve a \"package\" string translation",
+        "description": "<p>*Retrieves a string translation. The filter looks up a string that is <a href=\"https:\/\/wpml.org\/documentation\/support\/string-package-translation\/\">part of a package or a group of strings<\/a> (as opposed to an individual string**). If it finds it, it looks for a translation in the current language. If a translation exists, it will return it. Otherwise, it will return the original string.<\/p><p>*To register a \u201cpackage\u201d string translation please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_register_string\/\">wpml_register_string<\/a><br>**For retrieving an individual text string that does not belong to a package please see: <a href=\"https:\/\/wpml.org\/wpml-hook\/wpml_translate_single_string\/\">wpml_translate_single_string<\/a><\/p><p><strong>Note<\/strong>: This hook requires the WPML String Translation module<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "string_value": {
+                "label": "string_value",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string\u2019s original value"
+            },
+            "string_name": {
+                "label": "string_name",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The string\u2019s registered name"
+            },
+            "package": {
+                "label": "package",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) The string\u2019s registered package identifier"
+            },
+            "\n\nIf $package is an array it needs to be associative and contain keys kind and name.\nIf $package is an object it needs to have kind and name fields.\n\n": {
+                "label": "\n\nIf $package is an array it needs to be associative and contain keys kind and name.\nIf $package is an object it needs to have kind and name fields.\n\n",
+                "type": "mixed",
+                "required": false,
+                "description": ""
+            }
+        },
+        "rank": 1
+    },
+    "wpml_translated_language_name": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_translated_language_name",
+        "summary": "  Get a language's translated name in another language which you specify",
+        "description": "<p>Returns the translated name of a language in another specified language.<\/p><p>*Note: The languages involved do not need to be active for the site<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "empty_value": {
+                "label": "empty_value",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) This is normally the value the filter will be modifying. We are not filtering anything here so set this to NULL. This for the filter function to actually receive the full argument list"
+            },
+            "lang_code": {
+                "label": "lang_code",
+                "type": "string",
+                "required": true,
+                "description": "(string) (Required) The language name will be for this language. Accepts a 2-letter code e.g. en"
+            },
+            "display_code": {
+                "label": "display_code",
+                "type": "mixed",
+                "required": false,
+                "description": "(string|bool) (Optional) The language name will display translated in this language. Accepts a 2-letter code e.g. de. If set to false it will return the translated name in the current language. Default is FALSE."
+            }
+        },
+        "rank": 1
+    },
+    "wpml_unfiltered_admin_string": {
+        "since": false,
+        "group": "WPML",
+        "type": "hook-filter",
+        "name": "wpml_unfiltered_admin_string",
+        "summary": "  Retrieve an option value by-passing WPML ST filters.",
+        "description": "<p>WPML String Translation filters theme\/plugin setting options in order to return translations of their values in the current language.<br>This means that on a WordPress&nbsp;installation with WPML languages set for example to English as primary&nbsp;and German as secondary language, you can expect the German translations to be the values retrieved when calling:<code>get_option('{theme_name}_settings');<\/code> while&nbsp;the current language is German. Then while the current language is English, the English values will be displayed.<\/p><p>This also means however, that when an option value is updated with: <code>update_option('{theme_name}_settings', $new_value);<\/code>&nbsp;the option value will be <em>updated in both<\/em> languages. This may not be always desirable.<\/p><p>This is where the above filter is helpful. The filter allows retrieving an option value by-passing WPML String Translation filters. What is returned is the value in the language it is retrieved in so that further operations taken such as updating it the value in the database will not affect languages other than the one you are working with.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "default_value ": {
+                "label": "default_value ",
+                "type": "mixed",
+                "required": true,
+                "description": "(mixed) (Required) The value to return in case the string does not exist"
+            },
+            "option_name   ": {
+                "label": "option_name   ",
+                "type": "string",
+                "required": false,
+                "description": "(string) (Optional) The name of the option to retrieve. A non SQL-escaped name is expected."
+            }
+        },
+        "rank": 1
+    }
+}

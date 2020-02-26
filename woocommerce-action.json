@@ -1,0 +1,254 @@
+{
+    "woocommerce_account_content": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_account_content",
+        "summary": "Fires in WooCommerce account content",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_account_dashboard": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_account_dashboard",
+        "summary": "Fires in WooCommerce account dashboard",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_account_navigation": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_account_navigation",
+        "summary": "Fires in WooCommerce account navigation",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_after_account_downloads": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_after_account_downloads",
+        "summary": "Fires in WooCommerce after account downloads",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "has_downloads": {
+                "type": "bool",
+                "label": "has_downloads"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_after_available_downloads": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_after_available_downloads",
+        "summary": "Fires in WooCommerce after available downloads",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_after_cart_contents": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_after_cart_contents",
+        "summary": "Fires in WooCommerce after cart contents",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_after_single_product": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_after_single_product",
+        "summary": "Fires in WooCommerce after single product.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_after_single_product_summary": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_after_single_product_summary",
+        "summary": "Fires in WooCommerce after single product summary",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_available_downloads": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_available_downloads",
+        "summary": "Fires in WooCommerce in available downloads",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "downloads": {
+                "type": "mixed",
+                "label": "downloads"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_before_account_downloads": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_before_account_downloads",
+        "summary": "Fires in WooCommerce before account downloads",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "has_downloads": {
+                "type": "bool",
+                "label": "has_downloads"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_before_available_downloads": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_before_available_downloads",
+        "summary": "Fires in WooCommerce before available downloads",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_before_cart_contents": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_before_cart_contents",
+        "summary": "Fires in WooCommerce before cart contents",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_before_single_product": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_before_single_product",
+        "summary": "Fires in WooCommerce before single product",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_before_single_product_summary": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_before_single_product_summary",
+        "summary": "Fires in WooCommerce before single product summary",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_cart_contents": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_cart_contents",
+        "summary": "Fires in WooCommerce in cart contents",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_single_product_summary": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-action",
+        "name": "woocommerce_single_product_summary",
+        "summary": "Fires in WooCommerce in single product summary",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    }
+}

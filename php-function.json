@@ -1,0 +1,754 @@
+{
+    "addslashes": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "addslashes",
+        "summary": "Quote string with slashes.",
+        "description": "<p>Returns a string with backslashes added before characters that need to be escaped. These characters are: <\/p><ul class=\"simplelist\"><li>single quote (<em>&#039;<\/em>)<\/li><li>double quote (<em>&quot;<\/em>)<\/li><li>backslash (<em>\\<\/em>)<\/li><li>NUL (the NUL byte)<\/li><\/ul>",
+        "inputs": {
+            "string": {
+                "label": "string",
+                "type": "string",
+                "description": "The string to be escaped. "
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "string",
+                "type": "string",
+                "description": "Returns the escaped string."
+            }
+        },
+        "rank": 10
+    },
+    "array_diff": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_diff",
+        "summary": "Computes the difference of arrays.",
+        "description": "<p>Compares array1 against one or more other arrays and returns the values in array1 that are not present in any of the other arrays.<\/p>",
+        "inputs": {
+            "array1": {
+                "label": "array1",
+                "type": "array",
+                "description": "Initial array to merge."
+            },
+            "array2": {
+                "label": "array2",
+                "type": "array",
+                "description": "Second array to merge."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "array",
+                "type": "array"
+            }
+        },
+        "return_description": "Returns an array containing all the entries from array1 that are not present in any of the other arrays.",
+        "rank": 10
+    },
+    "array_key_exists": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_key_exists",
+        "summary": "Checks if the given key or index exists in the array.",
+        "description": "<p>array_key_exists() returns TRUE if the given key is set in the array. key can be any value possible for an array index.<\/p>",
+        "inputs": {
+            "key": {
+                "label": "key",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Value to check."
+            },
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "An array with keys to check."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "exists",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE on success or FALSE on failure.",
+        "rank": 10
+    },
+    "array_keys": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_keys",
+        "summary": "Return all the keys or a subset of the keys of an array",
+        "description": "<p>array_keys() returns the keys, numeric and string, from the array.<\/p><p>If a search_value is specified, then only the keys for that value are returned. Otherwise, all the keys from the array are returned.<\/p>",
+        "inputs": {
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "An array containing keys to return."
+            },
+            "search_value": {
+                "label": "search_value",
+                "type": "mixed",
+                "description": "If specified, then only keys containing these values are returned."
+            },
+            "strict": {
+                "label": "strict",
+                "type": "bool",
+                "description": "Determines if strict comparison (===) should be used during the search."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "array",
+                "type": "array"
+            }
+        },
+        "return_description": "Returns an array of all the keys in array.",
+        "rank": 10
+    },
+    "array_merge": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_merge",
+        "summary": "Merge one or more arrays",
+        "description": "<p>Merges the elements of one or more arrays together so that the values of one are appended to the end of the previous one. It returns the resulting array.<\/p><p>If the input arrays have the same string keys, then the later value for that key will overwrite the previous one. If, however, the arrays contain numeric keys, the later value will not overwrite the original value, but will be appended.<\/p><p>Values in the input arrays with numeric keys will be renumbered with incrementing keys starting from zero in the result array.<\/p>",
+        "inputs": {
+            "array1": {
+                "label": "array1",
+                "type": "array",
+                "description": "Initial array to merge."
+            },
+            "array2": {
+                "label": "array2",
+                "type": "array",
+                "description": "Second array to merge."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "array",
+                "type": "array"
+            }
+        },
+        "return_description": "Returns the merged array",
+        "rank": 10
+    },
+    "array_pop": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_pop",
+        "summary": "Pop the element off the end of array.",
+        "description": "<p>array_pop() pops and returns the value of the last element of array, shortening the array by one element.<\/p>",
+        "inputs": {
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "The array to get the value from."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "mixed"
+            }
+        },
+        "return_description": "Returns the value of the last element of array. If array is empty (or is not an array), NULL will be returned.",
+        "rank": 10
+    },
+    "array_push": {
+        "since": false,
+        "group": "PHP",
+        "type": "efct",
+        "name": "array_push",
+        "summary": "Push one or more elements onto the end of array",
+        "description": "<p>array_push() treats array as a stack, and pushes the passed variables onto the end of array. The length of array increases by the number of variables pushed.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "The input array."
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The values to push onto the end of the array."
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "label": "count",
+                "type": "int"
+            }
+        },
+        "return_description": "Returns the new number of elements in the array.",
+        "rank": 10
+    },
+    "array_reverse": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_reverse",
+        "summary": "Return an array with elements in reverse order.",
+        "description": "<p>Takes an input array and returns a new array with the order of the elements reversed.<\/p>",
+        "inputs": {
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "The input array."
+            },
+            "preserve_keys": {
+                "label": "preserve_keys",
+                "type": "bool",
+                "description": "If set to TRUE numeric keys are preserved. Non-numeric keys are not affected by this setting and will always be preserved."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "array",
+                "type": "array"
+            }
+        },
+        "return_description": "Returns the reversed array.",
+        "rank": 10
+    },
+    "array_search": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_search",
+        "summary": "Searches the array for a given value and returns the first corresponding key if successful.",
+        "description": "",
+        "inputs": {
+            "needle": {
+                "label": "needle",
+                "type": "mixed",
+                "description": "The searched value. If needle is a string, the comparison is done in a case-sensitive manner."
+            },
+            "haystack": {
+                "label": "haystack",
+                "type": "array",
+                "description": "The array."
+            },
+            "strict": {
+                "label": "strict",
+                "type": "bool",
+                "description": "If the third parameter strict is set to TRUE then the array_search() function will search for identical elements in the haystack. This means it will also perform a strict type comparison of the needle in the haystack, and objects must be the same instance."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "key",
+                "type": "mixed"
+            }
+        },
+        "return_description": "Returns the key for needle if it is found in the array, FALSE otherwise.",
+        "rank": 10
+    },
+    "array_values": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "array_values",
+        "summary": "Return all the values of an array.",
+        "description": "<p>array_values() returns all the values from the array and indexes the array numerically.<\/p>",
+        "inputs": {
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "The array."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "array",
+                "type": "array"
+            }
+        },
+        "return_description": "Returns an indexed array of values.",
+        "rank": 10
+    },
+    "count": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "count",
+        "summary": "Count all elements in an array.",
+        "description": "",
+        "inputs": {
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "The array to count."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "number",
+                "type": "int"
+            }
+        },
+        "return_description": "Returns the number of elements in array.",
+        "rank": 10
+    },
+    "double": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "double",
+        "summary": "Finds whether the type of a variable is double.",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The variable being evaluated."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if value is a double, FALSE otherwise.",
+        "rank": 10
+    },
+    "func_get_args": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "func_get_args",
+        "summary": "Returns an array comprising a function's argument list",
+        "description": "<p>Gets an array of the function's argument list.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "return": {
+                "type": "array",
+                "label": "return"
+            }
+        },
+        "return_description": "Returns an array in which each element is a copy of the corresponding member of the current user-defined function's argument list.",
+        "rank": 10
+    },
+    "function_exists": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "function_exists",
+        "summary": "Return TRUE if the given function has been defined.",
+        "description": "<p>Checks the list of defined functions, both built-in (internal) and user-defined, for function_name. <\/p>",
+        "inputs": {
+            "function_name": {
+                "label": "function_name",
+                "type": "string",
+                "description": "The string to be escaped. "
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "exists",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if function_name exists and is a function, FALSE otherwise. ",
+        "rank": 2
+    },
+    "in_array": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "in_array",
+        "summary": "Checks if a value exists in an array.",
+        "description": "<p>Searches haystack for needle using loose comparison unless strict is set.<\/p>",
+        "inputs": {
+            "needle": {
+                "label": "needle",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "string",
+                    "int",
+                    "float"
+                ],
+                "description": "The searched value."
+            },
+            "haystack": {
+                "label": "haystack",
+                "type": "array",
+                "description": "The array."
+            },
+            "strict": {
+                "label": "strict",
+                "type": "bool",
+                "description": "If the third parameter strict is set to TRUE then the in_array() function will also check the types of the needle in the haystack."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if needle is found in the array, FALSE otherwise.",
+        "rank": 10
+    },
+    "is_a": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "is_a",
+        "summary": "Checks if the object is of this class or has this class as one of its parents.",
+        "description": "<p>Checks if the given object is of this class or has this class as one of its parents.<\/p>",
+        "inputs": {
+            "object": {
+                "label": "object",
+                "type": "object",
+                "description": "A class name or an object instance."
+            },
+            "class_name": {
+                "label": "class_name",
+                "type": "string",
+                "description": "The class name."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "bool",
+                "type": "bool",
+                "description": "Returns TRUE if the object is of this class or has this class as one of its parents, FALSE otherwise."
+            }
+        },
+        "rank": 10
+    },
+    "is_array": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "is_array",
+        "summary": "Finds whether a variable is an array.",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The variable being evaluated."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if value is an array, FALSE otherwise.",
+        "rank": 10
+    },
+    "is_bool": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "is_bool",
+        "summary": "Finds whether the type of a variable is boolean.",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The variable being evaluated."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if value is a boolean, FALSE otherwise.",
+        "rank": 10
+    },
+    "is_float": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "is_float",
+        "summary": "Finds whether the type of a variable is float.",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The variable being evaluated."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if value is a float, FALSE otherwise.",
+        "rank": 10
+    },
+    "is_int": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "is_int",
+        "summary": "Finds whether the type of a variable is integer.",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The variable being evaluated."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if value is an integer, FALSE otherwise.",
+        "rank": 10
+    },
+    "is_object": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "is_object",
+        "summary": "Finds whether a variable is an object.",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The variable being evaluated."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if value is an object, FALSE otherwise.",
+        "rank": 10
+    },
+    "is_string": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "is_string",
+        "summary": "Finds whether the type of a variable is string.",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The variable being evaluated."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "bool"
+            }
+        },
+        "return_description": "Returns TRUE if value is a string, FALSE otherwise.",
+        "rank": 10
+    },
+    "md5": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "md5",
+        "summary": "Calculate the md5 hash of a string.",
+        "description": "<p>Calculates the MD5 hash of str using the \u00bb RSA Data Security, Inc. MD5 Message-Digest Algorithm, and returns that hash.<\/p>",
+        "inputs": {
+            "string": {
+                "label": "string",
+                "type": "string",
+                "description": "The string."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "md5 string",
+                "type": "string",
+                "description": "Returns the hash as a 32-character hexadecimal number."
+            }
+        },
+        "rank": 10
+    },
+    "nl2br": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "nl2br",
+        "summary": "Inserts HTML line breaks before all newlines in a string.",
+        "description": "<p>Returns string with <br \/> or <br> inserted before all newlines (\\r\\n, \\n\\r, \\n and \\r).<\/p>",
+        "inputs": {
+            "string": {
+                "label": "string",
+                "type": "string",
+                "description": "The input string."
+            },
+            "is_xhtml": {
+                "label": "is_xhtml",
+                "type": "bool",
+                "default": "true",
+                "description": "Whether to use XHTML compatible line breaks or not."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "string",
+                "type": "string",
+                "description": "Returns the altered string."
+            }
+        },
+        "rank": 10
+    },
+    "preg_match": {
+        "since": false,
+        "group": "PHP",
+        "type": "efct",
+        "name": "preg_match",
+        "summary": "Pop the element off the end of array.",
+        "description": "<p>array_pop() pops and returns the value of the last element of array, shortening the array by one element.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "pattern": {
+                "label": "pattern",
+                "type": "string",
+                "description": "The pattern to search for, as a string."
+            },
+            "subject": {
+                "label": "subject",
+                "type": "string",
+                "description": "The input string."
+            },
+            "matches": {
+                "label": "matches",
+                "type": "array",
+                "description": "If matches is provided, then it is filled with the results of search. $matches[0] will contain the text that matched the full pattern, $matches[1] will have the text that matched the first captured parenthesized subpattern, and so on."
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "mixed",
+                "label": "result",
+                "required": false
+            }
+        },
+        "return_description": "Returns 1 if the pattern matches given subject, 0 if it does not, or FALSE if an error occurred.",
+        "rank": 10
+    },
+    "strip_tags": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "strip_tags",
+        "summary": "Strip HTML and PHP tags from a string.",
+        "description": "<p>This function tries to return a string with all NULL bytes, HTML and PHP tags stripped from a given str. It uses the same tag stripping state machine as the fgetss() function.<\/p>",
+        "inputs": {
+            "str": {
+                "label": "str",
+                "type": "string",
+                "description": "The input string."
+            },
+            "allowable_tags": {
+                "label": "allowable_tags",
+                "type": "string",
+                "description": "You can use the optional second parameter to specify tags which should not be stripped."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "string",
+                "type": "string",
+                "description": "Returns the stripped string."
+            }
+        },
+        "rank": 10
+    },
+    "strlen": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "strlen",
+        "summary": "Get string length.",
+        "description": "<p>Returns the length of the given string.<\/p>",
+        "inputs": {
+            "string": {
+                "label": "string",
+                "type": "string",
+                "description": "The string being measured for length."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "length",
+                "type": "int",
+                "description": "The length of the string on success, and 0 if the string is empty."
+            }
+        },
+        "rank": 10
+    },
+    "trim": {
+        "since": false,
+        "group": "PHP",
+        "type": "fct",
+        "name": "trim",
+        "summary": "Strip whitespace (or other characters) from the beginning and end of a string.",
+        "description": "<p>This function returns a string with whitespace stripped from the beginning and end of str.<p><\/p>Without the second parameter, trim() will strip some characters<\/p>",
+        "inputs": {
+            "string": {
+                "label": "string",
+                "type": "string",
+                "description": "The string that will be trimmed."
+            },
+            "character_mask": {
+                "label": "character_mask",
+                "type": "string",
+                "description": "Optionally, the stripped characters can also be specified using the character_mask parameter. Simply list all characters that you want to be stripped. With .. you can specify a range of characters."
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "string",
+                "type": "string"
+            }
+        },
+        "return_description": "The trimmed string.",
+        "rank": 10
+    }
+}

@@ -1,0 +1,637 @@
+{
+    "after_rocket_clean_cache_dir": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_cache_dir",
+        "summary": "Fires after deleting all cache files in the cache folder",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_domain": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_domain",
+        "summary": "Fires after all cache files are deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "root": {
+                "label": "root",
+                "type": "mixed",
+                "description": "path of home cache file"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "language to purge"
+            },
+            "url": {
+                "label": "url",
+                "type": "mixed",
+                "description": "home url"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_file": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_file",
+        "summary": "Fires after a\u00a0cache file is deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "url": {
+                "label": "url",
+                "type": "mixed",
+                "description": "URL corresponding to the cache file"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_home": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_home",
+        "summary": "Fires after the home cache file is deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "root": {
+                "label": "root",
+                "type": "mixed",
+                "description": "path of the home cache file"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the language to purge"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_home_feeds": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_home_feeds",
+        "summary": "Fires after the home feeds cache is deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "mixed",
+                "description": "URLs of the home feeds"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_minify": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_minify",
+        "summary": "",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "ext": {
+                "label": "ext",
+                "type": "mixed",
+                "description": "file extensions to minify, can be js or css"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_post": {
+        "since": "1.3.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_post",
+        "summary": "Fires after cache files related to the post are deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "post": {
+                "label": "post",
+                "type": "mixed",
+                "description": "the post object"
+            },
+            "purge_urls": {
+                "label": "purge_urls",
+                "type": "mixed",
+                "description": "URLs cache files to remove"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the post language"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_term": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_term",
+        "summary": "Fires after deleting cache files related to a term",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "term": {
+                "label": "term",
+                "type": "mixed",
+                "description": "the term object"
+            },
+            "purge_urls": {
+                "label": "purge_urls",
+                "type": "mixed",
+                "description": "URLs of the cache files to remove"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the term language"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_clean_user": {
+        "since": "2.6.12",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_clean_user",
+        "summary": "Fires after all cache files are deleted for a specific user",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "user_id": {
+                "label": "user_id",
+                "type": "mixed",
+                "description": "user ID"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the term language"
+            }
+        },
+        "rank": 1
+    },
+    "after_rocket_rrmdir": {
+        "since": "1.1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_rocket_rrmdir",
+        "summary": "Fires after a file\/directory cache is deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "dir": {
+                "label": "dir",
+                "type": "mixed",
+                "description": "path to the file\/directory to delete"
+            },
+            "dirs_to_preserve": {
+                "label": "dirs_to_preserve",
+                "type": "mixed",
+                "description": "directories that should not be deleted"
+            }
+        },
+        "rank": 1
+    },
+    "after_run_rocket_bot": {
+        "since": "1.1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_run_rocket_bot",
+        "summary": "Fires after the WP Rocket bot is called",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "spider": {
+                "label": "spider",
+                "type": "mixed",
+                "description": "the spider type. Can be\u00a0cache-preload\u00a0or\u00a0cache-json"
+            },
+            "start_url": {
+                "label": "start_url",
+                "type": "mixed",
+                "description": "URL crawled by the bot"
+            }
+        },
+        "rank": 1
+    },
+    "after_run_rocket_sitemap_preload": {
+        "since": "2.8",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "after_run_rocket_sitemap_preload",
+        "summary": "Fires after WP Rocket sitemap preload was called for a sitemap URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "sitemap_type": {
+                "label": "sitemap_type",
+                "type": "mixed",
+                "description": "the sitemap identifier"
+            },
+            "sitemap_url": {
+                "label": "sitemap_url",
+                "type": "mixed",
+                "description": "sitemap URL crawled"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_cache_dir": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_cache_dir",
+        "summary": "Fires before deleting all cache files in the cache folder",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_domain": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_domain",
+        "summary": "Fires before all cache files are deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "root": {
+                "label": "root",
+                "type": "mixed",
+                "description": "path of home cache file"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "language to purge"
+            },
+            "url": {
+                "label": "url",
+                "type": "mixed",
+                "description": "home url"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_file": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_file",
+        "summary": "",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "url": {
+                "label": "url",
+                "type": "mixed",
+                "description": "URL corresponding to the cache file"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_home": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_home",
+        "summary": "Fires before the home cache file is deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "root": {
+                "label": "root",
+                "type": "mixed",
+                "description": "path of the home cache file"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the language to purge"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_home_feeds": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_home_feeds",
+        "summary": "Fires before the home feeds cache is deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "mixed",
+                "description": "URLs of the home feeds"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_minify": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_minify",
+        "summary": "Fires before the minify cache files are deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "ext": {
+                "label": "ext",
+                "type": "mixed",
+                "description": "file extensions to minify, can be js or css"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_post": {
+        "since": "1.3.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_post",
+        "summary": "Fires before cache files related to the post are deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "post": {
+                "label": "post",
+                "type": "mixed",
+                "description": "the post object"
+            },
+            "purge_urls": {
+                "label": "purge_urls",
+                "type": "mixed",
+                "description": "URLs cache files to remove"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the post language"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_term": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_term",
+        "summary": "Fires before deleting cache files related to a term",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "term": {
+                "label": "term",
+                "type": "mixed",
+                "description": "the term object"
+            },
+            "purge_urls": {
+                "label": "purge_urls",
+                "type": "mixed",
+                "description": "URLs of the cache files to remove"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the term language"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_clean_user": {
+        "since": "2.6.12",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_clean_user",
+        "summary": "Fires before all cache files are deleted for a specific user",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "user_id": {
+                "label": "user_id",
+                "type": "mixed",
+                "description": "user ID"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "mixed",
+                "description": "the term language"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_rrmdir": {
+        "since": "1.1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_rocket_rrmdir",
+        "summary": "Fires before a file\/directory cache is deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "dir": {
+                "label": "dir",
+                "type": "mixed",
+                "description": "path to the file\/directory to delete"
+            },
+            "dirs_to_preserve": {
+                "label": "dirs_to_preserve",
+                "type": "mixed",
+                "description": "directories that should not be deleted"
+            }
+        },
+        "rank": 1
+    },
+    "before_run_rocket_bot": {
+        "since": "1.1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_run_rocket_bot",
+        "summary": "Fires before the WP Rocket bot is called",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "spider": {
+                "label": "spider",
+                "type": "mixed",
+                "description": "the spider type. Can be cache-preload or cache-json"
+            },
+            "start_url": {
+                "label": "start_url",
+                "type": "mixed",
+                "description": "URL to be crawled by the bot"
+            }
+        },
+        "rank": 1
+    },
+    "before_run_rocket_sitemap_preload": {
+        "since": "2.8",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "before_run_rocket_sitemap_preload",
+        "summary": "Fires before WP Rocket sitemap preload is called for a sitemap URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "sitemap_type": {
+                "label": "sitemap_type",
+                "type": "mixed",
+                "description": "the sitemap identifier"
+            },
+            "sitemap_url": {
+                "label": "sitemap_url",
+                "type": "mixed",
+                "description": "sitemap URL to be crawled"
+            }
+        },
+        "rank": 1
+    },
+    "wp_rocket_first_install": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "wp_rocket_first_install",
+        "summary": "Fires when WP Rocket is installed for the first time",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "wp_rocket_loaded": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "wp_rocket_loaded",
+        "summary": "Fires after WP Rocket is correctly loaded",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            }
+        },
+        "rank": 1
+    },
+    "wp_rocket_upgrade": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-action",
+        "name": "wp_rocket_upgrade",
+        "summary": "Fires when WP Rocket is updated",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "WP_ROCKET_VERSION": {
+                "label": "WP_ROCKET_VERSION",
+                "type": "mixed",
+                "description": "WP Rocket new version after update"
+            },
+            "actual_version": {
+                "label": "actual_version",
+                "type": "mixed",
+                "description": "WP Rocket previous version before update"
+            }
+        },
+        "rank": 1
+    }
+}

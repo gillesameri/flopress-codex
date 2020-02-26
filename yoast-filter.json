@@ -1,0 +1,422 @@
+{
+    "wp_seo_get_bc_ancestors": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wp_seo_get_bc_ancestors",
+        "summary": "Allows changing the ancestors for the current page in the breadcrumb.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "array": {
+                "type": "array",
+                "label": "array",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wp_seo_get_bc_title": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wp_seo_get_bc_title",
+        "summary": "Allows changing the title used for the current page in the breadcrumb.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_author_link": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_author_link",
+        "summary": "Change the author link added in the <head> or return false to disable it.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_canonical": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-filter",
+        "name": "wpseo_canonical",
+        "summary": "Allows changing of the canonical URL. Returning false will disable the canonical.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_json_ld_output": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_json_ld_output",
+        "summary": "Allows you to filter the output of the JSON+LD.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_locale": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_locale",
+        "summary": "Allows changing the locale used in the opengraph set (and possibly in other locations later on).",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_metadesc": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_metadesc",
+        "summary": "Allows changing of the meta description. Returning false will disable the meta description.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_metakey": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_metakey",
+        "summary": "Allows changing of the meta keywords. Returning false will disable the meta keywords.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_next_rel_link": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_next_rel_link",
+        "summary": "Filter to change the rel=\"next\" link output by WordPress SEO, by returning false they won\u2019t show.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_opengraph_image": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_opengraph_image",
+        "summary": "Allows changing the image(s) being output in the opengraph set.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_opengraph_image_size": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_opengraph_image_size",
+        "summary": " Allows changing the image size used for the output of the featured image in the opengraph set.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "int": {
+                "type": "int",
+                "label": "int",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_opengraph_type": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_opengraph_type",
+        "summary": "Allows changing the content type for the current page being output in the opengraph set.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_options": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_options",
+        "summary": "Allows you to filter the array of options used by the WP SEO plugin, mostly so you can add your own if needed.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "array": {
+                "type": "array",
+                "label": "array",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_prev_rel_link": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_prev_rel_link",
+        "summary": "Filter to change the rel=\"prev\" link output by WordPress SEO, by returning false they won\u2019t show.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_robots": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_robots",
+        "summary": "Allows filtering of the meta robots output of Yoast SEO.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_show_date_in_snippet_preview": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_show_date_in_snippet_preview",
+        "summary": "Returning false on this will prevent the date from showing up in the snippet preview.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "bool": {
+                "type": "bool",
+                "label": "bool",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_title": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_title",
+        "summary": "Allows changing the title being output.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_use_page_analysis": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_use_page_analysis",
+        "summary": "Returning false on this will disable the page analysis score from showing up in publish box and edit posts pages.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "bool": {
+                "type": "bool",
+                "label": "bool",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_whitelist_permalink_vars": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_whitelist_permalink_vars",
+        "summary": "Allows changing the array of whitelisted permalink variables, useful for plugin authors who get complaints from users who are using the plugins permalink redirect function.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "array": {
+                "type": "array",
+                "label": "array",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_xml_sitemap_img_src": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-fitler",
+        "name": "wpseo_xml_sitemap_img_src",
+        "summary": "Allows you to change the URL for images embedded in the XML sitemap. Most common usecase is to make sure the CDN URL is embedded.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "type": "string",
+                "label": "string",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}

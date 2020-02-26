@@ -1,0 +1,672 @@
+{
+    "acf_add_options_page": {
+        "since": "5.0.0",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "acf_add_options_page",
+        "summary": "Add a global options page to the WP dashboard",
+        "description": "<p>This function will add global options page to the \u2018wp-admin\u2019 dashboard.<\/p><p>All data saved on an options page is global. This means it is not attached to any particular post or page, but is saved in the wp_options table.<\/p><p>This function must be used before the action admin_menu (priority 99) as this is when the options pages are added to WordPress.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "mixed",
+                "description": "A string for the page title, or an array of settings. If left blank, default settings will be used.",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "array",
+                "label": "settings",
+                "required": false
+            }
+        },
+        "return_description": "This function will return an array containing all final page settings. This is useful to find the page\u2019s menu_slug and use it later when adding child options pages.",
+        "rank": 1
+    },
+    "acf_add_options_sub_page": {
+        "since": "5.0.0",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "acf_add_options_sub_page",
+        "summary": "Add a global options sub page to the WP dashboard.",
+        "description": "<p>This function will add a new options sub page to the wp-admin sidebar.<\/p><p>All data saved on an options page is global. This means it is not attached to any particular post or page, but is saved in the wp_options table.<\/p><p>This function must be used before the action admin_menu (priority 99) as this is when the options pages are added to WordPress.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "page": {
+                "label": "page",
+                "type": "mixed",
+                "description": "A string for the page title, or an array of settings. If left blank, default settings will be used.",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "add_row": {
+        "since": "5.3.2",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "add_row",
+        "summary": "Adds a new row of data to an existing repeater field value.",
+        "description": "<p>This function will add a new row of data to an existing repeater field field value.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The parent field name or key.",
+                "required": true
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The new value to append.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID of which the value is saved to. Defaults to current post.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "int",
+                "label": "count",
+                "required": false
+            }
+        },
+        "return_description": "This function will return the new count of rows or false upon failure.",
+        "rank": 1
+    },
+    "add_sub_row": {
+        "since": "5.4.7",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "add_sub_row",
+        "summary": "Adds a row of data for an existing repeater sub field value.",
+        "description": "<p>This function will add (append) a row of values to an existing repeater field or flexible content sub field value. This function is different to add_row() which will add a row to a parent field. You may use this function inside or outside of a have_rows() loop to target which sub field\u2019s value you intend to modify.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "mixed",
+                "description": "The sub field name or key, or an array of ancestors and row numbers.",
+                "required": true
+            },
+            "row": {
+                "label": "row",
+                "type": "array",
+                "description": "The new row value to save in the database.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID of which the value is saved to",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "mixed",
+                "label": "result",
+                "required": false
+            }
+        },
+        "return_description": "This function will return the new count of rows or false upon failure.",
+        "rank": 1
+    },
+    "delete_row": {
+        "since": "5.3.2",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "delete_row",
+        "summary": "Deletes a row of data from an existing repeater \/ flexible content field value.",
+        "description": "<p>This function will delete a row of data from an existing repeater field or flexible content field value.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The parent field name or key.",
+                "required": true
+            },
+            "row": {
+                "label": "row",
+                "type": "int",
+                "description": "The row number to update.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID of which the value is saved to. Defaults to current post.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "bool",
+                "label": "result",
+                "required": false
+            }
+        },
+        "return_description": "This function will return true upon success or false upon failure.",
+        "rank": 1
+    },
+    "delete_sub_field": {
+        "since": "5.0.0",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "delete_sub_field",
+        "summary": "Delete an existing sub field value.",
+        "description": "<p>This function can be used to delete an existing sub field value. If used within a have_rows() loop, the current row will be used to delete the sub field value. If used outside of a have_rows() loop, the row and parent identifiers can be specified to target the correct sub field value.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "types": [
+                    "string",
+                    "array"
+                ],
+                "description": "The sub field name or key, or an array of ancestors and row numbers.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID where the value is saved. Defaults to the current post.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "label": "result",
+                "type": "bool",
+                "required": false
+            }
+        },
+        "return_description": "This function will return true upon success or false upon failure.",
+        "rank": 1
+    },
+    "delete_sub_row": {
+        "since": "5.4.7",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "delete_sub_row",
+        "summary": "Deletes a row of data from an existing repeater \/ flexible content sub field value.",
+        "description": "<p>This function will delete a specific row of values from an existing repeater field or flexible content sub field value. This function is different to delete_row() which will delete a row from a parent field. You may use this function inside or outside of a have_rows() loop to target which sub field\u2019s value you intend to modify.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "mixed",
+                "description": "The sub field name or key, or an array of ancestors and row numbers ",
+                "required": true
+            },
+            "i": {
+                "label": "i",
+                "type": "int",
+                "description": "The row number you wish to delete.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID of which the value is saved to",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "bool",
+                "label": "result",
+                "required": false
+            }
+        },
+        "return_description": "This function will return true upon success or false upon failure.",
+        "rank": 1
+    },
+    "get_row": {
+        "since": "5.3.3",
+        "group": "ACF Pro",
+        "type": "fct",
+        "name": "get_row",
+        "summary": "Return an array containing all sub field values for the current row.",
+        "description": "<p>This function will return an array containing all sub field values for the current row within a have_rows() loop.<\/p>",
+        "inputs": {
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether or not to format the value loaded from the db. Defaults to false.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "array",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "get_row_index": {
+        "since": "5.3.4",
+        "group": "ACF Pro",
+        "type": "fct",
+        "name": "get_row_index",
+        "summary": "Returns the current row index within a have_rows() loop.",
+        "description": "<p>This function will return the current loop count within a have_rows() loop.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "mixed",
+                "required": false
+            }
+        },
+        "return_description": "This function will return the row index starting from 1 (first row = 1, second row =2, etc). It is possible to change the index starting point so that the first row = 0 using the row_index_offset setting.",
+        "rank": 1
+    },
+    "get_row_layout": {
+        "since": "3.1.0",
+        "group": "ACF Pro",
+        "type": "fct",
+        "name": "get_row_layout",
+        "summary": "Returns the current row layout name within a have_rows() loop.",
+        "description": "<p>This function returns the current layout (string) within a the_flexible_field() loop. A flexible content field may hold many different layout options which can be placed on a page in any order.<\/p><p>It is necessary to use this function in your template to decide what code to write and which sub fields to call.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "string",
+                "required": false
+            }
+        },
+        "return_description": "This function will return the row index starting from 1 (first row = 1, second row =2, etc). It is possible to change the index starting point so that the first row = 0 using the row_index_offset setting.",
+        "rank": 1
+    },
+    "get_sub_field": {
+        "since": false,
+        "group": "ACF Pro",
+        "type": "fct",
+        "name": "get_sub_field",
+        "summary": "Returns the value of a specific sub field.",
+        "description": "<p>This function will return a sub field value from a repeater field or flexible content field loop. This function is used within a have_rows() loop.<\/p>",
+        "inputs": {
+            "sub_field_name": {
+                "label": "sub_field_name",
+                "type": "string",
+                "description": "The name of the field to be retrieved. eg \"page_content\"",
+                "required": true
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether or not to format the value loaded from the db. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "mixed",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "get_sub_field_object": {
+        "since": "4.0",
+        "group": "ACF Pro",
+        "type": "fct",
+        "name": "get_sub_field_object",
+        "summary": "Returns an array of field data (field object + value) for a specific sub field.",
+        "description": "<p>The field\u2019s value will also be loaded unless otherwise specified.<\/p>",
+        "inputs": {
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The field name or field key.",
+                "required": true
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether to apply formatting logic. Defaults to true.",
+                "required": false,
+                "default": "true"
+            },
+            "load_value": {
+                "label": "load_value",
+                "type": "bool",
+                "description": "Whether to load the field\u2019s value. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "array",
+                "required": false
+            }
+        },
+        "return_description": "This function will return an array. Please note that each field contains unique settings.",
+        "rank": 1
+    },
+    "have_rows": {
+        "since": "4.3.0",
+        "group": "ACF Pro",
+        "type": "fct",
+        "name": "have_rows",
+        "summary": "This function is used to loop over a repeater or flexible content field's value.",
+        "description": "<p>This function checks to see if a field (such as a Repeater or Flexible Content field) has any rows of data to loop over. This is a boolean function, meaning it returns either true or false.<\/p><p>This function is intended to be used in conjunction with the_row() to step through available values.<\/p><p>Using have_rows() together with the_row() is intended to feel native much like the have_posts() and the_post() WordPress functions.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "description": "The name of the repeater \/ flexible content field to loop through. eg \u201cgallery_images\u201d ",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Specific post ID where your value was entered. Defaults to current post ID. This can also be options \/ taxonomies \/ users \/ etc.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "array",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "the_sub_field": {
+        "since": false,
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "the_sub_field",
+        "summary": "Displays the value of a specific sub field.",
+        "description": "<p>This function will display a sub field value from a repeater field or flexible content field loop. This function is used within a have_rows() loop.<\/p><p>This function is the same as echo get_sub_field(\"name\");<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "sub_field_name": {
+                "label": "sub_field_name",
+                "type": "string",
+                "description": "The name of the field to be retrieved. eg \"page_content\"",
+                "required": true
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether to apply formatting logic. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "update_row": {
+        "since": "5.3.2",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "update_row",
+        "summary": "Updates a row of data for an existing repeater \/ flexible content field value.",
+        "description": "<p>This function will update a row of data for an existing repeater field or flexible content field value.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The parent field name or key.",
+                "required": true
+            },
+            "row": {
+                "label": "row",
+                "type": "int",
+                "description": "The row number to update.",
+                "required": true
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The new value to append.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID of which the value is saved to. Defaults to current post.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "bool",
+                "label": "result",
+                "required": false
+            }
+        },
+        "return_description": "This function will return true upon success or false upon failure.",
+        "rank": 1
+    },
+    "update_sub_field": {
+        "since": "5.0.0",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "update_sub_field",
+        "summary": "Updates a sub field value.",
+        "description": "<p>This function can be used to update an existing sub field value. If used within a have_rows() loop, the current row will be used to update the sub field value. If used outside of a have_rows() loop, the rows and parents can be specified to target the correct value place.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The sub field name or key, or an array of ancestors and row numbers.",
+                "required": true
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The new value to save in the database.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID of which the value is saved to.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "bool",
+                "label": "result",
+                "required": false
+            }
+        },
+        "return_description": "This function will return true upon success or false upon failure.",
+        "rank": 1
+    },
+    "update_sub_row": {
+        "since": "5.4.7",
+        "group": "ACF Pro",
+        "type": "efct",
+        "name": "update_sub_row",
+        "summary": "Updates a row of data for an existing repeater \/ flexible content sub field value.",
+        "description": "<p>This function will update a row of values of an existing repeater field or flexible content sub field value. This function is different to update_row() which will update a row of a parent field. You may use this function inside or outside of a have_rows() loop to target which sub field\u2019s value you intend to modify.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "mixed",
+                "description": "The sub field name or key, or an array of ancestors and row numbers.",
+                "required": true
+            },
+            "i": {
+                "label": "i",
+                "type": "int",
+                "description": "The row number you wish to update.",
+                "required": true
+            },
+            "row": {
+                "label": "row",
+                "type": "array",
+                "description": "The new row value to save in the database.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID of which the value is saved to",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "bool",
+                "label": "result",
+                "required": false
+            }
+        },
+        "return_description": "This function will return true upon success or false upon failure.",
+        "rank": 1
+    }
+}

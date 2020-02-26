@@ -1,0 +1,43 @@
+{
+    "wsal_post_meta_updated": {
+        "since": false,
+        "group": "WP Security Audit Log",
+        "type": "hook-action",
+        "name": "wsal_post_meta_updated",
+        "summary": "This hook runs before the logging of post meta update events, such as event ID 2062 and 2054 (refer to the complete list of WordPress activity log event IDs for more details).",
+        "description": "<p>This hook can be used to log events of updated post meta from the front-end, since the plugin only keeps a log of post meta updates done via the WordPress admin pages.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "meta_id": {
+                "label": "meta_id",
+                "type": "int",
+                "description": "Unique ID of the meta data."
+            },
+            "object_id": {
+                "label": "object_id",
+                "type": "int",
+                "description": "Post ID to which the meta data belongs to."
+            },
+            "old_meta": {
+                "label": "old_meta",
+                "type": "array",
+                "description": "Array of the meta data containing key & values of old meta data before it is updated."
+            },
+            "meta_key": {
+                "label": "meta_key",
+                "type": "string",
+                "description": "Key of the meta data being updated."
+            },
+            "meta_value": {
+                "label": "meta_value",
+                "type": "mixed",
+                "description": "Value of the meta data being updated."
+            }
+        },
+        "return_description": "",
+        "rank": ""
+    }
+}

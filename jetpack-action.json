@@ -1,0 +1,1552 @@
+{
+    "atd_http_post_error": {
+        "since": "1.2.3",
+        "group": "Jetpack",
+        "name": "atd_http_post_error",
+        "type": "hook-action",
+        "summary": "Fires when there is a post error to AtD.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "http-error": {
+                "label": "http-error",
+                "type": "int",
+                "required": false,
+                "description": "http-error The error that AtD runs into."
+            }
+        },
+        "rank": 1
+    },
+    "contact_form_akismet": {
+        "since": "2.2.0",
+        "group": "Jetpack",
+        "name": "contact_form_akismet",
+        "type": "hook-action",
+        "summary": "Fires after a comment has been marked by Akismet.<p>Typically this means the comment is spam.<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "comment_status": {
+                "label": "comment_status",
+                "type": "string",
+                "required": false,
+                "description": "Usually is \u2019spam\u2019, otherwise \u2019ham\u2019."
+            },
+            "akismet_values": {
+                "label": "akismet_values",
+                "type": "array",
+                "required": false,
+                "description": "From \u2019_feedback_akismet_values\u2019 in comment meta"
+            }
+        },
+        "rank": 1
+    },
+    "csstidy_optimize_postparse": {
+        "since": "1.8.0",
+        "group": "Jetpack",
+        "name": "csstidy_optimize_postparse",
+        "type": "hook-action",
+        "summary": "Fires after parsing the css.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "this": {
+                "label": "this",
+                "type": "obj",
+                "required": false,
+                "description": "CSSTidy object."
+            }
+        },
+        "rank": 1
+    },
+    "csstidy_optimize_subvalue": {
+        "since": "1.8.0",
+        "group": "Jetpack",
+        "name": "csstidy_optimize_subvalue",
+        "type": "hook-action",
+        "summary": "Fires before optimizing the Custom CSS subvalue.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "this": {
+                "label": "this",
+                "type": "obj",
+                "required": false,
+                "description": "CSSTidy object."
+            }
+        },
+        "rank": 1
+    },
+    "custom_css_submitbox_misc_actions": {
+        "since": "2.0.3",
+        "group": "Jetpack",
+        "name": "custom_css_submitbox_misc_actions",
+        "type": "hook-action",
+        "summary": "Allows addition of elements to the submit box for custom css on the wp-admin side.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "custom_design_header": {
+        "since": "1.7.0",
+        "group": "Jetpack",
+        "name": "custom_design_header",
+        "type": "hook-action",
+        "summary": "Fires right before the custom css page begins.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "did_jetpack_search_query": {
+        "since": "5.0.0",
+        "group": "Jetpack",
+        "name": "did_jetpack_search_query",
+        "type": "hook-action",
+        "summary": "Fires after a search request has been performed.<p>Includes the following info in the $query parameter:<\/p> <p>array args Array of Elasticsearch arguments for the search array response Raw API response, JSON decoded int response_code HTTP response code of the request float elapsed_time Roundtrip time of the search request, in milliseconds float es_time Amount of time Elasticsearch spent running the request, in milliseconds string url API url that was queried<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "query": {
+                "label": "query",
+                "type": "array",
+                "required": false,
+                "description": "Array of information about the query performed"
+            }
+        },
+        "rank": 1
+    },
+    "display_activate_module_setting_-module_id": {
+        "since": "3.8.0",
+        "group": "Jetpack",
+        "name": "display_activate_module_setting_{$module_id}",
+        "type": "hook-action",
+        "summary": "Fires to diplay a custom module activation screen.<p>To add a module actionation screen use Jetpack::module_configuration_activation_screen method. Example: Jetpack::module_configuration_activation_screen( 'manage', array( $this, 'manage_activate_screen' ) );<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "failed_jetpack_search_query": {
+        "since": "5.6.0",
+        "group": "Jetpack",
+        "name": "failed_jetpack_search_query",
+        "type": "hook-action",
+        "summary": "Fires after a search query request has failed",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "Array": {
+                "label": "Array",
+                "type": "array",
+                "required": false,
+                "description": "Array containing the response code and response from the failed search query"
+            }
+        },
+        "rank": 1
+    },
+    "grunion_pre_message_sent": {
+        "since": "1.3.1",
+        "group": "Jetpack",
+        "name": "grunion_pre_message_sent",
+        "type": "hook-action",
+        "summary": "Fires right before the contact form message is sent via email to the recipient specified in the contact form.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "integer",
+                "required": false,
+                "description": "Post contact form lives on"
+            },
+            "all_values": {
+                "label": "all_values",
+                "type": "array",
+                "required": false,
+                "description": "Contact form fields"
+            },
+            "extra_values": {
+                "label": "extra_values",
+                "type": "array",
+                "required": false,
+                "description": "Contact form fields not included in $all_values"
+            }
+        },
+        "rank": 1
+    },
+    "infinite_scroll_render": {
+        "since": "2.0.0",
+        "group": "Jetpack",
+        "name": "infinite_scroll_render",
+        "type": "hook-action",
+        "summary": "Fires when rendering Infinite Scroll posts.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_bump_stats_extras": {
+        "since": "3.6.0",
+        "group": "Jetpack",
+        "name": "jetpack_bump_stats_extras",
+        "type": "hook-action",
+        "summary": "Fires for each Social Media account being saved in the Social Media Widget settings.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "social-media-links-widget-svcs": {
+                "label": "social-media-links-widget-svcs",
+                "type": "string",
+                "required": false,
+                "description": "social-media-links-widget-svcs Type of action to track."
+            },
+            "val": {
+                "label": "val",
+                "type": "string",
+                "required": false,
+                "description": "Name of the Social Media account being saved."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_contact_info_widget_end": {
+        "since": "3.9.2",
+        "group": "Jetpack",
+        "name": "jetpack_contact_info_widget_end",
+        "type": "hook-action",
+        "summary": "Fires at the end of Contact Info widget.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_contact_info_widget_start": {
+        "since": "3.9.2",
+        "group": "Jetpack",
+        "name": "jetpack_contact_info_widget_start",
+        "type": "hook-action",
+        "summary": "Fires at the beginning of the Contact Info widget, after the title.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_copy_post": {
+        "since": "7.0.0",
+        "group": "Jetpack",
+        "name": "jetpack_copy_post",
+        "type": "hook-action",
+        "summary": "Fires after all updates have been performed, and default content filters have been added.<p>Allows for any cleanup or post operations, and default content filters can be removed or modified.<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "source_post": {
+                "label": "source_post",
+                "type": "WP_Post",
+                "required": false,
+                "description": "Post object that was copied."
+            },
+            "target_post_id": {
+                "label": "target_post_id",
+                "type": "int",
+                "required": false,
+                "description": "Target post ID."
+            },
+            "update_results": {
+                "label": "update_results",
+                "type": "array",
+                "required": false,
+                "description": "Results of all update operations, allowing action to be taken."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_custom_css_customizer_controls": {
+        "since": "4.4.2",
+        "group": "Jetpack",
+        "name": "jetpack_custom_css_customizer_controls",
+        "type": "hook-action",
+        "summary": "An action to grab on to if another Jetpack Module would like to add its own controls.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "wp_customize": {
+                "label": "wp_customize",
+                "type": "mixed",
+                "required": false,
+                "description": "The WP_Customize object."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_daily_akismet_meta_cleanup_after": {
+        "since": "6.1.0",
+        "group": "Jetpack",
+        "name": "jetpack_daily_akismet_meta_cleanup_after",
+        "type": "hook-action",
+        "summary": "Fires right after deleting the _feedback_akismet_values post meta on $feedback_ids",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "feedback_ids": {
+                "label": "feedback_ids",
+                "type": "array",
+                "required": false,
+                "description": "list of feedback post ID"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_daily_akismet_meta_cleanup_before": {
+        "since": "6.1.0",
+        "group": "Jetpack",
+        "name": "jetpack_daily_akismet_meta_cleanup_before",
+        "type": "hook-action",
+        "summary": "Fires right before deleting the _feedback_akismet_values post meta on $feedback_ids",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "feedback_ids": {
+                "label": "feedback_ids",
+                "type": "array",
+                "required": false,
+                "description": "list of feedback post ID"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_embed_to_shortcode": {
+        "since": "1.2.0",
+        "group": "Jetpack",
+        "name": "jetpack_embed_to_shortcode",
+        "type": "hook-action",
+        "summary": "Fires before the YouTube embed is transformed into a shortcode.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "youtube": {
+                "label": "youtube",
+                "type": "string",
+                "required": false,
+                "description": "youtube Shortcode name."
+            },
+            "url": {
+                "label": "url",
+                "type": "string",
+                "required": false,
+                "description": "YouTube video URL."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_holiday_snow_option_updated": {
+        "since": "2.0.3",
+        "group": "Jetpack",
+        "name": "jetpack_holiday_snow_option_updated",
+        "type": "hook-action",
+        "summary": "Fires when the holiday snow option is updated.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_holiday_snowing": {
+        "since": "2.0.3",
+        "group": "Jetpack",
+        "name": "jetpack_holiday_snowing",
+        "type": "hook-action",
+        "summary": "Fires when it's snowing.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_plugin_installed": {
+        "since": "5.8.0",
+        "group": "Jetpack",
+        "name": "jetpack_plugin_installed",
+        "type": "hook-action",
+        "summary": "Signals to the sync listener that a plugin was installed and a sync action reflecting the installation and the plugin info should be sent",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "()": {
+                "label": "()",
+                "type": "array",
+                "required": false,
+                "description": "() $plugin, Plugin Data"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_plugin_update_failed": {
+        "since": "5.8.0",
+        "group": "Jetpack",
+        "name": "jetpack_plugin_update_failed",
+        "type": "hook-action",
+        "summary": "Sync that a plugin update failed",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "plugin": {
+                "label": "plugin",
+                "type": "string",
+                "required": false,
+                "description": ", Plugin slug"
+            },
+            "Error": {
+                "label": "Error",
+                "type": "string",
+                "required": false,
+                "description": "Error message"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_plugins_updated": {
+        "since": "5.8.0",
+        "group": "Jetpack",
+        "name": "jetpack_plugins_updated",
+        "type": "hook-action",
+        "summary": "Sync that a plugin update",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "()": {
+                "label": "()",
+                "type": "array",
+                "required": false,
+                "description": "() $plugin, Plugin Data"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_post_meta_batch_delete": {
+        "since": "6.1.0",
+        "group": "Jetpack",
+        "name": "jetpack_post_meta_batch_delete",
+        "type": "hook-action",
+        "summary": "Used for syncing deletion of batch post meta",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "feedback_ids": {
+                "label": "feedback_ids",
+                "type": "array",
+                "required": false,
+                "description": "feedback post IDs"
+            },
+            "meta_key": {
+                "label": "meta_key",
+                "type": "string",
+                "required": false,
+                "description": "to be deleted"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_search_render_filters": {
+        "since": "5.8.0",
+        "group": "Jetpack",
+        "name": "jetpack_search_render_filters",
+        "type": "hook-action",
+        "summary": "Responsible for rendering filters to narrow down search results.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "filters": {
+                "label": "filters",
+                "type": "array",
+                "required": false,
+                "description": "The possible filters for the current query."
+            },
+            "post_types": {
+                "label": "post_types",
+                "type": "array",
+                "required": false,
+                "description": "An array of post types to limit filtering to."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_search_render_filters_widget_title": {
+        "since": "5.7.0",
+        "group": "Jetpack",
+        "name": "jetpack_search_render_filters_widget_title",
+        "type": "hook-action",
+        "summary": "Responsible for displaying the title of the Jetpack Search filters widget.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "required": false,
+                "description": "The widget\u2019s title"
+            },
+            "args[\u2019before_title\u2019]": {
+                "label": "args[\u2019before_title\u2019]",
+                "type": "string",
+                "required": false,
+                "description": "The HTML tag to display before the title"
+            },
+            "args[\u2019after_title\u2019]": {
+                "label": "args[\u2019after_title\u2019]",
+                "type": "string",
+                "required": false,
+                "description": "The HTML tag to display after the title"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_site_verification_validate": {
+        "since": "3.0.0",
+        "group": "Jetpack",
+        "name": "jetpack_site_verification_validate",
+        "type": "hook-action",
+        "summary": "Fire after each Verification code was validated.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "key": {
+                "label": "key",
+                "type": "string",
+                "required": false,
+                "description": "Verification service name."
+            },
+            "code": {
+                "label": "code",
+                "type": "string",
+                "required": false,
+                "description": "Verification service code provided in field in the Tools menu."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_sso_handle_login": {
+        "since": "2.6.0",
+        "group": "Jetpack",
+        "name": "jetpack_sso_handle_login",
+        "type": "hook-action",
+        "summary": "Fires after we got login information from WordPress.com.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "user": {
+                "label": "user",
+                "type": "array",
+                "required": false,
+                "description": "Local User information."
+            },
+            "user_data": {
+                "label": "user_data",
+                "type": "object",
+                "required": false,
+                "description": "WordPress.com User Login information."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_sso_pre_handle_login": {
+        "since": "2.6.0",
+        "group": "Jetpack",
+        "name": "jetpack_sso_pre_handle_login",
+        "type": "hook-action",
+        "summary": "Fires before Jetpack's SSO modifies the log in form.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "user_data": {
+                "label": "user_data",
+                "type": "object",
+                "required": false,
+                "description": "WordPress.com User information."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_stats_extra": {
+        "since": "1.6.0",
+        "group": "Jetpack",
+        "name": "jetpack_stats_extra",
+        "type": "hook-action",
+        "summary": "Fires when an item is displayed on the front end.<p>Can be used to track stats about the number of displays for a specific item<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "widget_view": {
+                "label": "widget_view",
+                "type": "string",
+                "required": false,
+                "description": "widget_view Item type (e.g. widget, or embed)."
+            },
+            "grofile": {
+                "label": "grofile",
+                "type": "string",
+                "required": false,
+                "description": "grofile     Item description (e.g. grofile, goodreads)."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_subscriptions_comment_form_submission": {
+        "since": "5.5.0",
+        "group": "Jetpack",
+        "name": "jetpack_subscriptions_comment_form_submission",
+        "type": "hook-action",
+        "summary": "Fires on each comment subscription form submission.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "result": {
+                "label": "result",
+                "type": "NULL",
+                "required": false,
+                "description": "Result of form submission: NULL on success, WP_Error otherwise."
+            },
+            "post_ids": {
+                "label": "post_ids",
+                "type": "Array",
+                "required": false,
+                "description": "An array of post IDs that the user subscribed to, 0 means blog subscription."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_subscriptions_form_submission": {
+        "since": "3.7.0",
+        "group": "Jetpack",
+        "name": "jetpack_subscriptions_form_submission",
+        "type": "hook-action",
+        "summary": "Fires on each subscription form submission.View Example",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "result": {
+                "label": "result",
+                "type": "string",
+                "required": false,
+                "description": "Result of form submission: success, invalid_email, already, error."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_sync_action_before_enqueue": {
+        "since": "5.9.0",
+        "group": "Jetpack",
+        "name": "jetpack_sync_action_before_enqueue",
+        "type": "hook-action",
+        "summary": "Add an action hook to execute when anything on the whitelist gets sent to the queue to sync.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_sync_save_post": {
+        "since": "5.8.0",
+        "group": "Jetpack",
+        "name": "jetpack_sync_save_post",
+        "type": "hook-action",
+        "summary": "Filter that is used to add to the post flags ( meta data ) when a post gets published",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "post_ID": {
+                "label": "post_ID",
+                "type": "int",
+                "required": false,
+                "description": "the post ID"
+            },
+            "post": {
+                "label": "post",
+                "type": "mixed",
+                "required": false,
+                "description": "WP_POST object"
+            },
+            "update": {
+                "label": "update",
+                "type": "bool",
+                "required": false,
+                "description": "Whether this is an existing post being updated or not."
+            },
+            "state": {
+                "label": "state",
+                "type": "mixed",
+                "required": false,
+                "description": "state"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_widget_top_posts_after_fields": {
+        "since": "3.9.3",
+        "group": "Jetpack",
+        "name": "jetpack_widget_top_posts_after_fields",
+        "type": "hook-action",
+        "summary": "Fires after the fields are displayed in the Top Posts Widget settings in wp-admin.<p>Allow adding extra content after the fields are displayed.<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "{     @param array $instance The widget instance.     @param object $this The class object. }"
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_widget_top_posts_after_post": {
+        "since": "3.2.0",
+        "group": "Jetpack",
+        "name": "jetpack_widget_top_posts_after_post",
+        "type": "hook-action",
+        "summary": "Fires after each Top Post result, inside <li>.View Example",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "post[\u2019post_id\u2019]": {
+                "label": "post[\u2019post_id\u2019]",
+                "type": "string",
+                "required": false,
+                "description": "Post ID."
+            }
+        },
+        "rank": 1
+    },
+    "jetpack_widget_top_posts_before_post": {
+        "since": "3.2.0",
+        "group": "Jetpack",
+        "name": "jetpack_widget_top_posts_before_post",
+        "type": "hook-action",
+        "summary": "Fires before each Top Post result, inside <li>.View Example",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "post[\u2019post_id\u2019]": {
+                "label": "post[\u2019post_id\u2019]",
+                "type": "string",
+                "required": false,
+                "description": "Post ID."
+            }
+        },
+        "rank": 1
+    },
+    "jp_carousel_enqueue_assets": {
+        "since": "1.6.0",
+        "group": "Jetpack",
+        "name": "jp_carousel_enqueue_assets",
+        "type": "hook-action",
+        "summary": "Fires after carousel assets are enqueued for the first time.<p>Allows for adding additional assets to the carousel page.<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "first_run": {
+                "label": "first_run",
+                "type": "bool",
+                "required": false,
+                "description": "First load if Carousel on the page."
+            },
+            "localized_strings": {
+                "label": "localized_strings",
+                "type": "array",
+                "required": false,
+                "description": "Array of strings passed to the Jetpack js file."
+            }
+        },
+        "rank": 1
+    },
+    "jp_carousel_post_attachment_comment": {
+        "since": "1.6.0",
+        "group": "Jetpack",
+        "name": "jp_carousel_post_attachment_comment",
+        "type": "hook-action",
+        "summary": "Fires before adding a new comment to the database via the get_attachment_comments ajax endpoint.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jp_carousel_thumbnails_shown": {
+        "since": "1.6.0",
+        "group": "Jetpack",
+        "name": "jp_carousel_thumbnails_shown",
+        "type": "hook-action",
+        "summary": "Fires when thumbnails are shown in Carousel.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "jpp_kill_login": {
+        "since": "3.4.0",
+        "group": "Jetpack",
+        "name": "jpp_kill_login",
+        "type": "hook-action",
+        "summary": "Fires before every killed login.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "ip": {
+                "label": "ip",
+                "type": "string",
+                "required": false,
+                "description": "IP flagged by Protect."
+            }
+        },
+        "rank": 1
+    },
+    "jpp_log_failed_attempt": {
+        "since": "3.4.0",
+        "group": "Jetpack",
+        "name": "jpp_log_failed_attempt",
+        "type": "hook-action",
+        "summary": "Fires before every failed login attempt.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "Information": {
+                "label": "Information",
+                "type": "array",
+                "required": false,
+                "description": "Information about failed login attempt   [     \u2019login\u2019 => (string) Username or email used in failed login attempt   ]"
+            }
+        },
+        "rank": 1
+    },
+    "mobile_app_promo_download": {
+        "since": "1.8.0",
+        "group": "Jetpack",
+        "name": "mobile_app_promo_download",
+        "type": "hook-action",
+        "summary": "Fires before you're redirected to download page if you clicked the mobile app promo link in mobile footer",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "_GET[\u2019app-download\u2019]": {
+                "label": "_GET[\u2019app-download\u2019]",
+                "type": "string",
+                "required": false,
+                "description": "app-download URL parameter."
+            }
+        },
+        "rank": 1
+    },
+    "mobile_force_mobile": {
+        "since": "1.8.0",
+        "group": "Jetpack",
+        "name": "mobile_force_mobile",
+        "type": "hook-action",
+        "summary": "In Jetpack's Mobile theme, fires after the user taps on the link to go back from full site to mobile site.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "mobile_reject_mobile": {
+        "since": "1.8.0",
+        "group": "Jetpack",
+        "name": "mobile_reject_mobile",
+        "type": "hook-action",
+        "summary": "In Jetpack's Mobile theme, fires after the user taps on the link to display a full version of the site.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "mobile_setup": {
+        "since": "1.8.0",
+        "group": "Jetpack",
+        "name": "mobile_setup",
+        "type": "hook-action",
+        "summary": "Fires after Jetpack's mobile theme has been setup.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "post_admin_screen_sharing": {
+        "since": "1.6.0",
+        "group": "Jetpack",
+        "name": "post_admin_screen_sharing",
+        "type": "hook-action",
+        "summary": "Fires at the bottom of the admin sharing settings screen.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "pre_admin_screen_sharing": {
+        "since": "1.6.0",
+        "group": "Jetpack",
+        "name": "pre_admin_screen_sharing",
+        "type": "hook-action",
+        "summary": "Fires at the top of the admin sharing settings screen.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "rest_api_delete_publicize_connection": {
+        "since": "3.2.0",
+        "group": "Jetpack",
+        "name": "rest_api_delete_publicize_connection",
+        "type": "hook-action",
+        "summary": "Fires when a Publicize connection is deleted.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "connection_id": {
+                "label": "connection_id",
+                "type": "int",
+                "required": false,
+                "description": "Publicize connection ID."
+            }
+        },
+        "rank": 1
+    },
+    "rest_api_inserted_post": {
+        "since": "2.3.0",
+        "group": "Jetpack",
+        "name": "rest_api_inserted_post",
+        "type": "hook-action",
+        "summary": "Fires when a post is created via the REST API.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "required": false,
+                "description": "Post ID."
+            },
+            "insert": {
+                "label": "insert",
+                "type": "array",
+                "required": false,
+                "description": "Data used to build the post."
+            },
+            "new": {
+                "label": "new",
+                "type": "string",
+                "required": false,
+                "description": "New post URL suffix."
+            }
+        },
+        "rank": 1
+    },
+    "restapi_theme_after_setup_theme": {
+        "since": "3.2.0",
+        "group": "Jetpack",
+        "name": "restapi_theme_after_setup_theme",
+        "type": "hook-action",
+        "summary": "Fires functions hooked onto `after_setup_theme` by the theme for the purpose of the REST API.<p>The REST API does not load the theme when processing requests. To enable theme-based functionality, the API will load the '\/functions.php', '\/inc\/jetpack.compat.php', '\/inc\/jetpack.php', '\/includes\/jetpack.compat.php files of the theme (parent and child) and copy functions hooked onto 'after_setup_theme' within those files.<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "restapi_theme_init": {
+        "since": "3.2.0",
+        "group": "Jetpack",
+        "name": "restapi_theme_init",
+        "type": "hook-action",
+        "summary": "Fires functions hooked onto `init` by the theme for the purpose of the REST API.<p>The REST API does not load the theme when processing requests. To enable theme-based functionality, the API will load the '\/functions.php', '\/inc\/jetpack.compat.php', '\/inc\/jetpack.php', '\/includes\/jetpack.compat.php files of the theme (parent and child) and copy functions hooked onto 'init' within those files.<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "safecss_link_tag_post": {
+        "since": "2.2.2",
+        "group": "Jetpack",
+        "name": "safecss_link_tag_post",
+        "type": "hook-action",
+        "summary": "Fires after creating the  in the  element for the custom css stylesheet.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "safecss_migrate_post": {
+        "since": "1.7.0",
+        "group": "Jetpack",
+        "name": "safecss_migrate_post",
+        "type": "hook-action",
+        "summary": "Allows additional work when migrating safecss from wp_options to wp_post.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "safecss_parse_post": {
+        "since": "1.7.0",
+        "group": "Jetpack",
+        "name": "safecss_parse_post",
+        "type": "hook-action",
+        "summary": "Fires after parsing the css with CSSTidy, but only if the preprocessor is not cinfigured for use.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "csstidy": {
+                "label": "csstidy",
+                "type": "obj",
+                "required": false,
+                "description": "The csstidy object."
+            },
+            "warnings": {
+                "label": "warnings",
+                "type": "array",
+                "required": false,
+                "description": "Array of warnings."
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "Array of custom CSS arguments."
+            }
+        },
+        "rank": 1
+    },
+    "safecss_parse_pre": {
+        "since": "1.7.0",
+        "group": "Jetpack",
+        "name": "safecss_parse_pre",
+        "type": "hook-action",
+        "summary": "Fires before parsing the css with CSSTidy, but only if the preprocessor is not configured for use.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "csstidy": {
+                "label": "csstidy",
+                "type": "obj",
+                "required": false,
+                "description": "The csstidy object."
+            },
+            "css": {
+                "label": "css",
+                "type": "string",
+                "required": false,
+                "description": "Custom CSS."
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "Array of custom CSS arguments."
+            }
+        },
+        "rank": 1
+    },
+    "safecss_print_pre": {
+        "since": "1.7.0",
+        "group": "Jetpack",
+        "name": "safecss_print_pre",
+        "type": "hook-action",
+        "summary": "Fires right before printing the custom CSS inside the  element.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "safecss_save_pre": {
+        "since": "1.7.0",
+        "group": "Jetpack",
+        "name": "safecss_save_pre",
+        "type": "hook-action",
+        "summary": "Fires prior to saving custom css values. Necessitated because the core WordPress save_pre filters were removed: - content_save_pre - content_filtered_save_pre",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "{ Array of custom CSS arguments. @type string $css The CSS (or LESS or Sass). @type bool $is_preview Whether this CSS is preview or published. @type string preprocessor Which CSS preprocessor to use. @type bool $add_to_existing Whether this CSS replaces the theme\u2019s CSS or supplements it. @type int $content_width A custom $content_width to go along with this CSS. }"
+            }
+        },
+        "rank": 1
+    },
+    "safecss_save_preview_post": {
+        "since": "1.7.0",
+        "group": "Jetpack",
+        "name": "safecss_save_preview_post",
+        "type": "hook-action",
+        "summary": "Fires after saving Custom CSS.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "sharing_admin_update": {
+        "since": "1.1.0",
+        "group": "Jetpack",
+        "name": "sharing_admin_update",
+        "type": "hook-action",
+        "summary": "Fires when updating sharing settings.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "sharing_bump_stats": {
+        "since": "1.1.0",
+        "group": "Jetpack",
+        "name": "sharing_bump_stats",
+        "type": "hook-action",
+        "summary": "Fires when a post is shared via one of the sharing buttons.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "Aray of information about the sharing service."
+            }
+        },
+        "rank": 1
+    },
+    "sharing_email_send_post": {
+        "since": "1.1.0",
+        "group": "Jetpack",
+        "name": "sharing_email_send_post",
+        "type": "hook-action",
+        "summary": "Fires when an email is sent via the Email sharing button.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "data": {
+                "label": "data",
+                "type": "array",
+                "required": false,
+                "description": "Array of information about the shared message."
+            }
+        },
+        "rank": 1
+    },
+    "sharing_get_button_state": {
+        "since": "1.1.0",
+        "group": "Jetpack",
+        "name": "sharing_get_button_state",
+        "type": "hook-action",
+        "summary": "Get the state of a sharing button.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "{  State of a sharing button.  @type string $id Service ID.  @type array $options Array of all sharing options.  @type array $service Details about a service. }"
+            }
+        },
+        "rank": 1
+    },
+    "sharing_get_services_state": {
+        "since": "1.1.0",
+        "group": "Jetpack",
+        "name": "sharing_get_services_state",
+        "type": "hook-action",
+        "summary": "Control the state of the list of sharing services.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "required": false,
+                "description": "{  Array of options describing the state of the sharing services.  @type array $services List of all available service names and classes.  @type array $available Validated list of all available service names and classes.  @type array $hidden List of services hidden behind a \u201dMore\u201d button.  @type array $visible List of visible services.  @type array $this->get_blog_services() Array of Sharing Services currently enabled. }"
+            }
+        },
+        "rank": 1
+    },
+    "sharing_global_options": {
+        "since": "1.1.0",
+        "group": "Jetpack",
+        "name": "sharing_global_options",
+        "type": "hook-action",
+        "summary": "Fires at the end of the sharing global options settings table.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "sharing_new_service_form": {
+        "since": "1.1.0",
+        "group": "Jetpack",
+        "name": "sharing_new_service_form",
+        "type": "hook-action",
+        "summary": "Fires after the custom sharing service form",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "widget_conditions_delete": {
+        "since": "2.4.0",
+        "group": "Jetpack",
+        "name": "widget_conditions_delete",
+        "type": "hook-action",
+        "summary": "Fires after the widget visibility conditions are deleted.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "widget_conditions_save": {
+        "since": "2.4.0",
+        "group": "Jetpack",
+        "name": "widget_conditions_save",
+        "type": "hook-action",
+        "summary": "Fires after the widget visibility conditions are saved.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    },
+    "wpcom_json_api_objects": {
+        "since": "3.2.0",
+        "group": "Jetpack",
+        "name": "wpcom_json_api_objects",
+        "type": "hook-action",
+        "summary": "Fires on each GET request to a specific endpoint.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            },
+            "sites.": {
+                "label": "sites.",
+                "type": "string",
+                "required": false,
+                "description": "sites."
+            }
+        },
+        "rank": 1
+    },
+    "wpcom_json_api_options": {
+        "since": "3.1.0",
+        "group": "Jetpack",
+        "name": "wpcom_json_api_options",
+        "type": "hook-action",
+        "summary": "Fires before the page output.<p>Can be used to specify custom header options.<\/p>",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": "false"
+            }
+        },
+        "rank": 1
+    }
+}

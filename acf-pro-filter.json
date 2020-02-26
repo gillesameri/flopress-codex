@@ -1,0 +1,122 @@
+{
+    "acf-fields-flexible_content-layout_title-key-field_key": {
+        "since": "5.3.6",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/flexible_content\/layout_title\/key={$field_key}",
+        "summary": "Customize the text (HTML) displayed at the top of each flexible content layout. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This filter allows you to modify the text (HTML) displayed at the top of each flexible content layout. All sub field functions are available within this filter to load and display values. This filter is also run via AJAX when the layout is toggled open or closed.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "required": false
+            },
+            "layout": {
+                "label": "layout",
+                "type": "array",
+                "required": false
+            },
+            "i": {
+                "label": "i",
+                "type": "int",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-flexible_content-layout_title-name-field_name": {
+        "since": "5.3.6",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/flexible_content\/layout_title\/name={$field_name}",
+        "summary": "Customize the text (HTML) displayed at the top of each flexible content layout. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to modify the text (HTML) displayed at the top of each flexible content layout. All sub field functions are available within this filter to load and display values. This filter is also run via AJAX when the layout is toggled open or closed.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "required": false
+            },
+            "layout": {
+                "label": "layout",
+                "type": "array",
+                "required": false
+            },
+            "i": {
+                "label": "i",
+                "type": "int",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-flexible_content-layout_title": {
+        "since": "5.3.6",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/flexible_content\/layout_title",
+        "summary": "Customize the text (HTML) displayed at the top of each flexible content layout. Filter for every field.",
+        "description": "<p>This filter allows you to modify the text (HTML) displayed at the top of each flexible content layout. All sub field functions are available within this filter to load and display values. This filter is also run via AJAX when the layout is toggled open or closed.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "required": false
+            },
+            "layout": {
+                "label": "layout",
+                "type": "array",
+                "required": false
+            },
+            "i": {
+                "label": "i",
+                "type": "int",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}

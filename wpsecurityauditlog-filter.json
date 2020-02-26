@@ -1,0 +1,80 @@
+{
+    "wsal_auditlog_row_user_data": {
+        "since": false,
+        "group": "WP Security Audit Log",
+        "type": "hook-filter",
+        "name": "wsal_auditlog_row_user_data",
+        "summary": "This filter hook runs before displaying the user data of an event on the audit log view. It can be used to filter the user data of each event being displayed on the audit log view.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "row_user_data": {
+                "label": "row_user_data",
+                "type": "string",
+                "description": "User data to display in the audit log row."
+            },
+            "event_db_id": {
+                "label": "revent_db_id",
+                "type": "int",
+                "description": "Event database ID."
+            }
+        },
+        "return_description": "",
+        "rank": ""
+    },
+    "wsal_event_data_before_log": {
+        "since": false,
+        "group": "WP Security Audit Log",
+        "type": "hook-filter",
+        "name": "wsal_event_data_before_log",
+        "summary": "This filter hook runs before saving an event in the audit log database. It can be used to filter the event data of a filter and take action accordingly.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "event_data": {
+                "label": "event_data",
+                "type": "array",
+                "description": "Array of event data"
+            },
+            "event_id": {
+                "label": "event_id",
+                "type": "int",
+                "description": "Event ID"
+            }
+        },
+        "return_description": "",
+        "rank": ""
+    },
+    "wsal_event_id_before_log": {
+        "since": false,
+        "group": "WP Security Audit Log",
+        "type": "hook-filter",
+        "name": "wsal_event_id_before_log",
+        "summary": "This filter hook runs before saving an event in the audit log database. It can be used to detect event ids and take the required action.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "event_data": {
+                "label": "event_data",
+                "type": "array",
+                "description": "Array of event data"
+            },
+            "event_id": {
+                "label": "event_id",
+                "type": "int",
+                "description": "Event ID"
+            }
+        },
+        "return_description": "",
+        "rank": ""
+    }
+}

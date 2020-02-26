@@ -1,0 +1,1361 @@
+{
+    "addition": {
+        "since": false,
+        "group": "Arithmetic",
+        "type": "arithmetic",
+        "name": "addition",
+        "summary": "Sum of item1 and item2.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "float",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "and": {
+        "since": false,
+        "group": "Logical",
+        "type": "logical",
+        "name": "and",
+        "summary": "TRUE if both item1 and item2 are TRUE.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "bool",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "array": {
+        "since": false,
+        "group": "Variable",
+        "type": "variable",
+        "name": "array",
+        "summary": "Store data within Arrays",
+        "description": "An array is a collection of variables all housed within a single unit",
+        "inputs": {},
+        "outputs": {
+            "output_array": {
+                "type": "array",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "boolean": {
+        "since": false,
+        "group": "Variable",
+        "type": "variable",
+        "name": "boolean",
+        "summary": "A boolean variable",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "output": {
+                "type": "int",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "call_user_func_array": {
+        "since": false,
+        "group": "PHP",
+        "type": "efct",
+        "name": "call_user_func_array",
+        "summary": "Call a callback with an array of parameters",
+        "description": "Calls the callback given by the first parameter with the parameters in param_arr.",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "callable": {
+                "label": "callable",
+                "type": "callable",
+                "description": "The callable to be called."
+            },
+            "param_arr": {
+                "label": "param_arr",
+                "type": "array",
+                "description": "The parameters to be passed to the callback, as an indexed array."
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "mixed",
+                "label": "return"
+            }
+        },
+        "return_description": "Returns the return value of the callback, or FALSE on error.",
+        "rank": 10
+    },
+    "cascader": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "cascader",
+        "summary": "Run each executable port",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct"
+            }
+        },
+        "outputs": {
+            "ofct0": {
+                "type": "efct",
+                "label": ""
+            },
+            "ofct1": {
+                "type": "efct",
+                "label": ""
+            },
+            "ofct2": {
+                "type": "efct",
+                "label": ""
+            }
+        },
+        "rank": 7
+    },
+    "concat": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "concat",
+        "summary": "Concats string values string1 and string2.",
+        "description": "",
+        "inputs": {
+            "string1": {
+                "label": "string1",
+                "type": "string",
+                "description": "The first part."
+            },
+            "string2": {
+                "label": "string2",
+                "type": "string",
+                "description": "The second part."
+            }
+        },
+        "outputs": {
+            "string": {
+                "type": "string",
+                "label": "string"
+            }
+        },
+        "return_description": "Returns the return concatened value.",
+        "rank": 10
+    },
+    "cookie": {
+        "since": false,
+        "group": "Global",
+        "type": "global",
+        "name": "cookie",
+        "summary": "An array of variables passed to the current script via HTTP Cookies.",
+        "description": "",
+        "inputs": {
+            "string": {
+                "label": "key",
+                "type": "string",
+                "description": "The key string"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "mixed",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "division": {
+        "since": false,
+        "group": "Arithmetic",
+        "type": "arithmetic",
+        "name": "division",
+        "summary": "Quotient of item1 and item2.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "float",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "equals": {
+        "since": false,
+        "group": "Comparison",
+        "type": "comparison",
+        "name": "equals",
+        "summary": "Check if the values provided are equals.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "bool",
+                "label": "result"
+            }
+        },
+        "rank": 3
+    },
+    "exit": {
+        "since": false,
+        "group": "PHP",
+        "type": "instruction",
+        "name": "exit",
+        "summary": "Output a message and terminate the current script",
+        "description": "<p>Terminates execution of the script. Shutdown functions and object destructors will always be executed even if exit is called. <\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "status": {
+                "label": "status",
+                "type": "string",
+                "types": [
+                    "string",
+                    "int"
+                ],
+                "description": "If status is a string, this function prints the status just before exiting. If status is an integer, that value will be used as the exit status and not printed. Exit statuses should be in the range 0 to 254, the exit status 255 is reserved by PHP and shall not be used. The status 0 is used to terminate the program successfully. "
+            }
+        },
+        "outputs": {},
+        "rank": 5
+    },
+    "exponentiation": {
+        "since": false,
+        "group": "Arithmetic",
+        "type": "arithmetic",
+        "name": "exponentiation",
+        "summary": "Result of raising item1 to the item2'th power.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "float",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "files": {
+        "since": false,
+        "group": "Global",
+        "type": "global",
+        "name": "files",
+        "summary": "An array of items uploaded to the current script via the HTTP POST method.",
+        "description": "",
+        "inputs": {
+            "string": {
+                "label": "key",
+                "type": "string",
+                "description": "The key string"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "mixed",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "float": {
+        "since": false,
+        "group": "Variable",
+        "type": "variable",
+        "name": "float",
+        "summary": "A float variable",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "output": {
+                "type": "int",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "for": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "for",
+        "summary": "Loop",
+        "description": "<p>The For node works like a standard loop, trigger an execution pulse for each iteration until end index is reached<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct"
+            },
+            "end_index": {
+                "label": "end_index",
+                "type": "int",
+                "default": "10",
+                "description": "End index"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "label": "finish"
+            },
+            "ofct_loop": {
+                "type": "efct",
+                "label": "loop"
+            },
+            "item_index": {
+                "type": "int",
+                "label": "index"
+            }
+        },
+        "rank": 7
+    },
+    "foreach": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "foreach",
+        "summary": "Loop through an array",
+        "description": "<p>The Foreach node works like a standard loop, trigger an execution pulse for each item in array.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct"
+            },
+            "array": {
+                "label": "array",
+                "type": "array",
+                "default": "array()",
+                "description": "Array to loop through"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "label": "finish"
+            },
+            "ofct_loop": {
+                "type": "efct",
+                "label": "loop"
+            },
+            "item_loop": {
+                "type": "mixed",
+                "label": "item"
+            },
+            "key_loop": {
+                "type": "mixed",
+                "label": "key"
+            }
+        },
+        "rank": 7
+    },
+    "fp_function": {
+        "since": false,
+        "group": "FloPress",
+        "type": "efct",
+        "name": "fp_function",
+        "summary": "Call a callback with an array of parameters",
+        "description": "Calls the callback given by the first parameter with the parameters in param_arr.",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "callable": {
+                "label": "callable",
+                "type": "callable",
+                "description": "The callable to be called."
+            },
+            "param_arr": {
+                "label": "param_arr",
+                "type": "array",
+                "description": "The parameters to be passed to the callback, as an indexed array."
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "return": {
+                "type": "mixed",
+                "label": "return"
+            }
+        },
+        "return_description": "Returns the return value of the callback, or FALSE on error.",
+        "rank": 10
+    },
+    "get": {
+        "since": false,
+        "group": "Global",
+        "type": "global",
+        "name": "get",
+        "summary": "Variables passed to the current script via the URL parameters.",
+        "description": "",
+        "inputs": {
+            "string": {
+                "label": "key",
+                "type": "string",
+                "description": "The key string"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "mixed",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "get_array_value": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "get_array_value",
+        "summary": "Get value of an array key",
+        "description": "",
+        "inputs": {
+            "array": {
+                "label": "array",
+                "type": "array",
+                "description": "The array to be called."
+            },
+            "param_arr": {
+                "label": "value",
+                "type": "string",
+                "description": "The value to be returned"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "mixed",
+                "label": "return"
+            }
+        },
+        "return_description": "Returns the return value.",
+        "rank": 10
+    },
+    "get_object_property": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "get_object_property",
+        "summary": "Get value of an object property",
+        "description": "",
+        "inputs": {
+            "object": {
+                "label": "object",
+                "type": "object",
+                "description": "The object to be called."
+            },
+            "property": {
+                "label": "property",
+                "type": "string",
+                "description": "The property to be returned"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "mixed",
+                "label": "return"
+            }
+        },
+        "return_description": "Returns the return value.",
+        "rank": 10
+    },
+    "greater_than": {
+        "since": false,
+        "group": "Comparison",
+        "type": "comparison",
+        "name": "greater_than",
+        "summary": "Check  if item1 is greater than item2",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "output_array": {
+                "type": "bool",
+                "label": "bool"
+            }
+        },
+        "rank": null
+    },
+    "greater_than_or_equal_to": {
+        "since": false,
+        "group": "Comparison",
+        "type": "comparison",
+        "name": "greater_than_or_equal_to",
+        "summary": "Check  if item1 is greater than or equal to item2.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "output_array": {
+                "type": "bool",
+                "label": "bool"
+            }
+        },
+        "rank": null
+    },
+    "if": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "if",
+        "summary": "Decision-based from a single true\/false condition.",
+        "description": "<p>The If node serves as a simple way to create decision-based flow from a single true\/false condition.<\/p><p>Once executed, the Branch node looks at the incoming value of the attached Boolean, and outputs an execution pulse down the appropriate output.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "condition": {
+                "label": "condition",
+                "type": "bool",
+                "description": "Value to check"
+            }
+        },
+        "outputs": {
+            "ofct_true": {
+                "type": "efct",
+                "label": "true",
+                "required": false
+            },
+            "ofct_false": {
+                "type": "efct",
+                "label": "false",
+                "required": false
+            }
+        },
+        "rank": 7
+    },
+    "init_variable": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "init_variable",
+        "summary": "Init a variable",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "variable": {
+                "label": "variable",
+                "type": "mixed",
+                "description": "The variable to be initialized"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 5
+    },
+    "integer": {
+        "since": false,
+        "group": "Variable",
+        "type": "variable",
+        "name": "integer",
+        "summary": "A integer variable",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "output": {
+                "type": "int",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "less_than": {
+        "since": false,
+        "group": "Comparison",
+        "type": "comparison",
+        "name": "less_than",
+        "summary": "Check  if item1 is less than item2",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "output_array": {
+                "type": "bool",
+                "label": "bool"
+            }
+        },
+        "rank": null
+    },
+    "less_than_or_equal_to": {
+        "since": false,
+        "group": "Comparison",
+        "type": "comparison",
+        "name": "less_than_or_equal_to",
+        "summary": "Check  if item1 is less than or equal to item2",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "output_array": {
+                "type": "bool",
+                "label": "bool"
+            }
+        },
+        "rank": null
+    },
+    "modulo": {
+        "since": false,
+        "group": "Arithmetic",
+        "type": "arithmetic",
+        "name": "modulo",
+        "summary": "Remainder of item1 divided by item2.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "float",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "multiplication": {
+        "since": false,
+        "group": "Arithmetic",
+        "type": "arithmetic",
+        "name": "multiplication",
+        "summary": "Product of item1 and item2.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "float",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "not": {
+        "since": false,
+        "group": "Logical",
+        "type": "logical",
+        "name": "not",
+        "summary": "TRUE if item1 is not TRUE.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "Value"
+            }
+        },
+        "outputs": {
+            "bool": {
+                "type": "bool",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "not_equals": {
+        "since": false,
+        "group": "Comparison",
+        "type": "comparison",
+        "name": "not_equals",
+        "summary": "Check if the values provided are not equals.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "bool",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "or": {
+        "since": false,
+        "group": "Logical",
+        "type": "logical",
+        "name": "or",
+        "summary": "TRUE if either item1 or item2 is TRUE.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "bool",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "post": {
+        "since": false,
+        "group": "Global",
+        "type": "global",
+        "name": "post",
+        "summary": "Variables passed to the current script via the HTTP POST method.",
+        "description": "",
+        "inputs": {
+            "string": {
+                "label": "key",
+                "type": "string",
+                "description": "The key string"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "mixed",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "print": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "print",
+        "summary": "Output a string",
+        "description": "Output the value provided.",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "string": {
+                "label": "string",
+                "type": "string",
+                "description": "The string to output"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "return_description": false,
+        "rank": 20
+    },
+    "return": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "return",
+        "summary": "Return the value provided and end script",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to be returned",
+                "default": "false"
+            }
+        },
+        "outputs": {},
+        "rank": 35
+    },
+    "server": {
+        "since": false,
+        "group": "Global",
+        "type": "global",
+        "name": "server",
+        "summary": "Containing information such as headers, paths, and script locations.",
+        "description": "",
+        "inputs": {
+            "string": {
+                "label": "key",
+                "type": "string",
+                "description": "The key string"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "mixed",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "session": {
+        "since": false,
+        "group": "Global",
+        "type": "global",
+        "name": "session",
+        "summary": "An array containing session variables available to the current script.",
+        "description": "",
+        "inputs": {
+            "string": {
+                "label": "key",
+                "type": "string",
+                "description": "The key string"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "mixed",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "set_array_value": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "set_array_value",
+        "summary": "Set value to an array key",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "variable": {
+                "label": "variable",
+                "type": "array",
+                "description": "The array variable"
+            },
+            "key": {
+                "label": "key",
+                "type": "string",
+                "description": "The key"
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to set"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 5
+    },
+    "set_object_property": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "set_object_property",
+        "summary": "Set value to an object property",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "variable": {
+                "label": "variable",
+                "type": "object",
+                "description": "The object variable"
+            },
+            "property": {
+                "label": "property",
+                "type": "string",
+                "description": "The property name"
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to set"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 5
+    },
+    "set_variable": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "set_variable",
+        "summary": "Set value to a variable",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "variable": {
+                "label": "variable",
+                "type": "mixed",
+                "description": "The variable to be set"
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "float",
+                    "string",
+                    "bool",
+                    "array",
+                    "object"
+                ],
+                "description": "The value to set"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 5
+    },
+    "string": {
+        "since": false,
+        "group": "Variable",
+        "type": "variable",
+        "name": "string",
+        "summary": "A string variable",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "output": {
+                "type": "string",
+                "label": "value"
+            }
+        },
+        "rank": null
+    },
+    "subtraction": {
+        "since": false,
+        "group": "Arithmetic",
+        "type": "arithmetic",
+        "name": "subtraction",
+        "summary": "Difference of item1 and item2.",
+        "description": "",
+        "inputs": {
+            "item1": {
+                "label": "item1",
+                "type": "mixed",
+                "description": "First value"
+            },
+            "item2": {
+                "label": "item2",
+                "type": "mixed",
+                "description": "Second value"
+            }
+        },
+        "outputs": {
+            "return": {
+                "type": "float",
+                "label": "result"
+            }
+        },
+        "rank": null
+    },
+    "to_array": {
+        "since": false,
+        "group": "Cast",
+        "type": "cast",
+        "name": "to_array",
+        "summary": "Cast to array",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value that need to be casted"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "array",
+                "label": "array"
+            }
+        },
+        "rank": null
+    },
+    "to_bool": {
+        "since": false,
+        "group": "Cast",
+        "type": "cast",
+        "name": "to_bool",
+        "summary": "Cast to boolean",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value that need to be casted"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "bool",
+                "label": "boolean"
+            }
+        },
+        "rank": null
+    },
+    "to_float": {
+        "since": false,
+        "group": "Cast",
+        "type": "cast",
+        "name": "to_float",
+        "summary": "Cast to float",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value that need to be casted"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "float",
+                "label": "float"
+            }
+        },
+        "rank": null
+    },
+    "to_int": {
+        "since": false,
+        "group": "Cast",
+        "type": "cast",
+        "name": "to_int",
+        "summary": "Cast to int",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value that need to be casted"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "int",
+                "label": "integer"
+            }
+        },
+        "rank": null
+    },
+    "to_object": {
+        "since": false,
+        "group": "Cast",
+        "type": "cast",
+        "name": "to_object",
+        "summary": "Cast to object",
+        "description": "",
+        "inputs": {
+            "object": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value that need to be casted"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "object",
+                "label": "object"
+            }
+        },
+        "rank": null
+    },
+    "to_string": {
+        "since": false,
+        "group": "Cast",
+        "type": "cast",
+        "name": "to_string",
+        "summary": "Cast to string",
+        "description": "",
+        "inputs": {
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value that need to be casted"
+            }
+        },
+        "outputs": {
+            "value": {
+                "type": "string",
+                "label": "string"
+            }
+        },
+        "rank": null
+    },
+    "unset": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "unset",
+        "summary": "Unset a given variable.",
+        "description": "<p>unset() destroys the specified variables.<\/p><p>The behavior of unset() inside of a function can vary depending on what type of variable you are attempting to destroy.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "variable": {
+                "label": "variable",
+                "type": "mixed",
+                "description": "The variable to be unset."
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 5
+    },
+    "while": {
+        "since": false,
+        "group": "Instruction",
+        "type": "instruction",
+        "name": "while",
+        "summary": "While loops are the simplest type of loop",
+        "description": "<p>The while statement executes the nested statement(s) repeatedly, as long as the while expression evaluates to TRUE.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct"
+            },
+            "condition": {
+                "label": "condition",
+                "type": "mixed",
+                "description": "The expression"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "label": "finish"
+            },
+            "ofct_loop": {
+                "type": "efct",
+                "label": "loop"
+            }
+        },
+        "rank": 7
+    }
+}

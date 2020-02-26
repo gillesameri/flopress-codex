@@ -1,0 +1,2034 @@
+{
+    "after_rocket_htaccess_rules": {
+        "since": "2.6",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "after_rocket_htaccess_rules",
+        "summary": "Filters the htaccess content to add after WP Rocket rules",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess rules to add"
+            }
+        },
+        "rank": 1
+    },
+    "before_rocket_htaccess_rules": {
+        "since": "2.6",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "before_rocket_htaccess_rules",
+        "summary": "Filters the htaccess content to add \u00a0before WP Rocket rules",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess rules to add"
+            }
+        },
+        "rank": 1
+    },
+    "do_rocket_cdn_css_properties": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "do_rocket_cdn_css_properties",
+        "summary": "Controls if the CDN should be applied to CSS properties",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "boolean": {
+                "label": "boolean",
+                "type": "bool",
+                "description": "Replace or not the CSS property URL by the CDN URL. Default to true"
+            }
+        },
+        "rank": 1
+    },
+    "do_rocket_generate_caching_file": {
+        "since": "2.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "do_rocket_generate_caching_file",
+        "summary": "Controls the generation of the static cache file",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "generate": {
+                "label": "generate",
+                "type": "bool",
+                "description": "Generate or not the cache file. Default to true"
+            }
+        },
+        "rank": 1
+    },
+    "do_rocket_lazyload": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "do_rocket_lazyload",
+        "summary": "Controls the insertion\u00a0of the lazyload script",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "display": {
+                "label": "display",
+                "type": "bool",
+                "description": "Insert or not the lazyload script. Default to true"
+            }
+        },
+        "rank": 1
+    },
+    "do_rocket_lazyload_iframes": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "do_rocket_lazyload_iframes",
+        "summary": "Controls the insertion\u00a0of the lazyload script",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "display": {
+                "label": "display",
+                "type": "bool",
+                "description": "Insert or not the lazyload script. Default to true"
+            }
+        },
+        "rank": 1
+    },
+    "do_rocket_old_ie_prefect_conditional_tag": {
+        "since": "2.6.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "do_rocket_old_ie_prefect_conditional_tag",
+        "summary": "Controls the insertion\u00a0of an IE conditional tag to speed up old IE versions to load CSS & JS files",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "display": {
+                "label": "display",
+                "type": "bool",
+                "description": "Insert or not the conditional tag. Default to true"
+            }
+        },
+        "rank": 1
+    },
+    "do_rocket_varnish_http_purge": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "do_rocket_varnish_http_purge",
+        "summary": "Allow or disallow the purge of Varnish cache. Default to disallow",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "Boolean": {
+                "label": "Boolean",
+                "type": "mixed",
+                "description": "a true value will force the Varnish purge"
+            }
+        },
+        "rank": 1
+    },
+    "do_run_rocket_bot": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "do_run_rocket_bot",
+        "summary": "Controls the preload bot",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "run": {
+                "label": "run",
+                "type": "bool",
+                "description": "Activate or deactivate the preload bot. Default to true"
+            },
+            "spider": {
+                "label": "spider",
+                "type": "string",
+                "description": "The spider name. Can be cache-preload or cache-json"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "string",
+                "description": "the language code to preload"
+            }
+        },
+        "rank": 1
+    },
+    "get_rocket_option_-option": {
+        "since": "2.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "get_rocket_option_{$option}",
+        "summary": "Filters a WP Rocket option value after being retrieved from the database",
+        "description": "",
+        "inputs": {
+            "option": {
+                "label": "option",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "value": {
+                "label": "value",
+                "type": "string",
+                "description": "Value of the option"
+            },
+            "default": {
+                "label": "default",
+                "type": "string",
+                "description": "Default value"
+            }
+        },
+        "rank": 1
+    },
+    "pre_get_rocket_option_-option": {
+        "since": "2.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "pre_get_rocket_option_{$option}",
+        "summary": "Filters a WP Rocket option before being retrieved from database",
+        "description": "",
+        "inputs": {
+            "option": {
+                "label": "option",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "default": {
+                "label": "default",
+                "type": "string",
+                "description": "The default value"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_advanced_cache_file": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_advanced_cache_file",
+        "summary": "Filters the content of the advanced-cache.php file",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "buffer": {
+                "label": "buffer",
+                "type": "string",
+                "description": "content to be inserted into the advanced-cache.php file"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_bad_deactivations": {
+        "since": "2.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_bad_deactivations",
+        "summary": "Filters the output messages for each bad deactivation attempt.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "errors": {
+                "label": "errors",
+                "type": "array",
+                "description": "The error messages to be filtered"
+            },
+            "msg": {
+                "label": "msg",
+                "type": "string",
+                "description": ""
+            }
+        },
+        "rank": 1
+    },
+    "rocket_buffer": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_buffer",
+        "summary": "Filters the buffer content before creating the cache file",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "buffer": {
+                "label": "buffer",
+                "type": "string",
+                "description": "HTML output of the page contained in the buffer"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_dynamic_cookies": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_dynamic_cookies",
+        "summary": "Filters the dynamic cookies list",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "cookies": {
+                "label": "cookies",
+                "type": "array",
+                "description": "List of dynamic cookies"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_mandatory_cookies": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_mandatory_cookies",
+        "summary": "Filters the mandatory cookies list",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "cookies": {
+                "label": "cookies",
+                "type": "array",
+                "description": "List of mandatory cookies"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_mobile_files_tablet": {
+        "since": "3.2",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_mobile_files_tablet",
+        "summary": "Filters the use of mobile or desktop version for tablets.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "tablet_version": {
+                "label": "tablet_version",
+                "type": "string",
+                "description": "takes values desktop or mobile. Default set to desktop."
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_query_string": {
+        "since": "2.3",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_query_string",
+        "summary": "Filters the list of query strings that can be cached",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "query_strings": {
+                "label": "query_strings",
+                "type": "array",
+                "description": "List of query strings"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_reject_cookies": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_reject_cookies",
+        "summary": "Filters the rejected cookies list",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "cookies": {
+                "label": "cookies",
+                "type": "array",
+                "description": "List of rejected cookies"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_reject_ua": {
+        "since": "2.3.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_reject_ua",
+        "summary": "Filters the rejected user-agents list",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "ua": {
+                "label": "ua",
+                "type": "array",
+                "description": "List of rejected user-agents"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_reject_uri": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_reject_uri",
+        "summary": "Filters the rejected uri list",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "uri": {
+                "label": "uri",
+                "type": "array",
+                "description": "List of rejected uri"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_reject_wc_rest_api": {
+        "since": "2.6.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_reject_wc_rest_api",
+        "summary": "Allow or disallow caching of WooCommerce REST API. Default to disallow",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "Boolean": {
+                "label": "Boolean",
+                "type": "mixed",
+                "description": "a false value will force to cache the WooCommerce REST API"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_reject_wp_rest_api": {
+        "since": "2.5.12",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_reject_wp_rest_api",
+        "summary": "Allow or disallow caching of WordPress REST API. Default to disallow",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "Boolean": {
+                "label": "Boolean",
+                "type": "mixed",
+                "description": "a false value will force to cache the WordPress REST API"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cache_search": {
+        "since": "2.3.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cache_search",
+        "summary": "Controls if the search results page should be cached",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "do_cache": {
+                "label": "do_cache",
+                "type": "bool",
+                "description": "Allow or disallow search results page cache. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_capacity": {
+        "since": "2.6.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_capacity",
+        "summary": "Filters the capability used to access the WP Rocket options",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "capacity": {
+                "label": "capacity",
+                "type": "string",
+                "description": "capability the user needs to have to access the WP Rocket options. Default. manage_options"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cdn_cnames": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cdn_cnames",
+        "summary": "Filters the CNAMES list for CDN",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "hosts": {
+                "label": "hosts",
+                "type": "array",
+                "description": "List of CNAMES"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cdn_css_properties_url": {
+        "since": "2.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cdn_css_properties_url",
+        "summary": "Filters the URL of the CSS property before it's replaced by the CDN URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "url": {
+                "label": "url",
+                "type": "string",
+                "description": "URL of the CSS property"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cdn_images_html": {
+        "since": "2.5.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cdn_images_html",
+        "summary": "Filters the image HTML output with the CDN link",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "html": {
+                "label": "html",
+                "type": "string",
+                "description": "HTML code for the image"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_cdn_reject_files": {
+        "since": "2.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_cdn_reject_files",
+        "summary": "Filters the list of rejected files from the CDN",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "files": {
+                "label": "files",
+                "type": "array",
+                "description": "List of rejected files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_clean_domain_urls": {
+        "since": "2.6.4",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_clean_domain_urls",
+        "summary": "Filters the URLs to delete when doing a full cache purge for a domain",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "array",
+                "description": "Array of URLs to be deleted"
+            },
+            "lang": {
+                "label": "lang",
+                "type": "string",
+                "description": "language code for the language to purge"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_clean_files": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_clean_files",
+        "summary": "Filters the URLs cache files to be deleted",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "array",
+                "description": "Array of URLs"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_clean_home_feeds": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_clean_home_feeds",
+        "summary": "Filters the home feeds URLs",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "string",
+                "description": "URLs of the home feeds"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_clean_home_root": {
+        "since": "2..6.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_clean_home_root",
+        "summary": "Filters the homepage caching folder root",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "root": {
+                "label": "root",
+                "type": "string",
+                "description": "Root path"
+            },
+            "host": {
+                "label": "host",
+                "type": "string",
+                "description": "Website host"
+            },
+            "path": {
+                "label": "path",
+                "type": "string",
+                "description": "Website path"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_comment_cookie_lifetime": {
+        "since": "2.2",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_comment_cookie_lifetime",
+        "summary": "Filters the cookie lifetime value for a comment. WordPress default is one year, WP Rocket reduces it to 3 minutes to allow the cache to be served quicker to the visitor after a comment",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "lifetime": {
+                "label": "lifetime",
+                "type": "int",
+                "description": ""
+            }
+        },
+        "rank": 1
+    },
+    "rocket_config_file": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_config_file",
+        "summary": "Filters the config file content before inserting it in the file",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "buffer": {
+                "label": "buffer",
+                "type": "string",
+                "description": "Config file content"
+            },
+            "config_files_path": {
+                "label": "config_files_path",
+                "type": "string",
+                "description": "Path to the config file"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_config_files_path": {
+        "since": "2.6.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_config_files_path",
+        "summary": "Filters the path of the WP Rocket config files",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "path": {
+                "label": "path",
+                "type": "string",
+                "description": "Path of the WP Rocket config files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_disable_htaccess": {
+        "since": "3.2.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_disable_htaccess",
+        "summary": "Completely disable the use of the htaccess for WP Rocket.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "Boolean": {
+                "label": "Boolean",
+                "type": "mixed",
+                "description": "a true value will disable the use of the htaccess."
+            }
+        },
+        "rank": 1
+    },
+    "rocket_display_varnish_options_tab": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_display_varnish_options_tab",
+        "summary": "Controls the display of the Varnish options tab",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "display": {
+                "label": "display",
+                "type": "bool",
+                "description": "display or hide the Varnish options tab. Default. true"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_dns_prefetch": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_dns_prefetch",
+        "summary": "Filters the list of domains to be DNS prefetched",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "inputs": {
+                "label": "inputs",
+                "type": "array",
+                "description": "Array of all domains"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_exclude_css": {
+        "since": "2.6",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_exclude_css",
+        "summary": "Filters theist of CSS files to exclude from minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "css_files": {
+                "label": "css_files",
+                "type": "array",
+                "description": "List of excluded CSS files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_exclude_js": {
+        "since": "2.6",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_exclude_js",
+        "summary": "Filters the list of JS files to exclude from minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "js_files": {
+                "label": "js_files",
+                "type": "array",
+                "description": "List of JS files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_excluded_handle_js": {
+        "since": "2.6.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_excluded_handle_js",
+        "summary": "Filters the list of JS script to be excluded from the minification process",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "inputs": {
+                "label": "inputs",
+                "type": "array",
+                "description": "Array of JS handles"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_force_full_path": {
+        "since": "1.3",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_force_full_path",
+        "summary": "Controls the path to be fully printed or dependant on DOCUMENT_ROOT",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "path": {
+                "label": "path",
+                "type": "bool",
+                "description": "Force the path to be full or not. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_force_gzip_htaccess_rules": {
+        "since": "2.4",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_force_gzip_htaccess_rules",
+        "summary": "Controls what cache file should be served. Only valid for Apache",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "force": {
+                "label": "force",
+                "type": "bool",
+                "description": "Serve the gzip cache file or not. Default to true"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_get_domain_preg": {
+        "since": "2.7.3",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_get_domain_preg",
+        "summary": "Filters the max allowed length for TLD when getting the domain of an URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "length": {
+                "label": "length",
+                "type": "int",
+                "description": "max length of the TLD"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_gzencode_level_compression": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_gzencode_level_compression",
+        "summary": "Filters the gzip compression level for the gzipped cache file",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "level": {
+                "label": "level",
+                "type": "int",
+                "description": "compression level. Default to 3"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_charset": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_charset",
+        "summary": "Filters the WP Rocket htacess charset rules for static files",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess charset rules"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_etag": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_etag",
+        "summary": "Filters the WP Rocket htacess rules to remove etags",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess rules to remove etags"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_files_match": {
+        "since": "1.1.6",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_files_match",
+        "summary": "Filters the WP Rocket htacess rewrite rules for cache control",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess rules for cache control"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_marker": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_marker",
+        "summary": "Filters the htaccess content added by WP Rocket",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "marker": {
+                "label": "marker",
+                "type": "string",
+                "description": "htaccess content"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_mobile_rewritecond": {
+        "since": "2.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_mobile_rewritecond",
+        "summary": "Filters the WP Rocket htaccess mobile condition rewrite rules",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "Htaccess mobile rewrite rules"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_mod_deflate": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_mod_deflate",
+        "summary": "Filters the WP Rocket htaccess gzip rules",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess gzip rules"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_mod_expires": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_mod_expires",
+        "summary": "Filters the WP Rocket htacess mod_expires rules",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess mod_expires rules"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_mod_rewrite": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_mod_rewrite",
+        "summary": "Filters the WP Rocket htaccess rewrite rules",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess rewrite rules"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_ssl_rewritecond": {
+        "since": "2.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_ssl_rewritecond",
+        "summary": "Filters the WP Rocket htacess rewrite rules for SSL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess rules for SSL"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_htaccess_web_fonts_access": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_htaccess_web_fonts_access",
+        "summary": "Filters the WP Rocket htacess rules for cross-origin fonts sharing",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "rules": {
+                "label": "rules",
+                "type": "string",
+                "description": "htaccess rules for cross-origin fonts sharing"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_inputs_sanitize": {
+        "since": "2.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_inputs_sanitize",
+        "summary": "Filters the WP Rocket settings before being saved",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "inputs": {
+                "label": "inputs",
+                "type": "array",
+                "description": "Array of all WP Rocket settings"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_labjs_options": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_labjs_options",
+        "summary": "Filters the list of LABjs options",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "options": {
+                "label": "options",
+                "type": "array",
+                "description": "Array of LABjs options"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_labjs_src": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_labjs_src",
+        "summary": "Filters the LABjs URL loaded for deferring JS files",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "labjs_src": {
+                "label": "labjs_src",
+                "type": "string",
+                "description": "LABjs URL"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_langs_to_preserve": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_langs_to_preserve",
+        "summary": "Filters directories path to preserve from cache purge",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "langs_to_preserve": {
+                "label": "langs_to_preserve",
+                "type": "array",
+                "description": "Array of directories path"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_lazyload_background_images": {
+        "since": "3.3",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_lazyload_background_images",
+        "summary": "Filters the application of lazyload on background images.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "boolean": {
+                "label": "boolean",
+                "type": "bool",
+                "description": "Default to true. Set to false to disable lazyload on background images."
+            }
+        },
+        "rank": 1
+    },
+    "rocket_lazyload_html": {
+        "since": "2.3.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_lazyload_html",
+        "summary": "Filters the lazyload HTML output for images",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "html": {
+                "label": "html",
+                "type": "string",
+                "description": "HTML output for the image"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_lazyload_iframe_html": {
+        "since": "2.6",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_lazyload_iframe_html",
+        "summary": "Filters the lazyload HTML output for iframes",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "html": {
+                "label": "html",
+                "type": "string",
+                "description": "HTML output for the iframe"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_lazyload_placeholder": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_lazyload_placeholder",
+        "summary": "Filters the lazyload placeholder on src attribute",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "placeholder": {
+                "label": "placeholder",
+                "type": "string",
+                "description": "The placeholder string. Defaults to\u00a0data.image of size 1px X 1px for images and\u00a0about.blank for iframes."
+            }
+        },
+        "rank": 1
+    },
+    "rocket_lazyload_threshold": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_lazyload_threshold",
+        "summary": "Filters the threshold at which lazyload is triggered.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "threshold": {
+                "label": "threshold",
+                "type": "int",
+                "description": "Threshold value in px. Defaults to 300."
+            }
+        },
+        "rank": 1
+    },
+    "rocket_lazyload_youtube_thumbnail_resolution": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_lazyload_youtube_thumbnail_resolution",
+        "summary": "Filters the resolution of the YouTube thumbnail (preview image).",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "thumbnail_resolution": {
+                "label": "thumbnail_resolution",
+                "type": "string",
+                "description": "The resolution of the thumbnail."
+            }
+        },
+        "rank": 1
+    },
+    "rocket_min_cachepath": {
+        "since": "2.8.3",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_min_cachePath",
+        "summary": "Filters the path of the tmp directory to use during minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "path": {
+                "label": "path",
+                "type": "string",
+                "description": "Path of the tmp directory. Default empty"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_min_documentroot": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_min_documentRoot",
+        "summary": "Filters the path of the document root to use during minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "path": {
+                "label": "path",
+                "type": "string",
+                "description": "Path of the document root. Default to ABSPATH"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_css_regex_pattern": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_css_regex_pattern",
+        "summary": "Filters the pattern used to get all CSS files",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "pattern": {
+                "label": "pattern",
+                "type": "string",
+                "description": "Pattern used to get all CSS files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_debug": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_debug",
+        "summary": "Controls the minify URL rewrite",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "debug": {
+                "label": "debug",
+                "type": "bool",
+                "description": "Rewrite or not the minify URL for debugging. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_deferred_js": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_deferred_js",
+        "summary": "Filters the list of JS files to defer",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "js_files": {
+                "label": "js_files",
+                "type": "array",
+                "description": "List of JS files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_deferred_js_wait": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_deferred_js_wait",
+        "summary": "Filters the list of deferred JS files waited to be loaded",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "deferred_js_wait": {
+                "label": "deferred_js_wait",
+                "type": "array",
+                "description": "Array of JS URLs"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_excluded_external_js": {
+        "since": "2.2",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_excluded_external_js",
+        "summary": "Filters JS external files to be excluded from minification (moved to header)",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "external_js": {
+                "label": "external_js",
+                "type": "array",
+                "description": "Array of external domains"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_filename_length": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_filename_length",
+        "summary": "Filters the total number of files generated by the minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "length": {
+                "label": "length",
+                "type": "int",
+                "description": "maximum number of characters in the URL"
+            },
+            "extension": {
+                "label": "extension",
+                "type": "string",
+                "description": "file extension"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_html_options": {
+        "since": "1.1.12",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_html_options",
+        "summary": "Filters the options for the HTML minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "inputs": {
+                "label": "inputs",
+                "type": "array",
+                "description": "Array of HTML minification options"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_js_in_footer": {
+        "since": "2.6",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_js_in_footer",
+        "summary": "Filters the list of JS files to move to the footer during minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "js_files": {
+                "label": "js_files",
+                "type": "array",
+                "description": "List of JS files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_js_regex_pattern": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_js_regex_pattern",
+        "summary": "Filters the pattern used to get all JS files",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "pattern": {
+                "label": "pattern",
+                "type": "string",
+                "description": "pattern used to get all JS files"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_minify_pretty_url": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_minify_pretty_url",
+        "summary": "Filters the pretty minified URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "pretty_url": {
+                "label": "pretty_url",
+                "type": "string",
+                "description": "URL of the pretty minified file"
+            },
+            "pretty_filename": {
+                "label": "pretty_filename",
+                "type": "string",
+                "description": "name of the minified file"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_override_donotcachepage": {
+        "since": "2.5",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_override_donotcachepage",
+        "summary": "Controls if WP Rocket should ignore the DONOTCACHEPAGE constant",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "override": {
+                "label": "override",
+                "type": "bool",
+                "description": "Allow or disallow the override. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_override_min_cachepath": {
+        "since": "2.8.3",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_override_min_cachepath",
+        "summary": "Controls the replacement of the default tmp directory path to use during minification",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "override": {
+                "label": "override",
+                "type": "bool",
+                "description": "Replace or not the default tmp directory path. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_override_min_documentroot": {
+        "since": "2.7",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_override_min_documentRoot",
+        "summary": "Controls the value of the document root path",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "override": {
+                "label": "override",
+                "type": "bool",
+                "description": "Replace or not the document Root path to use during minification. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_parse_url": {
+        "since": "2.2",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_parse_url",
+        "summary": "Filters the components of an URL parsed by parse_url()",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "components": {
+                "label": "components",
+                "type": "array",
+                "description": "Components of the URL"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_permit_force_deactivation": {
+        "since": "2.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_permit_force_deactivation",
+        "summary": "Controls the display of a force deactivation link",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "force": {
+                "label": "force",
+                "type": "bool",
+                "description": "Display or hide the link. Default to true"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_plugins_to_deactivate": {
+        "since": "2.6.4",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_plugins_to_deactivate",
+        "summary": "Filters the list of plugins recommended to deactivate when WP Rocket is active",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "plugins": {
+                "label": "plugins",
+                "type": "array",
+                "description": "List of plugins to deactivate"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_post_dates_urls": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_post_dates_urls",
+        "summary": "Filters the list of dates URLs for a post",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "array",
+                "description": "Array of dates URLs"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_post_purge_urls": {
+        "since": "1.0",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_post_purge_urls",
+        "summary": "Filters the URLs cache file to be removed",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "purge_urls": {
+                "label": "purge_urls",
+                "type": "array",
+                "description": "List of URLs to be purged"
+            },
+            "post": {
+                "label": "post",
+                "type": "object",
+                "description": "The post object"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_post_terms_urls": {
+        "since": "1.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_post_terms_urls",
+        "summary": "Filters the list of taxonomies URLs for a post",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "array",
+                "description": "Array of taxonomies URL"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_pre_minify_path": {
+        "since": "2.4",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_pre_minify_path",
+        "summary": "Filters path of the file before being added to the minification URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "file": {
+                "label": "file",
+                "type": "string",
+                "description": "Path of the file"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_sitemap_preload_interval": {
+        "since": "2.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_sitemap_preload_interval",
+        "summary": "Filters the array of options interval for sitemap preload",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "interval": {
+                "label": "interval",
+                "type": "array",
+                "description": "Array of intervals using a $value => $label format"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_sitemap_preload_list": {
+        "since": "2.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_sitemap_preload_list",
+        "summary": "Filters the list of sitemaps file to use for preload",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "sitemaps_list": {
+                "label": "sitemaps_list",
+                "type": "array",
+                "description": "Array of sitemaps URL"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_specify_image_dimensions": {
+        "since": "2.2",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_specify_image_dimensions",
+        "summary": "Controls the insertion of\u00a0width and height attributes to images missing them",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "specify": {
+                "label": "specify",
+                "type": "bool",
+                "description": "Insert or not the attributes. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_specify_image_dimensions_for_distant": {
+        "since": "2.2",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_specify_image_dimensions_for_distant",
+        "summary": "Controls the insertion of width and height attributes for a distant image",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "specify": {
+                "label": "specify",
+                "type": "bool",
+                "description": "Insert or not the attributes. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_term_purge_urls": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_term_purge_urls",
+        "summary": "Filters the URLs cache files to delete when purging a term",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "urls": {
+                "label": "urls",
+                "type": "array",
+                "description": "Array of URLs to purge"
+            },
+            "term": {
+                "label": "term",
+                "type": "object",
+                "description": "The term object"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_urls_no_dots": {
+        "since": "1.3",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_urls_no_dots",
+        "summary": "Controls the replacement of dots by underscores to avoid some \u00a0bugs on some shared hosting",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "dots": {
+                "label": "dots",
+                "type": "bool",
+                "description": "Replace or not the dots by underscores. Default to false"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_varnish_http_purge_scheme": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_varnish_http_purge_scheme",
+        "summary": "Filters the scheme for Varnish URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "scheme": {
+                "label": "scheme",
+                "type": "string",
+                "description": "the scheme for Varnish URL"
+            }
+        },
+        "rank": 1
+    },
+    "rocket_varnish_ip": {
+        "since": "2.6.8",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "rocket_varnish_ip",
+        "summary": "Filters the Varnish IP",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "varnish_ip": {
+                "label": "varnish_ip",
+                "type": "string",
+                "description": "the Varnish IP"
+            }
+        },
+        "rank": 1
+    },
+    "set_rocket_wp_cache_define": {
+        "since": "2.1",
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "set_rocket_wp_cache_define",
+        "summary": "Filters the value of WP_CACHE constant",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "turn_it_on": {
+                "label": "turn_it_on",
+                "type": "string",
+                "description": "WP_CACHE value. Can be true or false"
+            }
+        },
+        "rank": 1
+    },
+    "varnish_http_purge_schema": {
+        "since": false,
+        "group": "WP Rocket",
+        "type": "hook-filter",
+        "name": "varnish_http_purge_schema",
+        "summary": "Filters the schema used for Varnish URL",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "schema": {
+                "label": "schema",
+                "type": "string",
+                "description": "schema of the Varnish URL"
+            }
+        },
+        "rank": 1
+    }
+}

@@ -1,0 +1,2074 @@
+{
+    "acf-compatibility-name": {
+        "since": "5.1.7",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/compatibility\/{$name}",
+        "summary": "Enable specific backwards compatibility logic with dynamic name",
+        "description": "<p>This filter allows you to modify ACF compatibility settings which are used throughout the plugin.<\/p>",
+        "inputs": {
+            "name": {
+                "label": "name",
+                "type": "string",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-compatibility": {
+        "since": "5.1.7",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/compatibility",
+        "summary": "Enable specific backwards compatibility logic.",
+        "description": "<p>This filter allows you to modify ACF compatibility settings which are used throughout the plugin.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-google_map-api": {
+        "since": "4.3.9",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/google_map\/api",
+        "summary": "Customize the URL parameters used to load Google Maps JS.",
+        "description": "<p>This filter allows you to modify the URL parameters used to load Google Maps JS. Its primary use is to allow a Google API key to be set, however, may also be used to customize other_params used in the google.load function.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "api": {
+                "type": "array",
+                "label": "api",
+                "description": "an array of all API info detailed below",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-post_object-query-key-field_key": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/post_object\/query\/key={$field_key}",
+        "summary": "Customize the $args array used to query posts for the post object field. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This hook allows you to modify the $args array which is used to query the posts shown in the the post_object select field.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "The WP_Query args used to find choices.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-post_object-query-name-field_name": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/post_object\/query\/name={$field_name}",
+        "summary": "Customize the $args array used to query posts for the post object field. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This hook allows you to modify the $args array which is used to query the posts shown in the the post_object select field.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "The WP_Query args used to find choices.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-post_object-query": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/post_object\/query",
+        "summary": "Customize the $args array used to query posts for the post object field. Filter for every field.",
+        "description": "<p>This hook allows you to modify the $args array which is used to query the posts shown in the the post_object select field.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "The WP_Query args used to find choices.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-post_object-result-name-field_key": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/post_object\/result\/name={$field_key}",
+        "summary": "Customize the result (text) displayed for each option in the post object field. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This filter allows you to modify the result (text) displayed for each option in the post object field.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this post object.",
+                "required": false
+            },
+            "post": {
+                "label": "post",
+                "type": "object",
+                "description": "The post object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-post_object-result-name-field_name": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/post_object\/result\/name={$field_name}",
+        "summary": "Customize the result (text) displayed for each option in the post object field. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to modify the result (text) displayed for each option in the post object field.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this post object.",
+                "required": false
+            },
+            "post": {
+                "label": "post",
+                "type": "object",
+                "description": "The post object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-post_object-result": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/post_object\/result",
+        "summary": "Customize the result (text) displayed for each option in the post object field. Filter for every field",
+        "description": "<p>This filter allows you to modify the result (text) displayed for each option in the post object field.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this post object.",
+                "required": false
+            },
+            "post": {
+                "label": "post",
+                "type": "object",
+                "description": "The post object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-relationship-query-key-field_key": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/relationship\/query\/key={$field_key}",
+        "summary": "Customize the $args array used to query posts for the relationship field. Filter for a specific field based on it\u2019s key",
+        "description": "<p>This hook allows you to modify the $args array which is used to query the posts shown in the the relationship field list.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "The WP_Query args used to find choices.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-relationship-query-name-field_name": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/relationship\/query\/name={$field_name}",
+        "summary": "Customize the $args array used to query posts for the relationship field. Filter for a specific field based on it\u2019s name",
+        "description": "<p>This hook allows you to modify the $args array which is used to query the posts shown in the the relationship field list.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "The WP_Query args used to find choices.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-relationship-query": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/relationship\/query",
+        "summary": "Customize the $args array used to query posts for the relationship field. Filter for every field",
+        "description": "<p>This hook allows you to modify the $args array which is used to query the posts shown in the the relationship field list.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "The WP_Query args used to find choices.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-relationship-result-key-field_key": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/relationship\/result\/key={$field_key}",
+        "summary": "Customize the result (text) displayed for each option in the relationship field. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This hook allows you to modify the result (text) displayed for each post in the relationship field list.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this post object.",
+                "required": false
+            },
+            "post": {
+                "label": "post",
+                "type": "object",
+                "description": "The post object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-relationship-result-name-field_name": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/relationship\/result\/name={$field_name}",
+        "summary": "Customize the result (text) displayed for each option in the relationship field. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This hook allows you to modify the result (text) displayed for each post in the relationship field list.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this post object.",
+                "required": false
+            },
+            "post": {
+                "label": "post",
+                "type": "object",
+                "description": "The post object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-relationship-result": {
+        "since": "4.1.2",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/relationship\/result",
+        "summary": "Customize the result (text) displayed for each option in the relationship field. Filter for any field.",
+        "description": "<p>This hook allows you to modify the result (text) displayed for each post in the relationship field list.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this post object.",
+                "required": false
+            },
+            "post": {
+                "label": "post",
+                "type": "object",
+                "description": "The post object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-query-key-field_key": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/query\/key={$field_key}",
+        "summary": "Customize the $args array used to query terms for the taxonomy field (select display). Filter for a specific field based on it\u2019s key",
+        "description": "<p>This filter allows you to modify the $args array which is used to query the terms shown in the taxonomy field. The available arguments can be found in the get_terms() documentation.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "An array of arguments passed to the get_terms() function.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "description": "The ID for the current post being edited",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-query-name-field_name": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/query\/name={$field_name}",
+        "summary": "Customize the $args array used to query terms for the taxonomy field (select display). Filter for a specific field based on it\u2019s name",
+        "description": "<p>This filter allows you to modify the $args array which is used to query the terms shown in the taxonomy field. The available arguments can be found in the get_terms() documentation.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "An array of arguments passed to the get_terms() function.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "description": "The ID for the current post being edited",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-query": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/query",
+        "summary": "Customize the $args array used to query terms for the taxonomy field (select display). Filter for every field",
+        "description": "<p>This filter allows you to modify the $args array which is used to query the terms shown in the taxonomy field. The available arguments can be found in the get_terms() documentation.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "An array of arguments passed to the get_terms() function.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "description": "The ID for the current post being edited",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-result-key-field_key": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/result\/key={$field_key}",
+        "summary": "Customize the result (text) displayed for each option in the taxonomy field. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This filter allows you to modify the result (text) displayed for each option in the taxonomy field.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this taxonomy term.",
+                "required": false
+            },
+            "term": {
+                "label": "post",
+                "type": "object",
+                "description": "The taxonomy term object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-result-name-field_name": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/result\/name={$field_name}",
+        "summary": "Customize the result (text) displayed for each option in the taxonomy field. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to modify the result (text) displayed for each option in the taxonomy field.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this taxonomy term.",
+                "required": false
+            },
+            "term": {
+                "label": "post",
+                "type": "object",
+                "description": "The taxonomy term object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-result": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/result",
+        "summary": "Customize the result (text) displayed for each option in the taxonomy field. Filter for any field.",
+        "description": "<p>This filter allows you to modify the result (text) displayed for each option in the taxonomy field.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "title": {
+                "label": "title",
+                "type": "string",
+                "description": "The text displayed for this taxonomy term.",
+                "required": false
+            },
+            "term": {
+                "label": "post",
+                "type": "object",
+                "description": "The taxonomy term object.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The current post ID being edited.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-wp_list_categories-key-field_key": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/wp_list_categories\/key={$field_key}",
+        "summary": "Customize the $args array used to query and list terms for the taxonomy field (checkbox and radio display). Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This filter allows you to modify the $args array which is used to query the terms shown in the taxonomy field. The available arguments can be found in the wp_list_categories documentation.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "An array of arguments passed to the wp_list_categories function.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-wp_list_categories-name-field_name": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/wp_list_categories\/name={$field_name}",
+        "summary": "Customize the $args array used to query and list terms for the taxonomy field (checkbox and radio display). Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to modify the $args array which is used to query the terms shown in the taxonomy field. The available arguments can be found in the wp_list_categories documentation.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "An array of arguments passed to the wp_list_categories function.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-fields-taxonomy-wp_list_categories": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/fields\/taxonomy\/wp_list_categories",
+        "summary": "Customize the $args array used to query and list terms for the taxonomy field (checkbox and radio display). Filter for any field.",
+        "description": "<p>This filter allows you to modify the $args array which is used to query the terms shown in the taxonomy field. The available arguments can be found in the wp_list_categories documentation.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "An array of arguments passed to the wp_list_categories function.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-format_value-type-field_type": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/format_value\/type={$field_type}",
+        "summary": "Customize the value when it is called from a template function such as get_field(). Filter for a specific field based on it\u2019s type.",
+        "description": "<p>This filter is applied to the $value after it is loaded from the db and before it is returned to the template via functions such as get_field().<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value which was loaded from the database.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "description": "The post ID from which the value was loaded.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings for the field which was used to upload the attachment.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-format_value": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/format_value",
+        "summary": "Customize the value when it is called from a template function such as get_field(). Filter for every field.",
+        "description": "<p>This filter is applied to the $value after it is loaded from the db and before it is returned to the template via functions such as get_field().<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value which was loaded from the database.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "description": "The post ID from which the value was loaded.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings for the field which was used to upload the attachment.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_field-key-field_key": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_field\/key={$field_key}",
+        "summary": "Customize the field when it is loaded. Filter for a specific field based on its key.",
+        "description": "<p>This filter allows you to modify a field after it is loaded from the database and before its value has been loaded.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_field-name-field_name": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_field\/name={$field_name}",
+        "summary": "Customize the field when it is loaded. Filter for a specific field based on its name.",
+        "description": "<p>This filter allows you to modify a field after it is loaded from the database and before its value has been loaded.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_field-type-field_type": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_field\/type={$field_type}",
+        "summary": "Customize the field when it is loaded. Filter for a specific field based on its type.",
+        "description": "<p>This filter allows you to modify a field after it is loaded from the database and before its value has been loaded.<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_field": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_field",
+        "summary": "Customize the field when it is loaded. Filter for every field",
+        "description": "<p>This filter allows you to modify a field after it is loaded from the database and before its value has been loaded.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_value-key-field_key": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_value\/key={$field_key}",
+        "summary": "Customize the field when it is loaded. Filter for a specific field based on its key. Filter for a specific value load based on it\u2019s field key.",
+        "description": "<p>This hook allows you to modify the value of a field right after it is loaded from the database.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the database.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id which the value was loaded from.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_value-name-field_name": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_value\/name={$field_name}",
+        "summary": "Customize the field when it is loaded. Filter for a specific field based on its name. Filter for a specific value load based on it\u2019s field name.",
+        "description": "<p>This hook allows you to modify the value of a field right after it is loaded from the database.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the database.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id which the value was loaded from.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_value-type-field_type": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_value\/type={$field_type}",
+        "summary": "Customize the field when it is loaded. Filter for a specific field based on its type. Filter for a value load based on it\u2019s field type.",
+        "description": "<p>This hook allows you to modify the value of a field right after it is loaded from the database.<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the database.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id which the value was loaded from.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-load_value": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/load_value",
+        "summary": "Customize the value when it is loaded. Filter for every value load. Filter for every value load.",
+        "description": "<p>This hook allows you to modify the value of a field right after it is loaded from the database.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the database.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id which the value was loaded from.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-pre_save_post": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/pre_save_post",
+        "summary": "Customize the $post_id used to save data during the acf_form_head() function.",
+        "description": "<p>This filter allows you to modify the $post_id before any custom field data is saved from the front end form (acf_form()). This filter is used in the tutorial Using acf_form to create a new post.<\/p><p>This filter is not required to create a new post due to the new_post argument added to acf_form() in v5.0.0<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post ID to which all the $_POST data (values) will be saved to.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-prepare_field-key-field_key": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/prepare_field\/key={$field_key}",
+        "summary": "Customize the field after its value is loaded (before field is rendered for input). Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to modify a field right before it is rendered onto the page. By this time, the field has been validated and it\u2019s value loaded.<\/p><p>You may also use this filter to prevent the field from being rendered in a form. To do this, return false instead of an array.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-prepare_field-name-field_name": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/prepare_field\/name={$field_name}",
+        "summary": "Customize the field after its value is loaded (before field is rendered for input). Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to modify a field right before it is rendered onto the page. By this time, the field has been validated and it\u2019s value loaded.<\/p><p>You may also use this filter to prevent the field from being rendered in a form. To do this, return false instead of an array.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-prepare_field-type-field_type": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/prepare_field\/type={$field_type}",
+        "summary": "Customize the field after its value is loaded (before field is rendered for input). Filter for a specific field based on it\u2019s type.",
+        "description": "<p>This filter allows you to modify a field right before it is rendered onto the page. By this time, the field has been validated and it\u2019s value loaded.<\/p><p>You may also use this filter to prevent the field from being rendered in a form. To do this, return false instead of an array.<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-prepare_field": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/prepare_field",
+        "summary": "Customize the field after its value is loaded (before field is rendered for input). Filter for every field",
+        "description": "<p>This filter allows you to modify a field right before it is rendered onto the page. By this time, the field has been validated and it\u2019s value loaded.<\/p><p>You may also use this filter to prevent the field from being rendered in a form. To do this, return false instead of an array.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "mixed",
+                "description": "The field settings array. This can be modified and then returned.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-settings-name": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/settings\/{$name}",
+        "summary": "Customize ACF settings which are used throughout the plugin.",
+        "description": "<p>This filter allows you to modify ACF settings which are used throughout the plugin.<\/p>",
+        "inputs": {
+            "name": {
+                "label": "name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "settings": {
+                "label": "settings",
+                "type": "mixed",
+                "description": "The settings.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-update_value-key-field_key": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/update_value\/key={$field_key}",
+        "summary": "Customize the value before it is saved. Specific filter for a value based on it\u2019s field key.",
+        "description": "<p>This hook allows you to modify the value of a field before it is saved to the database.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the $_POST object.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id to save against.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-update_value-name-field_name": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/update_value\/name={$field_name}",
+        "summary": "Customize the value before it is saved. Specific filter for a value based on it\u2019s field name.",
+        "description": "<p>This hook allows you to modify the value of a field before it is saved to the database.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the $_POST object.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id to save against.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-update_value-type-field_type": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/update_value\/type={$field_type}",
+        "summary": "Customize the value before it is saved. Specific filter for a value based on it\u2019s field type.",
+        "description": "<p>This hook allows you to modify the value of a field before it is saved to the database.<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the $_POST object.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id to save against.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-update_value": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/update_value",
+        "summary": "Customize the value before it is saved. Filter for every value update",
+        "description": "<p>This hook allows you to modify the value of a field before it is saved to the database.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the $_POST object.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id to save against.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-upload_prefilter-key-field_key": {
+        "since": "5.1.9",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/upload_prefilter\/key={$field_key}",
+        "summary": "Perform custom validation on an attachment before it is uploaded. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This filter allows you to run custom validation on attachments before they are uploaded. The image, file and gallery field include settings to validate width, height, size and type for uploads, however you may find it necessary to add customized logic for all or specific upload fields.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the $_POST object.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id to save against.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-upload_prefilter-name-field_name": {
+        "since": "5.1.9",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/upload_prefilter\/name={$field_name}",
+        "summary": "Perform custom validation on an attachment before it is uploaded. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to run custom validation on attachments before they are uploaded. The image, file and gallery field include settings to validate width, height, size and type for uploads, however you may find it necessary to add customized logic for all or specific upload fields.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the $_POST object.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id to save against.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-upload_prefilter-type-field_type": {
+        "since": "5.1.9",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/upload_prefilter\/type={$field_type}",
+        "summary": "Perform custom validation on an attachment before it is uploaded. Filter for a specific field based on it\u2019s type.",
+        "description": "<p>This filter allows you to run custom validation on attachments before they are uploaded. The image, file and gallery field include settings to validate width, height, size and type for uploads, however you may find it necessary to add customized logic for all or specific upload fields.<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value of the field as found in the $_POST object.",
+                "required": false
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "int",
+                "description": "The post id to save against.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field object (actually an array, not object).",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-upload_prefilter": {
+        "since": "5.1.9",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/upload_prefilter",
+        "summary": "Perform custom validation on an attachment before it is uploaded. Filter for every field.",
+        "description": "<p>This filter allows you to run custom validation on attachments before they are uploaded. The image, file and gallery field include settings to validate width, height, size and type for uploads, however you may find it necessary to add customized logic for all or specific upload fields.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "errors": {
+                "label": "errors",
+                "type": "array",
+                "description": "An array of errors for the given file about to be uploaded. Appending to this array will result in the attachment failing to upload, and the error message displayed to the client.",
+                "required": false
+            },
+            "file": {
+                "label": "file",
+                "type": "array",
+                "description": "An array containing the $_FILE data for the attachment about to be uploaded.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings for the field which was used to upload the attachment.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_attachment-key-field_key": {
+        "since": "5.2.8",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_attachment\/key={$field_key}",
+        "summary": "Perform custom validation on an attachment before it is uploaded or selected. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This filter allows you to run custom validation on attachments before they are uploaded. The image, file and gallery field include settings to validate width, height, size and type for uploads, however you may find it necessary to add customized logic for all or specific upload fields.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "errors": {
+                "label": "errors",
+                "type": "array",
+                "description": "An array of error messages (strings) for the given attachment. Appending to this array will result in the attachment failing to upload, and the error message displayed to the client.",
+                "required": false
+            },
+            "file": {
+                "label": "file",
+                "type": "array",
+                "description": "An array of generic file data including type, width, height and size.",
+                "required": false
+            },
+            "attachment": {
+                "label": "attachment",
+                "type": "array",
+                "description": "The attachment being uploaded\/displayed. This data changes depending on context.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "context": {
+                "label": "context",
+                "type": "string",
+                "description": "Description of the current context: upload, basic_upload (when uploading) or prepare (when viewing). Added in 5.6.3.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_attachment-name-field_name": {
+        "since": "5.2.8",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_attachment\/name={$field_name}",
+        "summary": "Perform custom validation on an attachment before it is uploaded or selected. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to run custom validation on attachments before they are uploaded. The image, file and gallery field include settings to validate width, height, size and type for uploads, however you may find it necessary to add customized logic for all or specific upload fields.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "errors": {
+                "label": "errors",
+                "type": "array",
+                "description": "An array of error messages (strings) for the given attachment. Appending to this array will result in the attachment failing to upload, and the error message displayed to the client.",
+                "required": false
+            },
+            "file": {
+                "label": "file",
+                "type": "array",
+                "description": "An array of generic file data including type, width, height and size.",
+                "required": false
+            },
+            "attachment": {
+                "label": "attachment",
+                "type": "array",
+                "description": "The attachment being uploaded\/displayed. This data changes depending on context.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "context": {
+                "label": "context",
+                "type": "string",
+                "description": "Description of the current context: upload, basic_upload (when uploading) or prepare (when viewing). Added in 5.6.3.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_attachment-type-field_type": {
+        "since": "5.2.8",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_attachment\/type={$field_type}",
+        "summary": "Perform custom validation on an attachment before it is uploaded or selected. Filter for a specific field based on it\u2019s type.",
+        "description": "<p>This filter allows you to run custom validation on attachments before they are uploaded. The image, file and gallery field include settings to validate width, height, size and type for uploads, however you may find it necessary to add customized logic for all or specific upload fields.<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "errors": {
+                "label": "errors",
+                "type": "array",
+                "description": "An array of error messages (strings) for the given attachment. Appending to this array will result in the attachment failing to upload, and the error message displayed to the client.",
+                "required": false
+            },
+            "file": {
+                "label": "file",
+                "type": "array",
+                "description": "An array of generic file data including type, width, height and size.",
+                "required": false
+            },
+            "attachment": {
+                "label": "attachment",
+                "type": "array",
+                "description": "The attachment being uploaded\/displayed. This data changes depending on context.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "context": {
+                "label": "context",
+                "type": "string",
+                "description": "Description of the current context: upload, basic_upload (when uploading) or prepare (when viewing). Added in 5.6.3.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_attachment": {
+        "since": "5.2.8",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_attachment",
+        "summary": "Perform custom validation on an attachment before it is uploaded or selected. Filter for every field.",
+        "description": "<p>This filter allows you to perform custom validation on an attachment and prevent it being uploaded or selected for a specific field.<\/p><p>Similar to the acf\/upload_prefilter filter, this filter can be used to prevent an upload, however, it can also be used to prevent an attachment being selected from a WP media modal.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "errors": {
+                "label": "errors",
+                "type": "array",
+                "description": "An array of error messages (strings) for the given attachment. Appending to this array will result in the attachment failing to upload, and the error message displayed to the client.",
+                "required": false
+            },
+            "file": {
+                "label": "file",
+                "type": "array",
+                "description": "An array of generic file data including type, width, height and size.",
+                "required": false
+            },
+            "attachment": {
+                "label": "attachment",
+                "type": "array",
+                "description": "The attachment being uploaded\/displayed. This data changes depending on context.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field array containing all attributes & settings.",
+                "required": false
+            },
+            "context": {
+                "label": "context",
+                "type": "string",
+                "description": "Description of the current context: upload, basic_upload (when uploading) or prepare (when viewing). Added in 5.6.3.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_value-key-field_key": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_value\/key={$field_key}",
+        "summary": "Perform custom validation on a field's value before it is saved. Filter for a specific field based on it\u2019s key.",
+        "description": "<p>This filter allows you to perform custom validation on a field\u2019s value and either allow or prevent the post from being saved.<\/p>",
+        "inputs": {
+            "field_key": {
+                "label": "field_key",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "valid": {
+                "label": "valid",
+                "type": "mixed",
+                "description": "Whether or not the value is valid (true \/ false). Can also be returned as a custom error message (string).",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to be saved.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            },
+            "input": {
+                "label": "input",
+                "type": "string",
+                "description": "The DOM element\u2019s name attribute.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_value-name-field_name": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_value\/name={$field_name}",
+        "summary": "Perform custom validation on a field's value before it is saved. Filter for a specific field based on it\u2019s name.",
+        "description": "<p>This filter allows you to perform custom validation on a field\u2019s value and either allow or prevent the post from being saved.<\/p>",
+        "inputs": {
+            "field_name": {
+                "label": "field_name",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "valid": {
+                "label": "valid",
+                "type": "mixed",
+                "description": "Whether or not the value is valid (true \/ false). Can also be returned as a custom error message (string).",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to be saved.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            },
+            "input": {
+                "label": "input",
+                "type": "string",
+                "description": "The DOM element\u2019s name attribute.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_value-type-field_type": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_value\/type={$field_type}",
+        "summary": "Perform custom validation on a field's value before it is saved. Filter for a specific field based on it\u2019s type.",
+        "description": "<p>This filter allows you to perform custom validation on a field\u2019s value and either allow or prevent the post from being saved.<\/p>",
+        "inputs": {
+            "field_type": {
+                "label": "field_type",
+                "type": "string",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "valid": {
+                "label": "valid",
+                "type": "mixed",
+                "description": "Whether or not the value is valid (true \/ false). Can also be returned as a custom error message (string).",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to be saved.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            },
+            "input": {
+                "label": "input",
+                "type": "string",
+                "description": "The DOM element\u2019s name attribute.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_value": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-filter",
+        "name": "acf\/validate_value",
+        "summary": "Perform custom validation on a field's value before it is saved. Filter for every field",
+        "description": "<p>This filter allows you to perform custom validation on a field\u2019s value and either allow or prevent the post from being saved.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "valid": {
+                "label": "valid",
+                "type": "mixed",
+                "description": "Whether or not the value is valid (true \/ false). Can also be returned as a custom error message (string).",
+                "required": false
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to be saved.",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "An array containing all the field settings.",
+                "required": false
+            },
+            "input": {
+                "label": "input",
+                "type": "string",
+                "description": "The DOM element\u2019s name attribute.",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}

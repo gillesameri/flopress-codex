@@ -1,0 +1,291 @@
+{
+    "wpforms_display_submit_after": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_display_submit_after",
+        "summary": "Action that fires just after the submit button element is displayed.",
+        "description": "<p>The wpforms_display_submit_after hook fires within the form\u2019s submit button container div, after the submit button element is displayed. As an example, you can use this hook to add HTML that\u2019s output after the submit button.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Form settings\/data."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_display_submit_before": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_display_submit_before",
+        "summary": "Action that fires immediately before the submit button element is displayed.",
+        "description": "<p>The wpforms_display_submit_before hook fires within the form\u2019s submit button container div, just before the submit button element. As an example, you can use this hook to add HTML that\u2019s output before the submit button.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Form settings\/data."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_frontend_output_after": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_frontend_output_after",
+        "summary": "Action that fires at when form shortcode is run, after the form is displayed.",
+        "description": "<p>The wpforms_frontend_output_after action fires after a form is displayed on the site\u2019s frontend. It only fires if the form exists and contains fields.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Processed form settings\/data, prepared to be used later."
+            },
+            "form": {
+                "type": "object",
+                "label": "form",
+                "required": true,
+                "description": "Unprocessed form settings\/data."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_frontend_output_before": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_frontend_output_before",
+        "summary": "Action that fires at when form shortcode is run, before the form is displayed.",
+        "description": "<p>The wpforms_frontend_output_before action fires before a form is displayed on the site\u2019s frontend. It only fires if the form exists and contains fields.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Processed form settings\/data, prepared to be used later."
+            },
+            "form": {
+                "type": "object",
+                "label": "form",
+                "required": true,
+                "description": "Unprocessed form settings\/data."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_process": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_process",
+        "summary": "Action that fires during form entry processing, after initial field validation has passed.",
+        "description": "<p>The wpforms_process action fires towards the end of form entry processing. It runs after all initial form fields have been validated and sanitized.<\/p><p>This hook should be used when the action potentially needs to return an error and halt form processing (see More Information below for details). Examples: verify if a user account exists or validate data for a payment gateway.<\/p><p>Please remember that the form processing can still be halted\/prevented after this hooks fires, by other code using the same hook. See the note below about another similar hook that fires after <em>all<\/em> validation is passed.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "required": true,
+                "description": "Sanitized entry field values\/properties."
+            },
+            "entry": {
+                "type": "array",
+                "label": "entry",
+                "required": true,
+                "description": "Original $_POST global."
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Form settings\/data."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_process_before": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_process_before",
+        "summary": "Action that fires after a form\u2019s submit button is clicked, but before form data is validated or cleaned.",
+        "description": "<p>The wpforms_process_before action fires almost immediately after the form\u2019s submit button is clicked, before validation takes place for the entry. Since entry data has not been validated or cleaned at this point in pre-processing, this hook should be used with caution.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "entry": {
+                "type": "array",
+                "label": "entry",
+                "required": true,
+                "description": "Unvalidated entry data."
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Formatted form data."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_process_complete": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_process_complete",
+        "summary": "Action that fires at the very end of (successful) form entry processing.",
+        "description": "<p>The wpforms_process_complete hook fires at the very end of form processing. It only fires if the entry was successful and did not contain errors. Saving the entry to the database and sending the email notifications are done prior to this hook running.<\/p><p>A popular choice when building custom API integrations or needing to perform any kind of action after an entry is successfully submitted (eg sending a custom email notification, creating a post or user account, etc).<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "required": true,
+                "description": "Sanitized entry field values\/properties."
+            },
+            "entry": {
+                "type": "array",
+                "label": "entry",
+                "required": true,
+                "description": "Original $_POST global."
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Form settings\/data."
+            },
+            "entry_id": {
+                "type": "int",
+                "label": "entry_id",
+                "required": true,
+                "description": "Entry ID. Will return 0 if entry storage is disabled or using WPForms Lite."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_process_complete_-form_id": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_process_complete_{$form_id}",
+        "summary": "Action that fires at the very end of (successful) form entry processing.",
+        "description": "<p>The wpforms_process_complete hook fires at the very end of form processing. It only fires if the entry was successful and did not contain errors. Saving the entry to the database and sending the email notifications are done prior to this hook running.<\/p><p>A popular choice when building custom API integrations or needing to perform any kind of action after an entry is successfully submitted (eg sending a custom email notification, creating a post or user account, etc).<\/p><p>Easily limit by form ID, wpforms_process_complete_{$form_id}.<\/p>",
+        "inputs": {
+            "form_id": {
+                "type": "string",
+                "label": "form_id",
+                "required": true,
+                "description": "The form ID."
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "required": true,
+                "description": "Sanitized entry field values\/properties."
+            },
+            "entry": {
+                "type": "array",
+                "label": "entry",
+                "required": true,
+                "description": "Original $_POST global."
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Form settings\/data."
+            },
+            "entry_id": {
+                "type": "int",
+                "label": "entry_id",
+                "required": true,
+                "description": "Entry ID. Will return 0 if entry storage is disabled or using WPForms Lite."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_process_entry_save": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-action",
+        "name": "wpforms_process_entry_save",
+        "summary": "Action that fires when entry is saved to the database.",
+        "description": "<p>The wpforms_process_entry_save action fires after the entry has been successfully processed, when the entry is being saved to the database. Both the confirmation event and notification email are triggered after this hook has run.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "required": true,
+                "description": "Sanitized entry field values\/properties."
+            },
+            "entry": {
+                "type": "array",
+                "label": "entry",
+                "required": true,
+                "description": "Original $_POST global."
+            },
+            "form_id": {
+                "type": "int",
+                "label": "form_id",
+                "required": true,
+                "description": "Form ID."
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Form settings\/data."
+            }
+        },
+        "rank": 1
+    }
+}

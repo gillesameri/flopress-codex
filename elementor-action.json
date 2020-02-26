@@ -1,0 +1,573 @@
+{
+    "elementor-editor-after_save": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/editor\/after_save",
+        "summary": "Runs after saving Elementor data.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "post_id": {
+                "type": "int",
+                "label": "post_id",
+                "required": false,
+                "description": "The post ID."
+            },
+            "editor_data": {
+                "type": "array",
+                "label": "editor_data",
+                "required": false,
+                "description": "Array of Elementor elements."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-editor-before_enqueue_scripts": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/editor\/before_enqueue_scripts",
+        "summary": "Before the editor scripts enqueuing.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-after_section_end": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/after_section_end",
+        "summary": "Runs before an editor section is registered.",
+        "description": "Here is the place to add additional sections before and after each section for all elements in panel If you need to add a section in a specific place ( a specific element & section ), prefer to use the next hook.",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false,
+                "description": "Current section id."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-after_section_start": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/after_section_start",
+        "summary": "Runs within an editor section after it was opened.",
+        "description": "Here is the place to add additional controls to existing sections. If you need to add a control to a specific place ( a specific element & section ), prefer to use the next hook.",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false,
+                "description": "Current section id."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-before_section_end": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/before_section_end",
+        "summary": "Runs within an editor section before the section is closed.",
+        "description": "Here is the place to add additional controls to existing sections. If you need to add a control to a specific place ( a specific element & section ), prefer to use the next hook.",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false,
+                "description": "Current section id."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-before_section_start": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/before_section_start",
+        "summary": "Runs before an editor section is registered.",
+        "description": "Here is the place to add additional sections before and after each section for all elements in panel If you need to add a section in a specific place ( a specific element & section ), prefer to use the next hook.",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false,
+                "description": "Current section id."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-parse_css": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/parse_css",
+        "summary": "After Parse the element CSS in order to generate the CSS file.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "post_css": {
+                "type": "object",
+                "label": "post_css",
+                "required": false,
+                "description": "The Post CSS generator"
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The element instance"
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-section_name-section_id-after_section_end": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/{$section_name}\/{$section_id}\/after_section_end",
+        "summary": "Runs after a specific element ( like heading) and a specific section ( like section_title )",
+        "description": "",
+        "inputs": {
+            "section_name": {
+                "type": "string",
+                "label": "section_name",
+                "required": false
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-section_name-section_id-after_section_start": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/{$section_name}\/{$section_id}\/after_section_start",
+        "summary": "Runs within an editor section after it was opened.",
+        "description": "Here is the place to add additional controls before and after a specific element ( like heading) and a specific section ( like section_title ).",
+        "inputs": {
+            "section_name": {
+                "type": "string",
+                "label": "section_name",
+                "required": false
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-section_name-section_id-before_section_end": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/{$section_name}\/{$section_id}\/before_section_end",
+        "summary": "Runs within an editor section before the section is closed.",
+        "description": "Here is the place to add additional controls before and after a specific element ( like heading) and a specific section ( like section_title ).",
+        "inputs": {
+            "section_name": {
+                "type": "string",
+                "label": "section_name",
+                "required": false
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-element-section_name-section_id-before_section_start": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/element\/{$section_name}\/{$section_id}\/before_section_start",
+        "summary": "Runs before a specific element ( like heading) and a specific section ( like section_title ).",
+        "description": "",
+        "inputs": {
+            "section_name": {
+                "type": "string",
+                "label": "section_name",
+                "required": false
+            },
+            "section_id": {
+                "type": "string",
+                "label": "section_id",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The edited element."
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "required": false,
+                "description": "The $args that sent to $element->start_controls_section."
+            }
+        },
+        "rank": 1
+    },
+    "elementor-frontend-after_enqueue_styles": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/frontend\/after_enqueue_styles",
+        "summary": "After Elementor registers all styles.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "elementor-frontend-after_register_styles": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/frontend\/after_register_styles",
+        "summary": "After Elementor registers all styles.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "elementor-frontend-before_enqueue_scripts": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/frontend\/before_enqueue_scripts",
+        "summary": "Before the frontend scripts enqueuing.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "elementor-frontend-element_type-after_render": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/frontend\/{$element_type}\/after_render",
+        "summary": "After the element is printed.",
+        "description": "",
+        "inputs": {
+            "element_type": {
+                "type": "string",
+                "label": "element_type",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The element instance"
+            }
+        },
+        "rank": 1
+    },
+    "elementor-frontend-element_type-before_render": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/frontend\/{$element_type}\/before_render",
+        "summary": "Before the element is printed.",
+        "description": "",
+        "inputs": {
+            "element_type": {
+                "type": "string",
+                "label": "element_type",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "element": {
+                "type": "object",
+                "label": "element",
+                "required": false,
+                "description": "The element instance"
+            }
+        },
+        "rank": 1
+    },
+    "elementor-init": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/init",
+        "summary": "Elementor is fully loaded.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "elementor-loaded": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/loaded",
+        "summary": "Applied to frontend HTML content (the entire Elementor content in page).",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "content": {
+                "type": "string",
+                "label": "content",
+                "required": false,
+                "description": "The entire Elementor HTML output of current page\/post"
+            }
+        },
+        "rank": 1
+    },
+    "elementor-preview-enqueue_styles": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/preview\/enqueue_styles",
+        "summary": "Before the preview styles enqueuing.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "elementor-widget-widget_name-skins_init": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/widget\/{$widget_name}\/skins_init",
+        "summary": "Runs after widget construction. Here is th place to register custom skins.",
+        "description": "",
+        "inputs": {
+            "widget_name": {
+                "type": "string",
+                "label": "widget_name"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "widget": {
+                "type": "object",
+                "label": "widget",
+                "required": false,
+                "description": "The widget instance"
+            }
+        },
+        "rank": 1
+    },
+    "elementor-widgets-widgets_registered": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-action",
+        "name": "elementor\/widgets\/widgets_registered",
+        "summary": "The place to register your custom widgets.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "widgets_manager": {
+                "type": "object",
+                "label": "widgets_manager",
+                "required": false,
+                "description": "The widgets manager instance."
+            }
+        },
+        "rank": 1
+    }
+}

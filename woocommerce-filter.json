@@ -1,0 +1,162 @@
+{
+    "widget_title": {
+        "since": "2.6.0",
+        "group": "WooCommerce",
+        "type": "hook-filter",
+        "name": "widget_title",
+        "summary": "Filters the widget title.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "title": {
+                "type": "string",
+                "label": "title",
+                "description": "The widget title. Default 'Pages'."
+            },
+            "instance": {
+                "type": "array",
+                "label": "instance",
+                "description": "Array of settings for the current widget."
+            },
+            "id_base": {
+                "type": "mixed",
+                "label": "id_base",
+                "description": "The widget ID."
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_checkout_fields": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-filter",
+        "name": "woocommerce_checkout_fields",
+        "summary": "The WordPress Core woocommerce checkout fields hook.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "description": "The remove fields filter."
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_default_address_fields": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-filter",
+        "name": "woocommerce_default_address_fields",
+        "summary": "Filters the widget title.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "description": "The fields."
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_get_availability": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-filter",
+        "name": "woocommerce_get_availability",
+        "summary": "Returns the availability of the product.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "availability": {
+                "type": "array",
+                "label": "availability",
+                "description": "The array."
+            },
+            "instance": {
+                "type": "object",
+                "label": "instance",
+                "description": "The instance."
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_page_title": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-filter",
+        "name": "woocommerce_page_title",
+        "summary": "The WordPress Core woocommerce page title hook.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "page_title": {
+                "type": "string",
+                "label": "page_title",
+                "description": "The page title."
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_product_single_add_to_cart_text": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-filter",
+        "name": "woocommerce_product_single_add_to_cart_text",
+        "summary": "Get the add to cart button text for the single page.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "var": {
+                "type": "array",
+                "label": "var",
+                "description": "The string."
+            },
+            "instance": {
+                "type": "object",
+                "label": "instance",
+                "description": "The instance."
+            }
+        },
+        "rank": 1
+    },
+    "woocommerce_return_to_shop_redirect": {
+        "since": false,
+        "group": "WooCommerce",
+        "type": "hook-filter",
+        "name": "woocommerce_return_to_shop_redirect",
+        "summary": "Changes the redirect URL for the Return To Shop button in the cart.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "url": {
+                "type": "string",
+                "label": "url",
+                "description": "The url."
+            }
+        },
+        "rank": 1
+    }
+}

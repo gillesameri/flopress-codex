@@ -1,0 +1,88 @@
+{
+    "wpseo_dashboard": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-action",
+        "name": "wpseo_dashboard",
+        "summary": "Runs on the SEO admin dashboard page.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_do_sitemap_-type": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-action",
+        "name": "wpseo_do_sitemap_{$type}",
+        "summary": "Runs in the creation of XML sitemaps, $type can not be a valid post type or taxonomy, when they are this action will not trigger.",
+        "description": "",
+        "inputs": {
+            "type": {
+                "type": "string",
+                "label": "type",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_head": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-action",
+        "name": "wpseo_head",
+        "summary": "Runs at the end of the output of all SEO meta tags by the plugin, before the closing debug comment.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_opengraph": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-action",
+        "name": "wpseo_opengraph",
+        "summary": "Runs at the end of the output of OpenGraph meta tags by the plugin, before the closing debug comment.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "wpseo_xmlsitemaps_config": {
+        "since": false,
+        "group": "Yoast SEO",
+        "type": "hook-action",
+        "name": "wpseo_xmlsitemaps_config",
+        "summary": "Runs on the SEO Admin page for XML Sitemaps.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}

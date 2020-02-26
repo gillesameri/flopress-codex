@@ -1,0 +1,208 @@
+{
+    "acf-field_group-admin_enqueue_scripts": {
+        "since": false,
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/field_group\/admin_enqueue_scripts",
+        "summary": "Called during the enqueue_scripts action when editing a field group.",
+        "description": "<p>This action is called in all pages where field groups are edited.<\/p><p>You can think of this function the same as admin_enqueue_scripts but only for the ACF field group page.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-field_group-admin_head": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/field_group\/admin_head",
+        "summary": "Called during the admin_head action when editing a field group.",
+        "description": "<p>This action is called in the head of the edit field group page.<\/p><p>This action is very similar to the WP action admin_head.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-init": {
+        "since": "5.2.7",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/init",
+        "summary": "Called after ACF is finished loading and is similar to the WordPress init action.",
+        "description": "<p>This action is fired after ACF is finished loading and is similar to the WordPress init action.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-input-admin_enqueue_scripts": {
+        "since": false,
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/input\/admin_enqueue_scripts",
+        "summary": "Called during the enqueue_scripts action when editing a post.",
+        "description": "<p>This action used to enqueue scripts and styles on pages where ACF fields are rendered. Eg: page \/ post edit screen, front end form, options page, etc.<\/p><p>This action is very similar to the WP action admin_enqueue_scripts.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-input-admin_footer": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/input\/admin_footer",
+        "summary": "Called during the admin_footer action when editing a post.",
+        "description": "<p>This action is called in the footer of all pages where fields are rendered. Eg: page \/ post edit screen, front end form, options page, etc.<\/p><p>This action is very similar to the WP action admin_footer.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-input-admin_head": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/input\/admin_head",
+        "summary": "Called during the admin_head action when editing a post.",
+        "description": "<p>This action is called in the head of all pages where fields are rendered. Eg: page \/ post edit screen, front end form, options page, etc.<\/p><p>This action is very similar to the WP action admin_head.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-input-form_data": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/input\/form_data",
+        "summary": "Called during the form element when editing a post.",
+        "description": "<p>This action is called once on the \u2018input\u2019 page within the form element and is a good place to store hidden inputs, inline scripts and templates. This function will always be called if ACF fields appear within the form, and accepts $args that related to the current screen such as $args[\"post_id\"]<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "args": {
+                "type": "array",
+                "label": "args",
+                "description": "The current screen data including post_id and nonce",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-render_field-type-field_type": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/render_field\/type={$field_type}",
+        "summary": "Called when rendering a field input.",
+        "description": "<p>This action is called to render a field input. When creating a custom field type, this action runs the render_field function within the field type class. You can use this action to render HTML before or after the field type\u2019s input.<\/p><ul><li>To render HTML before ACF does, use a priority less than 10<\/li><li>To render HTML after ACF does, use a priority of 10 or higher<\/li><\/ul>",
+        "inputs": {
+            "field_type": {
+                "type": "string",
+                "label": "field_type",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "type": "array",
+                "label": "field",
+                "description": "The field settings including name, label, etc",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-render_field": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/render_field",
+        "summary": "Called when rendering a field input.",
+        "description": "<p>This action is called to render a field input. When creating a custom field type, this action runs the render_field function within the field type class. You can use this action to render HTML before or after the field type\u2019s input.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "type": "array",
+                "label": "field",
+                "description": "The field settings including name, label, etc",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-save_post": {
+        "since": "4.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/save_post",
+        "summary": "Called when saving $_POST data.",
+        "description": "<p>This action is called when saving the submitted $_POST data.<\/p><p>This filter allows you to hook in before or after the data has been saved. It is important to note that the get_field() function will return different values at these times (previous value \/ new value).<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "post_id": {
+                "type": "int",
+                "label": "post_id",
+                "description": "The ID of the post (or user, term, etc) being saved.",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf-validate_save_post": {
+        "since": "5.0.0",
+        "group": "ACF",
+        "type": "hook-action",
+        "name": "acf\/validate_save_post",
+        "summary": "Called when validating $_POST data.",
+        "description": "<p>This action is fired during the validation process (triggered when publishing a post) and allows you to review $_POST data and add validation errors.<\/p><p>If you are looking for a filter to validate a specific field, please use acf\/validate_value.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}

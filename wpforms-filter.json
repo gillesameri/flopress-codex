@@ -1,0 +1,324 @@
+{
+    "wpforms_csv_export_separator": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_csv_export_separator",
+        "summary": "Filters the delimiter used in CSV exports of form entries.",
+        "description": "<p>The wpforms_csv_export_separator filter is applied to entry data exported to a CSV file. It can be used to change the type of delimiter used in the CSV.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "separator": {
+                "type": "string",
+                "label": "separator",
+                "required": true,
+                "description": "Delimiter used in CSV exports. Default is a comma (\",\")."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_currencies": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_currencies",
+        "summary": "Filters currency options available in WPForms Settings (listed under WPForms \u00bb Settings \u00bb Payments, in the Currency dropdown field).",
+        "description": "<p>The wpforms_currencies filter provides a list of supported currencies.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "currencies": {
+                "type": "array",
+                "label": "currencies",
+                "required": true,
+                "description": "Supported currency options, including the details for each type of currency."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_datetime_date_dropdowns": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_datetime_date_dropdowns",
+        "summary": "Filters labels and options within the date field\u2019s dropdown format.",
+        "description": "<p>The wpforms_datetime_date_dropdowns filter is applied to an array containing date dropdown options. It can be used to customize the labels for the month, day, and year dropdowns, as well as which options are included within each of these dropdowns.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "dates": {
+                "type": "array",
+                "label": "dates",
+                "required": true,
+                "description": "Labels and number ranges used in date dropdowns."
+            },
+            "form_id": {
+                "type": "int",
+                "label": "form_id",
+                "required": true,
+                "description": "Form ID."
+            },
+            "field": {
+                "type": "array",
+                "label": "field",
+                "required": true,
+                "description": "Date field values and properties."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_datetime_date_formats": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_datetime_date_formats",
+        "summary": "Filters the date field formats available for the Date Picker in the form builder.",
+        "description": "<p>The <code>wpforms_datetime_date_formats<\/code> filter is applied to an array containing format options for date fields. These options are provided within the form builder when using the Date Picker option. <\/p><p>This filter can be used to add additional format options. The format will determine how date field selections are displayed to the user, how dates appear in entries and notifications, and also how date field selections appear within the database.<\/p><p>Default date format options include:<\/p><ul><li><strong>m\/d\/Y:<\/strong> 01\/31\/2019<\/li><li><strong>d\/m\/Y:<\/strong> 31\/01\/2019<\/li><li><strong>F j, Y:<\/strong> January 31, 2019<\/li><\/ul>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "date_formats": {
+                "type": "array",
+                "label": "date_formats",
+                "required": true,
+                "description": "Date format options."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_disable_all_emails": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_disable_all_emails",
+        "summary": "Filter used to disable all form notification emails.",
+        "description": "<p>The wpforms_disable_all_emails filter applies to all notification emails within the form submission process. It can be used to prevent form notification emails from being sent site-wide, regardless of settings within the form builder.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "disable": {
+                "type": "bool",
+                "label": "disable",
+                "required": true,
+                "description": "If true, all notification emails will be disabled (default is false)."
+            },
+            "this": {
+                "type": "object",
+                "label": "this",
+                "required": true,
+                "description": "Instance of the WPForms_WP_Emails class, which handles all notification emails sent by WPForms."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_email_display_other_fields": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_email_display_other_fields",
+        "summary": "Filters non-input field types to include in {all_fields} output.",
+        "description": "<p>The wpforms_email_display_other_fields filter determines whether non-input fields are included in the form\u2019s notification email when the {all_fields} Smart Tag is used. It can be used to include Page Break (page title), Section Divider, and\/or HTML fields in form emails.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "required": true,
+                "description": "Non-input field types to include."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_email_footer_text": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_email_footer_text",
+        "summary": "Filters form notification email footer content.",
+        "description": "<p>The wpforms_email_footer_text filter determines what content, if any, will be displayed underneath the main body of all form notification emails. By default, the footer will include the text \u201cSent from\u201d, followed by the name of the site. The site name will be linked to the site\u2019s homepage.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "footer": {
+                "type": "string",
+                "label": "footer",
+                "required": true,
+                "description": "Content displayed in email footer."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_field_credit_card_enable": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_field_credit_card_enable",
+        "summary": "Determines whether Credit Card field will be displayed in form builder.",
+        "description": "<p>The wpforms_field_credit_card_enable filter is applied when the form builder loads. Though the Credit Card field will by default only be available when the Stripe addon is active, this filter can be used to enable the Credit Card field without any addon.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "enable_cc": {
+                "type": "bool",
+                "label": "enable_cc",
+                "required": true,
+                "description": "Determines whether field will display, default is false (do not display)."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_frontend_confirmation_message": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_frontend_confirmation_message",
+        "summary": "Filters confirmation message output site-wide.",
+        "description": "<p>The wpforms_frontend_confirmation_message filter is applied to all forms set to display a confirmation message. It can be used to change or replace the confirmation message that\u2019s displayed, overriding the message contents set within the form builder.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "message": {
+                "type": "string",
+                "label": "message",
+                "required": true,
+                "description": "Confirmation message, including processed Smart Tags."
+            },
+            "form_data": {
+                "type": "array",
+                "label": "form_data",
+                "required": true,
+                "description": "Form data and settings."
+            },
+            "fields": {
+                "type": "array",
+                "label": "fields",
+                "required": true,
+                "description": "Sanitized field data."
+            },
+            "entry_id": {
+                "type": "int",
+                "label": "entry_id",
+                "required": true,
+                "description": "Entry id."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_manage_cap": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_manage_cap",
+        "summary": "Filters user access to WPForms based on their current role\u2019s capabilities.",
+        "description": "<p>The wpforms_manage_cap filter is applied to any user who logs into the WordPress dashboard. By default, only users with the manage_options capability (administrator role) will have access to WPForms.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "cap": {
+                "type": "mixed",
+                "label": "cap",
+                "required": true,
+                "description": "Capability required for user role to access WPForms."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_math_captcha": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_math_captcha",
+        "summary": "Filters setting properties applied to the Custom Captcha addon.",
+        "description": "<p>The wpforms_math_captcha filter is applied to an array that sets minimum and maximum numbers, as well as the type of calculations used with those values (addition, multiplication, etc). It can be used to change the integer range and operators allowed in a custom captcha field.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "settings": {
+                "type": "array",
+                "label": "settings",
+                "required": true,
+                "description": "Minimum integer, maximum integer, and operators that will be used."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_rating_field_emoji": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_rating_field_emoji",
+        "summary": "Filters the inclusion of emoji icons in notification emails.",
+        "description": "<p>The wpforms_rating_field_emoji filter is applied to form notification emails when a Rating field is included.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "enable_emojis": {
+                "type": "bool",
+                "label": "enable_emojis",
+                "required": true,
+                "description": "Determines whether emoji icons for the Rating field will be displayed in notification emails, default is true (will display)."
+            }
+        },
+        "rank": 1
+    },
+    "wpforms_user_registration_email_user": {
+        "since": false,
+        "group": "WPForms",
+        "type": "hook-filter",
+        "name": "wpforms_user_registration_email_user",
+        "summary": "Filters email properties for new user emails sent from the User Registration addon.",
+        "description": "<p>The wpforms_user_registration_email_user filter is applied to an array containing email data, prior to the User Registration addon sending the new user email. It can be used to customize the properties of the email including the message sent to the user.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "emails": {
+                "type": "array",
+                "label": "emails",
+                "required": true,
+                "description": "Properties of the email that will be generated"
+            }
+        },
+        "rank": 1
+    }
+}

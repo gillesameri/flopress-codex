@@ -1,0 +1,365 @@
+{
+    "metaslider_-type-_slider_anchor_attributes": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_{$type}_slider_anchor_attributes",
+        "summary": "Use this filter to modify or add attributes to each slide anchor (link) tag. {type} can be flex, coin, responsive or nivo.",
+        "description": "",
+        "inputs": {
+            "type": {
+                "label": "type",
+                "type": "string",
+                "description": "{type} can be flex, coin, responsive or nivo",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "attributes": {
+                "label": "attributes",
+                "type": "array",
+                "description": "Default image attributes (eg width, height, src).",
+                "required": true
+            },
+            "slide": {
+                "label": "slide",
+                "type": "array",
+                "description": "Slide data",
+                "required": true
+            },
+            "slider_id": {
+                "label": "slider_id",
+                "type": "int",
+                "description": "Slideshow ID",
+                "required": true
+            }
+        },
+        "rank": ""
+    },
+    "metaslider_-type-_slider_image_attributes": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_{$type}_slider_image_attributes",
+        "summary": "Use this filter to modify or add attributes to each slide image tag. {type} can be flex, coin, responsive or nivo.",
+        "description": "",
+        "inputs": {
+            "type": {
+                "label": "type",
+                "type": "string",
+                "description": "{type} can be flex, coin, responsive or nivo",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "attributes": {
+                "label": "attributes",
+                "type": "array",
+                "description": "Default image attributes (eg width, height, src).",
+                "required": true
+            },
+            "slide": {
+                "label": "slide",
+                "type": "array",
+                "description": "Slide data",
+                "required": true
+            },
+            "slider_id": {
+                "label": "slider_id",
+                "type": "int",
+                "description": "Slideshow ID",
+                "required": true
+            }
+        },
+        "rank": 1
+    },
+    "metaslider_-type-_slider_javascript": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_{$type}_slider_javascript",
+        "summary": "Use this filter to add javascript below (after) the slider JavaScript call. {type} can be flex, coin, responsive or nivo.",
+        "description": "",
+        "inputs": {
+            "type": {
+                "label": "type",
+                "type": "string",
+                "description": "{type} can be flex, coin, responsive or nivo",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "javascript": {
+                "label": "javascript",
+                "type": "string",
+                "description": "The javascript code.",
+                "required": true
+            },
+            "slider_id": {
+                "label": "slider_id",
+                "type": "int",
+                "description": "Slideshow ID",
+                "required": true
+            }
+        },
+        "rank": ""
+    },
+    "metaslider_-type-_slider_javascript_before": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_{$type}_slider_javascript_before",
+        "summary": "Use this filter to add javascript before the slider JavaScript call. {type} can be flex, coin, responsive or nivo.",
+        "description": "",
+        "inputs": {
+            "type": {
+                "label": "type",
+                "type": "string",
+                "description": "{type} can be flex, coin, responsive or nivo",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "javascript": {
+                "label": "javascript",
+                "type": "string",
+                "description": "The javascript code.",
+                "required": true
+            },
+            "slider_id": {
+                "label": "slider_id",
+                "type": "int",
+                "description": "Slideshow ID",
+                "required": true
+            }
+        },
+        "rank": 1
+    },
+    "metaslider_-type-_slider_parameters": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_{$type}_slider_parameters",
+        "summary": "Use this filter to modify the JavaScript properties used to initiate the slideshow. {type} can be flex, coin, responsive or nivo.",
+        "description": "<p>MetaSlider exposes most of each slideshows options in the slideshow settings, but there are some specialist options that are offered by each slideshow library that you cannot change through the MetaSlider interface. This filter allows you to change existing properties or add new ones.<\/p><p>For a full list of available properties, see Flex Slider Properties, Nivo Slider Properties (scroll down to \u2018Play with settings\u2019), Coin Slider Properties (scroll down to \u2018List of all options\u2019), Responsive Slides Properties (scroll down to \u2018Options you can customise\u2019)<\/p><ul><li>To create\/alter an integer property value, omit quotes<\/li><li>To create\/alter a string property value, use single or double quotes<\/li><li>To create or add to a function, assign the value to an array (see first example)<\/li><\/ul>",
+        "inputs": {
+            "type": {
+                "label": "type",
+                "type": "string",
+                "description": "{type} can be flex, coin, responsive or nivo",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "options": {
+                "label": "options",
+                "type": "array",
+                "description": "Slideshow properties",
+                "required": true
+            },
+            "slider_id": {
+                "label": "slider_id",
+                "type": "int",
+                "description": "Slideshow ID",
+                "required": true
+            },
+            "settings": {
+                "label": "settings",
+                "type": "array",
+                "description": "Slideshow settings.",
+                "required": true
+            }
+        },
+        "rank": 1
+    },
+    "metaslider_capability": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_capability",
+        "summary": "Use this filter to modify the user capability required to use MetaSlider. The default capability is \u2018edit_others_posts\u2019.",
+        "description": "<p>You can change the required capability to any default capability included in WordPress.<\/p>",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "capability": {
+                "label": "capability",
+                "type": "string",
+                "description": "User role capability",
+                "required": true
+            }
+        },
+        "rank": ""
+    },
+    "metaslider_default_parameters": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_default_parameters",
+        "summary": "Use this filter to modify the default slideshow settings. Theme developers may wish to use this to automatically set a \u2018recommended\u2019 slideshow size.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "params": {
+                "label": "params",
+                "type": "array",
+                "description": "Default slideshow settings.",
+                "required": true
+            }
+        },
+        "rank": ""
+    },
+    "metaslider_hoplink": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_hoplink",
+        "summary": "Use this filter to modify the URL used in the \u201cGo Pro\u201d links throughout MetaSlider. This is for use by theme developers who have signed up as an affiliate.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "link": {
+                "label": "link",
+                "type": "string",
+                "description": "The URL used to direct users to www.metaslider.com from all \u201cGo Pro\u201d links within the MetaSlider interface.",
+                "required": true
+            }
+        },
+        "rank": ""
+    },
+    "metaslider_image_-type-_slider_markup": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_image_{$type}_slider_markup",
+        "summary": "This filter allows you to modify the complete slide HTML generated by MetaSlider. {type} can be flex, coin, responsive or nivo.",
+        "description": "",
+        "inputs": {
+            "type": {
+                "label": "type",
+                "type": "string",
+                "description": "{type} can be flex, coin, responsive or nivo",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "html": {
+                "label": "html",
+                "type": "string",
+                "description": "HTML markup for the complete slide",
+                "required": true
+            },
+            "slide": {
+                "label": "slide",
+                "type": "array",
+                "description": "Slide data",
+                "required": true
+            },
+            "settings": {
+                "label": "settings",
+                "type": "array",
+                "description": "Slideshow settings",
+                "required": true
+            }
+        },
+        "rank": ""
+    },
+    "metaslider_post_feed_args": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_post_feed_args",
+        "summary": "Use this filter to modify the query arguments used to extract posts in a Post Feed slide.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "args": {
+                "label": "args",
+                "type": "array",
+                "description": "WP_Query arguments as defined by the slide settings",
+                "required": true
+            },
+            "slide": {
+                "label": "slide",
+                "type": "object",
+                "description": "Current slide data",
+                "required": true
+            },
+            "slider_settings": {
+                "label": "slider_settings",
+                "type": "array",
+                "description": "Current slider settings",
+                "required": true
+            },
+            "slide_settings": {
+                "label": "slide_settings",
+                "type": "array",
+                "description": "Current slide settings",
+                "required": true
+            }
+        },
+        "rank": ""
+    },
+    "metaslider_resized_image_url": {
+        "since": false,
+        "group": "MetaSlider",
+        "type": "hook-filter",
+        "name": "metaslider_resized_image_url",
+        "summary": "Use this filter to modify the slide image URL used by MetaSlider. For example, it could be used to change the full image URL to a relative image URL.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct"
+            },
+            "cropped_url": {
+                "label": "cropped_url",
+                "type": "string",
+                "description": "The URL to the cropped\/resized image (e.g. http:\/\/[\u2026]\/image-150x150.jpg)",
+                "required": true
+            },
+            "orig_url": {
+                "label": "orig_url",
+                "type": "string",
+                "description": "The URL to the full size image (e.g.  http:\/\/[\u2026]\/image.jpg)",
+                "required": true
+            }
+        },
+        "rank": ""
+    }
+}

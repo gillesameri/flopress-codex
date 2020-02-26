@@ -1,0 +1,96 @@
+{
+    "elementor-element-print_template": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-filter",
+        "name": "elementor\/element\/print_template",
+        "summary": "Applied to the javascript preview templates.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "template": {
+                "type": "string",
+                "label": "template",
+                "required": false,
+                "description": "The JavaScript template output."
+            },
+            "widget": {
+                "type": "object",
+                "label": "widget",
+                "required": false,
+                "description": "The widget instance"
+            }
+        },
+        "rank": 1
+    },
+    "elementor-frontend-print_google_fonts": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-filter",
+        "name": "elementor\/frontend\/print_google_fonts",
+        "summary": "Used to prevent loading of Google Fonts by Elementor.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "elementor-frontend-the_content": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-filter",
+        "name": "elementor\/frontend\/the_content",
+        "summary": "Applied to frontend HTML content (the entire Elementor content in page).",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "content": {
+                "type": "string",
+                "label": "content",
+                "required": false,
+                "description": "The entire Elementor HTML output of current page\/post"
+            }
+        },
+        "rank": 1
+    },
+    "elementor-widget-render_content": {
+        "since": false,
+        "group": "Elementor",
+        "type": "hook-filter",
+        "name": "elementor\/widget\/render_content",
+        "summary": "Applied to the PHP html content of a single widget. ( in the Editor it will be shown after the finish edit the element. to change the JavaScript Template see elementor\/element\/print_template).",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "content": {
+                "type": "string",
+                "label": "content",
+                "required": false,
+                "description": "The widget HTML output"
+            },
+            "widget": {
+                "type": "object",
+                "label": "widget",
+                "required": false,
+                "description": "The widget instance"
+            }
+        },
+        "rank": 1
+    }
+}

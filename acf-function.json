@@ -1,0 +1,488 @@
+{
+    "acf_add_local_field": {
+        "since": false,
+        "group": "ACF",
+        "type": "efct",
+        "name": "acf_add_local_field",
+        "summary": "Adds a field to the local cache.",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "label": "field",
+                "type": "array",
+                "description": "The field definition.",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 2
+    },
+    "acf_add_local_field_group": {
+        "since": false,
+        "group": "ACF",
+        "type": "efct",
+        "name": "acf_add_local_field_group",
+        "summary": "Adds a field group to the local cache.",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "field_group": {
+                "label": "field_group",
+                "type": "array",
+                "description": "The field group definition.",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 2
+    },
+    "acf_form": {
+        "since": false,
+        "group": "ACF",
+        "type": "efct",
+        "name": "acf_form",
+        "summary": "Creates a front end form.",
+        "description": "<p>This function creates a <form> to add or edit a post. There are many settings available to customize the form and these are set by adding to the $options array. You may also register a form using the acf_register_form() function.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "settings": {
+                "label": "settings",
+                "type": "array",
+                "types": [
+                    "array",
+                    "string"
+                ],
+                "description": "Either an array or settings or the \u2018id\u2019 of a registered form.",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf_form_head": {
+        "since": "5.5.10",
+        "group": "ACF",
+        "type": "efct",
+        "name": "acf_form_head",
+        "summary": "Validates and saves data submitted from an acf_form().",
+        "description": "<p>This function is used to process, validate and save the submitted form data created by the acf_form() function. This function will also enqueue all ACF related scripts and styles for the acf form to render correctly. This function must be placed before any HTML has been created, preferably above the get_header(); function in your theme file.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf_register_block": {
+        "since": "5.8.0",
+        "group": "ACF",
+        "type": "efct",
+        "name": "acf_register_block",
+        "summary": "Registers a custom block type in the Gutenberg editor.",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "settings": {
+                "label": "settings",
+                "type": "array",
+                "description": "Array of arguments for registering a block type. Any argument from the JavaScript registerBlockType() function may also be used.",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf_register_block_type": {
+        "since": "5.8.0",
+        "group": "ACF",
+        "type": "efct",
+        "name": "acf_register_block_type",
+        "summary": "Registers a custom block type in the Gutenberg editor.",
+        "description": "",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "settings": {
+                "label": "settings",
+                "type": "array",
+                "description": "Array of arguments for registering a block type. Any argument from the JavaScript registerBlockType() function may also be used.",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "acf_register_form": {
+        "since": "5.5.10",
+        "group": "ACF",
+        "type": "efct",
+        "name": "acf_register_form",
+        "summary": "Registers a front end form.",
+        "description": "<p>This function will register a form to later be used by the acf_form() function. There are many settings available to customize a form and these are set by adding to the $settings array.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "settings": {
+                "label": "settings",
+                "type": "array",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "delete_field": {
+        "since": false,
+        "group": "ACF",
+        "type": "efct",
+        "name": "delete_field",
+        "summary": "Deletes a field value.",
+        "description": "<p>This function is used to delete a field value from a specific post.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The field name or key.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Specific post ID where your value was entered. Defaults to current post ID. This can also be options \/ taxonomies \/ users \/ etc.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "get_field": {
+        "since": false,
+        "group": "ACF",
+        "type": "fct",
+        "name": "get_field",
+        "summary": "Returns the value of a specific field.",
+        "description": "<p>Returns the value of a specific field.<\/p><p>Intuitive and powerful (much like ACF itself ?), this function can be used to load the value of any field from any location. Please note that each field type returns different forms of data (string, int, array, etc).<\/p>",
+        "inputs": {
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The field name or field key",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID where the value is saved. Defaults to the current post.",
+                "required": false
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether to apply formatting logic. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "mixed",
+                "required": false
+            }
+        },
+        "return_description": "Returns the value of a specific field.",
+        "rank": 1
+    },
+    "get_field_object": {
+        "since": false,
+        "group": "ACF",
+        "type": "fct",
+        "name": "get_field_object",
+        "summary": "Returns the settings of a specific field.",
+        "description": "<p>Each field contains many settings such as a label, name and type. This function can be used to load these settings as an array along with the field\u2019s value.<\/p>",
+        "inputs": {
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The field name or field key",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID where the value is saved. Defaults to the current post.",
+                "required": false
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether to apply formatting logic. Defaults to true.",
+                "required": false,
+                "default": "true"
+            },
+            "load_value": {
+                "label": "load_value",
+                "type": "bool",
+                "description": "Whether to load the field\u2019s value. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "array",
+                "required": false
+            }
+        },
+        "return_description": "This function will return an array. Please note that each field contains unique settings.",
+        "rank": 1
+    },
+    "get_field_objects": {
+        "since": false,
+        "group": "ACF",
+        "type": "fct",
+        "name": "get_field_objects",
+        "summary": "Returns an array of custom field objects for a specific page \/ post.",
+        "description": "<p>This is a very simple function which finds ALL custom field values (that don\u2019t start with an \u201c_\u201d) in the wp_postmeta table and returns them in an associated array where the $field_name => field object.<\/p><p>You should only use this function when you do not know the fields which which will be appearing on a template or if you have a large amount of fields which you would prefer not to code independently.<\/p>",
+        "inputs": {
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID where the value is saved. Defaults to the current post.",
+                "required": false
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether to apply formatting logic. Defaults to true.",
+                "required": false,
+                "default": "true"
+            },
+            "load_value": {
+                "label": "load_value",
+                "type": "bool",
+                "description": "Whether to load the field values. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "array",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "get_fields": {
+        "since": false,
+        "group": "ACF",
+        "type": "fct",
+        "name": "get_fields",
+        "summary": "Returns an array of field values (name => value) for a specific post.",
+        "description": "<p>Returns the value of a specific field.<\/p><p>Intuitive and powerful (much like ACF itself ?), this function can be used to load the value of any field from any location. Please note that each field type returns different forms of data (string, int, array, etc).<\/p>",
+        "inputs": {
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID where the value is saved. Defaults to the current post.",
+                "required": false
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether to apply formatting logic. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "return": {
+                "label": "value",
+                "type": "mixed",
+                "required": false
+            }
+        },
+        "return_description": "Array of values or false if no fields are found.",
+        "rank": 1
+    },
+    "the_field": {
+        "since": false,
+        "group": "ACF",
+        "type": "efct",
+        "name": "the_field",
+        "summary": "Displays the value of a specific field.",
+        "description": "<p>Intuitive and powerful, this function can be used to output the value of any field from any location. Please note this function is the same as echo get_field();<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The field name or field key",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "The post ID where the value is saved. Defaults to the current post.",
+                "required": false
+            },
+            "format_value": {
+                "label": "format_value",
+                "type": "bool",
+                "description": "Whether to apply formatting logic. Defaults to true.",
+                "required": false,
+                "default": "true"
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    },
+    "update_field": {
+        "since": false,
+        "group": "ACF",
+        "type": "efct",
+        "name": "update_field",
+        "summary": "Updates a field value.",
+        "description": "<p>This function is used to update a field value for a specific post.<\/p>",
+        "inputs": {
+            "ifct": {
+                "type": "efct",
+                "required": false
+            },
+            "selector": {
+                "label": "selector",
+                "type": "string",
+                "description": "The field name or key.",
+                "required": true
+            },
+            "value": {
+                "label": "value",
+                "type": "mixed",
+                "description": "The value to save.",
+                "required": true
+            },
+            "post_id": {
+                "label": "post_id",
+                "type": "mixed",
+                "types": [
+                    "mixed",
+                    "int",
+                    "string"
+                ],
+                "description": "Specific post ID where your value was entered. Defaults to current post ID. This can also be options \/ taxonomies \/ users \/ etc.",
+                "required": false
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}

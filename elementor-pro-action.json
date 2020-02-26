@@ -1,0 +1,288 @@
+{
+    "elementor-query-custom_filter": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor\/query\/{$custom_filter}",
+        "summary": "After you have set up the Custom Query Filter you can use it to modify the query in the same way WordPress native pre_get_posts hook lets you modify the Query. Using the Custom Query filter is just like any other WordPress native action hook.",
+        "description": "",
+        "inputs": {
+            "custom_filter": {
+                "type": "string",
+                "label": "custom_filter",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "query": {
+                "type": "object",
+                "label": "query",
+                "required": false,
+                "description": "The query object."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-form_submitted": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/form_submitted",
+        "summary": "After the forms module is loaded and it\u2019s a POST request with the form action. This is the place to add a form handlers.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "module": {
+                "type": "object",
+                "label": "module",
+                "required": false,
+                "description": "The entire Elementor HTML output of current page\/post."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-mail_sent": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/mail_sent",
+        "summary": "",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "settings": {
+                "type": "array",
+                "label": "settings",
+                "required": false,
+                "description": "The form settings."
+            },
+            "record": {
+                "type": "object",
+                "label": "record",
+                "required": false,
+                "description": "The record submitted."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-new_record": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/new_record",
+        "summary": "After the form actions have run. This is the place to add custom form handlers.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "record": {
+                "type": "object",
+                "label": "record",
+                "required": false,
+                "description": "The record submitted."
+            },
+            "ajax_handler": {
+                "type": "object",
+                "label": "ajax_handler",
+                "required": false,
+                "description": "The Ajax Handler component."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-process-field_type": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/process\/{$field_type}",
+        "summary": "After the forms fields have been validated, Fires when a single form field is being processed. This allows developers to process individual field types. The dynamic portion of the hook name, $field_type, refers to the field type.",
+        "description": "",
+        "inputs": {
+            "field_type": {
+                "type": "string",
+                "label": "field_type",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "type": "array",
+                "label": "field",
+                "required": false,
+                "description": "The submitted field."
+            },
+            "record": {
+                "type": "object",
+                "label": "record",
+                "required": false,
+                "description": "The record submitted."
+            },
+            "ajax_handler": {
+                "type": "object",
+                "label": "ajax_handler",
+                "required": false,
+                "description": "The Ajax Handler component."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-process": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/process",
+        "summary": "Fires after the forms fields have been validated and processed. This is the place to add a extra form field processing work handlers.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "record": {
+                "type": "object",
+                "label": "record",
+                "required": false,
+                "description": "The record submitted."
+            },
+            "ajax_handler": {
+                "type": "object",
+                "label": "ajax_handler",
+                "required": false,
+                "description": "The Ajax Handler component."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-validation-field_type": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/validation\/{$field_type}",
+        "summary": "After the forms module is loaded and it\u2019s a POST request with the form action. This allows developers to validate individual field types. The dynamic portion of the hook name, $field_type, refers to the field type.",
+        "description": "",
+        "inputs": {
+            "field_type": {
+                "type": "string",
+                "label": "field_type",
+                "required": true
+            }
+        },
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "field": {
+                "type": "array",
+                "label": "field",
+                "required": false,
+                "description": "The submitted field."
+            },
+            "record": {
+                "type": "object",
+                "label": "record",
+                "required": false,
+                "description": "The record submitted."
+            },
+            "ajax_handler": {
+                "type": "object",
+                "label": "ajax_handler",
+                "required": false,
+                "description": "The Ajax Handler component."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-validation": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/validation",
+        "summary": "Fires after the forms fields have been validated and processed. This is the place to add a extra form field processing work handlers.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "record": {
+                "type": "object",
+                "label": "record",
+                "required": false,
+                "description": "The record submitted."
+            },
+            "ajax_handler": {
+                "type": "object",
+                "label": "ajax_handler",
+                "required": false,
+                "description": "The Ajax Handler component."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-forms-webhooks-response": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/forms\/webhooks\/response",
+        "summary": "Handle the webhook response.",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            },
+            "response": {
+                "type": "mixed",
+                "label": "response",
+                "required": false,
+                "description": "The wp_remote_post response. See wp_remote_retrieve_response_message() function for more information."
+            },
+            "record": {
+                "type": "object",
+                "label": "record",
+                "required": false,
+                "description": "The record submitted."
+            }
+        },
+        "rank": 1
+    },
+    "elementor_pro-init": {
+        "since": false,
+        "group": "Elementor Pro",
+        "type": "hook-action",
+        "name": "elementor_pro\/init",
+        "summary": "",
+        "description": "",
+        "inputs": {},
+        "outputs": {
+            "ofct": {
+                "type": "efct",
+                "required": false
+            }
+        },
+        "rank": 1
+    }
+}
